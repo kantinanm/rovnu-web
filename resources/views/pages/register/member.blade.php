@@ -1,0 +1,279 @@
+@extends('layouts.default')
+@section('title')
+    :: กรอกข้อมูลสมาชิกในทีม ::
+@stop
+@section('css_script')
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
+@endsection
+@include('includes.header_v2')
+@section('content')
+
+    <section id="introduction" class="gradient-violat padding-top-90 home-slider">
+        <div id="home-slider" class="empty-carousel">
+
+        </div>
+    </section>
+
+    <section id="formUI" class="newsletter">
+        <div class="container">
+
+            <div class="ui breadcrumb">
+                <a class="section">หน้าแรก</a>
+                <div class="divider"> / </div>
+                <div class="active section">กรอกข้อมูลสมาชิกในทีม</div>
+            </div>
+
+            <div class="row padding-top-bottom-20">
+                <div class="col-md-12">
+
+                    <div class="ui steps">
+                        <div class="step disabled">
+                            <i class="ion-android-lock" style="font-size: 32px;"></i>&nbsp;&nbsp;
+                            <div class="content">
+                                <div class="title"><span class="markFont">นโยบายข้อมูลส่วนบุคคล</span></div>
+                                <div class="description">โปรดอ่านและยอมรับเงื่อนไข</div>
+                            </div>
+                        </div>
+                        <div class="disabled step">
+                            <i class="ion-compose" style="font-size: 32px;"></i>&nbsp;&nbsp;
+                            <div class="content">
+                                <div class="title"><span class="markFont">ลงทะเบียนทีม</span></div>
+                                <div class="description">สำรองที่นั่งในการแข่งขัน</div>
+                            </div>
+                        </div>
+                        <div class="active step">
+                            <i class="ion-information-circled" style="font-size: 32px;"></i>&nbsp;&nbsp;
+                            <div class="content">
+                                <div class="title"><span class="markFont">กรอกข้อมูลสมาชิกในทีม </span></div>
+                                <div class="description">ยืนยันข้อมูล และ Activate account ผ่าน email</div>
+                            </div>
+                        </div>
+
+                        <div class="disabled step">
+                            <i class="ion-checkmark-circled" style="font-size: 32px;"></i>&nbsp;&nbsp;
+                            <div class="content">
+                                <div class="title"><span class="markFont">ตรวจสอบข้อมูล</span></div>
+                                <div class="description">กับ Garana Thailand </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui pointing menu">
+                        <a class="item">
+                            Home
+                        </a>
+                        <a class="item">
+                            <span class="markFont">ลงทะเบียนทีม</span>
+                        </a>
+                        <a class="item active">
+                            <span class="markFont">รายชื่อสมาชิก</span>
+                        </a>
+                        <div class="right menu">
+                            <a class="ui item" href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                <i class="icon power off"></i>
+                                <span class="markFont">ออกจากระบบ</span>
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="container">
+                <div class="ui icon green message">
+                    <i class="chess knight icon"></i>
+                    <div class="content">
+                        <div class="header">
+                            <span class="markFont"> ทีม :</span>
+                        </div>
+                        <p>Get the best news in your e-mail every day.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui segment">
+
+                <table class="ui compact celled definition table">
+                    <thead class="full-width">
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>ชื่อ - นามสกุล</th>
+                        <th>รหัสนิสิต/นักศึกษา</th>
+                        <th>คณะ</th>
+                        <th>ID Game</th>
+                        <th>Approve</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <a class="ui teal image label">
+                                <img src="{{ URL::asset('images/christian.jpg') }}">
+                                นายพงศ์พันธุ์ วงค์จันทร์
+                                <div class="detail">Manager</div>
+                            </a>
+                        </td>
+                        <td>55362202</td>
+                        <td>คณะวิศวกรรมศาสตร์</td>
+                        <td>No</td>
+                        <td class="collapsing">
+                            <div class="ui fitted slider checkbox">
+                                <input type="checkbox" onChange="chkApprove(1,this)"> <label></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>นายวรรธนัย กองฉลาด</td>
+                        <td>56364014</td>
+                        <td>คณะวิศวกรรมศาสตร์</td>
+                        <td>Yes</td>
+                        <td class="collapsing">
+                            <div class="ui fitted slider checkbox">
+                                <input type="checkbox"> <label></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>นายสุวราม เครือคำ</td>
+                        <td>56364250</td>
+                        <td>คณะวิศวกรรมศาสตร์</td>
+                        <td>Yes</td>
+                        <td class="collapsing">
+                            <div class="ui fitted slider checkbox">
+                                <input type="checkbox"> <label></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>นายชนก ว่องถิ่นป่า</td>
+                        <td>57363795</td>
+                        <td>คณะวิศวกรรมศาสตร์</td>
+                        <td>No</td>
+                        <td class="collapsing">
+                            <div class="ui fitted slider checkbox">
+                                <input type="checkbox"> <label></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>นายชินภัทร เพลิดเพลิน</td>
+                        <td>57363849</td>
+                        <td>คณะวิศวกรรมศาสตร์</td>
+                        <td>No</td>
+                        <td >
+
+                            <i class="green check circle outline icon"></i>
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+                    <tfoot class="full-width">
+                    <tr>
+                        <th></th>
+
+                        <th colspan="5">
+                            <a href="{{ route('register-players-add') }}"> <button class="ui basic button right floated primary">
+                                <i class="icon user"></i>
+                                เพิ่มรายชื่อ
+                            </button></a>
+                            <div class="ui left floated small primary labeled icon button" data-toggle="modal" data-target="#exampleModalCenter">
+                                <i class="user icon"></i> ยืนยันข้อมูลทีม
+                            </div>
+
+                        </th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">คุณยืนยันที่จะส่งทีมเข้าแข่งขันตามข้อมูลข้างต้นนี้ </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ui red message">
+                            <div class="header">
+                                <span class="markFont"> คุณรับรู้และรับทราบเกี่ยวกับกฏกติกาการแข่งขันและขอยอมรับว่าความข้อมูลที่ได้บันทึกและได้ลงทะเบียนเป็นข้อมูลจริง</span>
+                            </div>
+                            <ul class="list">
+                                <li>หากทีมงานตรวจสอบพบว่ามีข้อมูลบางส่วนเป็นข้อมูลเท็จ ทางเราของสงวนสิทธิในการยกเลิกสิทธิการเข้าร่วมการแข่งขันของทีมนี้และสมาชิกทุกคนภายในทีม</li>
+                                <li>ในระหว่างดำเนินการแข่งขัน หากมีข้อโต้แย้งกันระหว่างทีม หรือทีมใดทีมหนึ่งมีข้อพิพาษหรือทำผิดกติกา คำวินิจฉัยของคณะกรรมการจัดการแข่งขันถือเป็นที่สิ้นสุด</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">ย้อนกลับ</button>
+                        <button type="button" class="btn btn-primary">ยืนยันการลงทะเบียนทีม</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+
+    </section>
+@endsection
+@section('js_plugin')
+    <div id="scroll-top-div" class="scroll-top-div">
+        <div class="scroll-top-icon-container">
+            <i class="ion-ios-arrow-thin-up"></i>
+        </div>
+    </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!--<script src="js/jquery.min.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ URL::asset('js/script.js') }}"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="{{ URL::asset('js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ URL::asset('js/stellar/jquery.stellar.min.js') }}"></script>
+    <script src="{{ URL::asset('js/Semantic-UI-CSS/semantic.min.js') }}"></script>
+
+    <script>
+        jQuery(document).ready(function( $ ) {
+
+        });
+    </script>
+
+    <script>
+
+    </script>
+@endsection

@@ -1,0 +1,109 @@
+/* CSS Document */
+
+		
+
+		
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+		.photo {
+			background-attachment: fixed;
+			background-position: 100% 0%;
+			background-repeat: no-repeat;
+			height: auto;
+			position: relative;
+		}
+		.photo span {
+			bottom: 0;
+			color: white;
+			display: block;
+			/*left: 50%;*/
+			/*margin-left: -640px;*/
+			
+			/*margin-left: calc(-100vw / 2 + 500px / 2);
+		  	margin-right: calc(-100vw / 2 + 500px / 2);
+			font-size: 38px;
+			padding: 5px;
+			position: absolute;
+			text-shadow: 0 2px 0 black, 0 0 10px black;*/
+			
+		}
+		
+		.sweat16_blur {
+			background-image: url(../images/cute_blur_nobg_resize400.png);
+
+		}
+		.sweat16 {
+			background-image: url(../images/cute_noblur_600.png);
+		}
+		.eng{
+			background-image: url(../images/logo25.png);
+		}
+		
+		
+		.drawChild{
+			background-image: url(../images/005_resize.png);
+		}
+		
+		#meetingidol{
+			left:15%;
+			position:absolute;
+			background-image: url(../images/prepair_200.png);
+			height: 94px;
+		}
+	
+	}
+	
+	
+	@media only screen and (min-width: 64.063em) { 
+	
+	
+		.photo {
+			/*background-attachment: fixed;
+			background-position: 100% 10%;*/
+			background-repeat: no-repeat;
+			height: 444px;
+			position: relative;
+		}
+		.photo span {
+			bottom: 0;
+			color: white;
+			display: block;
+			margin-top: -50px;
+			/*left: 50%;*/
+			/*margin-left: -640px;*/
+			margin-left: calc(-100vw / 2 + 500px / 2);
+		  	margin-right: calc(-100vw / 2 + 500px / 2);
+			font-size: 38px;
+			padding: 5px;
+			position: absolute;
+			text-shadow: 0 2px 0 black, 0 0 10px black;
+			width: 1280px;
+		}
+	
+	
+		.sweat16_blur {
+			background-image: url(../images/t01_reszie.jpg); /* cute_blur_nobg_resize.png */
+		}
+		.sweat16 {
+			background-image: url(../images/cute_noblur.png);
+		}
+		.eng{
+			background-image: url(images/logo25.png);
+		}
+		
+		
+		.drawChild{
+			background-image: url(../images/005_resize.png);
+		}
+		
+		
+		#meetingidol{
+			left:30%;
+			position:absolute;
+			background-image: url(../images/prepair.png);
+			height: 263px;
+		}
+	
+	
+	} /* min-width 1025px, large screens */
