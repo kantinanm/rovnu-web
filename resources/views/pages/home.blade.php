@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/modal-video.min.css') }}">
 @endsection
 @include('includes.header')
 @section('content')
@@ -30,7 +31,7 @@
                     <h3 class="cta-heading text-white">Beyond The Hero <span class="markFont">: คุณพร้อมหรือยังที่จะเป็นฮีโร่ผู้กล้า </span></h3>
                     <p class="text-white">ฝ่าสมรภูมิรบไปด้วยกัน เปิดรับลงทะเบียนทีมแล้ววันนี้</p>
                     <div class="cta-btn-group">
-                        <a class="btn btn-orange border-none btn-rounded-corner" href="#">พร้อม Battle <span class="icon-on-button"><i class="ion-log-in"></i></span></a>
+                        <a class="btn btn-orange border-none btn-rounded-corner" href="{{ route('register-privacy') }}">พร้อม Battle <span class="icon-on-button"><i class="ion-log-in"></i></span></a>
                         <a class="btn btn-white gradient-white border-none btn-rounded-corner" href="#">ไม่ แต่ฉันจะไปร่วมงานแน่<span class="icon-on-button"><i class="ion-person-add"></i></span></a>
                     </div>
                     <p class="text-white">* สำรองที่นั่งในงาน เพื่อลุ้นของรางวัลและร่วมใกล้ชิด Cosplay สาวสวยภายในงาน (จำนวนจำกัด)</p>
@@ -83,6 +84,7 @@
     <script src="{{ URL::asset('js/jquery.counterup.min.js') }}"></script>
     <script src="{{ URL::asset('js/stellar/jquery.stellar.min.js') }}"></script>
     <script src="{{ URL::asset('js/Semantic-UI-CSS/semantic.min.js') }}"></script>
+    <script src="{{ URL::asset('js/modal-video/jquery-modal-video.min.js') }}"></script>
 
     <script>
         jQuery(document).ready(function( $ ) {
@@ -95,6 +97,7 @@
                 .transition('jiggle')
             ;
 
+            $("#btnVideoShow").modalVideo();
         });
     </script>
 
