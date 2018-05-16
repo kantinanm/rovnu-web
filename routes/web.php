@@ -76,8 +76,8 @@ Route::get('register/players/add', function () {
 
 })->name('register-players-add')->middleware(['role:admin|subscriber']);
 
-Route::post('register/players/add', 'PlayerController@create')->name('players-add')->middleware(['role:admin','role:subscriber']);
-
+Route::post('register/players/add', 'PlayerController@create')->name('players-add')->middleware(['role:admin|subscriber']);
+Route::post('register/players/check', 'PlayerController@checkRovIDExits')->name('players-check-id')->middleware(['role:admin|subscriber']);
 
 /*Route::get('register/create-account', function () {
     //return view('auth.register');

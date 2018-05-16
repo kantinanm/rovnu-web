@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 use App\Role;
 use App\Permission;
 use App\Player;
+use Illuminate\Support\Facades\Auth;
 
 class PlayerController extends Controller
 {
@@ -17,10 +18,11 @@ class PlayerController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
-            'teamname' => 'required|max:255',
+            'firstname' => 'required|max:255',
+            'lastname' => 'required|max:255',
+            'studentid' => 'required|max:255',
+            'hidGameId' => 'required|max:255',
+            'player_name' => 'required|max:255'
         ]);
     }
 
@@ -33,17 +35,40 @@ class PlayerController extends Controller
             'firstname' => $request->input('firstname'),
             'lastname'=> $request->input('lastname'),
             'studentid'=> $request->input('studentid'),
-            'rov_id' => $request->input('rov_id'),
+            'rov_id' => $request->input('hidGameId'),
             'player_name' => $request->input('player_name'),
             'faculty' => $request->input('faculty'),
             'institution'=> $request->input('institution'),
             'mobilephone' => $request->input('mobilephone'),
-            'team_id' => Auth::user()->id
+            'team_id' =>  Auth::user()->id
         ];
+
+        //dd($player);
+        //$player->team_id()
 
         $player = Player::create($player);
 
         $info="เพิ่มผู้เล่นในทีมเรียบร้อยแล้ว";
         return redirect('/register/players')->with('info', $info);
+    }
+
+    protected function checkRovIDExits(Request $request)
+    {
+        $data = $request->json()->all();
+
+        $exitsPlayer =Player::Where(['rov_id'=>$data["rov_id"]])->first();
+
+
+
+        if($exitsPlayer!=null){
+            //find meaning : exits
+            $result["status"]=0;
+            $result["notice"]="id is dupicated. Please use another game id.!";
+        }else{
+            $result["status"]=1;
+            $result["notice"]="game id be can use.";
+        }
+
+        return response()->json($result);
     }
 }

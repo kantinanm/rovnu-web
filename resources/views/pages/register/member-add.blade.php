@@ -3,6 +3,7 @@
     :: กรอกข้อมูลสมาชิกในทีม ::
 @stop
 @section('css_script')
+    <meta name="csrf_token" content="{{ csrf_token() }}" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -161,7 +162,8 @@
 
                                     </div>
                                     <div class="field">
-
+                                        <label>Player name</label>
+                                        <input type="text" name="player_name" id="player_name"  value="" />
                                     </div>
                                 </div>
                             </div>
@@ -265,12 +267,6 @@
                                 {type: 'empty', prompt: 'ระบุนามสกุล'}
                             ]
                         },
-                        faculty: {
-                            identifier: "faculty",
-                            rules: [
-                                {type: 'empty', prompt: 'ระบุคณะ'}
-                            ]
-                        },
 
                         studentid: {
                             identifier: "studentid",
@@ -308,16 +304,16 @@
 
                     },
 
-                    inline: true,
-                    onSuccess: function() {
-                        alert("All valid");
-                    }
+                    inline: true
                 });
         });
     </script>
 
     <script>
         function checkIdExits(){
+
+            $("#loadingDiv").addClass("ui loading form");
+
             var id =$("#gameid").val();
             if(id!=""){
                 // change css class ui loading form => loadingDiv  eg. $("p:first").addClass("intro");
@@ -330,11 +326,49 @@
                 // if exits then show warning div idWarningDiv
                 // clear value checked in hidden element tag eg. #hidGameId
                 // unlock fillable value of gameid   eg .$("#gameid").removeAttr('disabled');
-                $("#loadingDiv").addClass("ui loading form");
 
-                setTimeout(function(){ clearLoading(); }, 3000);
+
+
+                $.ajax
+                ({
+                    type: "POST",
+                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')},
+                    url: "{{ route('players-check-id') }}",
+                    dataType: 'json',
+                    contentType : 'application/json; charset=utf-8',
+                    //json object to sent to the authentication url
+                    data: JSON.stringify({ "rov_id": id, "_token" :"{{ csrf_token() }}" }),
+                    success: function (data) {
+
+                        //alert("Thanks!");
+                        //console.log(data);
+                        if(data.status==1){
+                            //ok
+                            $("#hidGameId").val($("#gameid").val()); // update checked in hidden element
+                            $("#gameid").attr('disabled',true);
+                        }else{
+                            $("#idWarningDiv").show();
+                        }
+                        clearLoading();
+                    }
+                })
+
+
+                //setTimeout(function(){ clearLoading(); }, 3000);
             }
 
+        }
+
+        function clearLoading(){
+            //alert("Clear");
+            $("#loadingDiv").removeClass("ui loading form");
+
+            // valid
+            //$("#hidGameId").val($("#gameid").val()); // update checked in hidden element
+            //$("#gameid").attr('disabled',true);
+
+            // invalid
+            //$("#idWarningDiv").show();
         }
 
         function clearState(){
@@ -343,6 +377,8 @@
             $("#loadingDiv").removeClass("ui loading form");
             $("#idWarningDiv").hide();
         }
+
+
 
     </script>
 @endsection
