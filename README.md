@@ -9,3 +9,5 @@ NU eSports Tournament : งานเฉลิมฉลองครบรอบ 2
     <p>CACHE_DRIVER=array</p>
     <p>QUEUE_DRIVER=database</p>
 5. php artisan migrate:refresh --seed
+6. php artisan queue:work
+7. php artisan serve
