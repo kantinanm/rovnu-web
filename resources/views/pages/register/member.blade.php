@@ -111,7 +111,13 @@
                     </div>
                 </div>
             </div>
+            @if (session('info'))
 
+                <div class="alert alert-success">
+                    {{ session('info') }}
+                </div>
+
+            @endif
             <div class="ui segment">
 
                 <table class="ui compact celled definition table">
