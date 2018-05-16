@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('title')
-    NU eSports Tournament : งานเฉลิมฉลองครบรอบ 25 ปี คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร
+    NU eSports ROV Tournament : งานเฉลิมฉลองครบรอบ 25 ปี คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร
 @stop
 @section('css_script')
     <!-- Bootstrap CSS -->
@@ -97,7 +97,7 @@
                 .transition('jiggle')
             ;
 
-            $("#btnVideoShow").modalVideo();
+            $("#btnVideoShow").modalVideo({channel:'vimeo'});
         });
     </script>
 
