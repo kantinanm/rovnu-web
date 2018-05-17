@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#"><span class="logo-wraper logo-white">
-                <img src="{{ URL::asset('images/logo25.png') }}" alt=""/>NU eSports Tournament
+                <img src="{{ URL::asset('images/logo25.png') }}" alt=""/>NU eSports ROV Tournament
               </span></a>
             </div>
 

@@ -27,7 +27,8 @@ class CreateUsersTable extends Migration
             $table->string('slug')->nullable($value = true);
             $table->string('video_link')->nullable($value = true);
             $table->boolean('verified')->default(0);
-            $table->string('team_type')->nullable($value = true);
+            $table->string('team_type')->default('');
+            $table->string('institution')->default('');
             $table->char('group')->nullable($value = true)->default('');
             $table->integer('current_state')->nullable($value = true)->default(1);
             $table->boolean('matching')->nullable($value = true)->default(0);

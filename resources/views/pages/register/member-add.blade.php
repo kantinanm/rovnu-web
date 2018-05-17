@@ -76,10 +76,10 @@
                         <a class="item">
                             Home
                         </a>
-                        <a class="item">
+                        <div class="item">
                             <span class="markFont">ลงทะเบียนทีม</span>
-                        </a>
-                        <a class="item active">
+                        </div>
+                        <a class="item active" href="{{ route('register-players') }}">
                             <span class="markFont">รายชื่อสมาชิก</span>
                         </a>
                         <div class="right menu">
@@ -106,9 +106,9 @@
                     <i class="chess knight icon"></i>
                     <div class="content">
                         <div class="header">
-                            <span class="markFont"> ทีม :</span>
+                            <span class="markFont"> ทีม :{{Auth::user()->teamname}}</span>
                         </div>
-                        <p>Get the best news in your e-mail every day.</p>
+                        <p>{{Auth::user()->slug}}</p>
                     </div>
                 </div>
             </div>
@@ -136,24 +136,28 @@
                             <div class="three fields">
                                 <div class="field">
                                     <label>ชื่อ </label>
-                                    <input type="text" name="firstname" id="firstname"  value="" />
+                                    <input type="text" name="firstname" id="firstname"  value="{{ old('firstname') }}" />
                                 </div>
                                 <div class="field">
                                     <label>นามสกุล</label>
-                                    <input type="text" name="lastname" id="lastname"  value="" />
+                                    <input type="text" name="lastname" id="lastname"  value="{{ old('lastname') }}" />
                                 </div>
                                 <div class="field">
-                                    <label>รหัสนิสิต/รหัสนักศึกษา</label>
-                                    <input type="text" name="studentid" id="studentid"  value="" />
+                                    <label>รหัสนักเรียน/รหัสนักศึกษา</label>
+                                    <input type="text" name="studentid" id="studentid"  value="{{ old('studentid') }}" />
                                 </div>
                             </div>
 
                             <div class="" id="loadingDiv">
                                 <div class="two fields">
                                     <div class="field">
-                                        <label>ID ในเกม ROV ที่ใช้ในการแข่งขัน</label>
+                                        <label>Player Name ในเกม ROV </label>
+                                        <input type="text" name="player_name" id="player_name" placeholder="ชื่อตัวละครในเกมการแข่งขัน และรับรางวัล" value="{{ old('player_name') }}" />
+                                    </div>
+                                    <div class="field">
+                                        <label>ID ในเกม ROV </label>
                                         <div class="ui left icon input">
-                                            <input type="text" name="gameid" id="gameid"  value="" onchange="checkIdExits()" /><i class="users icon"></i>
+                                            <input type="text" name="gameid" id="gameid"  value="{{ old('gameid') }}" onchange="checkIdExits()" /><i class="users icon"></i>
                                         </div>
                                         <input type="hidden" name="hidGameId" id="hidGameId" value="" />
                                         <div class="ui pointing red basic label" id="idWarningDiv" style="display: none">
@@ -161,42 +165,29 @@
                                         </div>
 
                                     </div>
-                                    <div class="field">
-                                        <label>Player name</label>
-                                        <input type="text" name="player_name" id="player_name"  value="" />
-                                    </div>
+
                                 </div>
                             </div>
 
                             <div class="two fields">
 
                                 <div class="field">
-                                    <label>คณะ</label>
+                                    <label>คณะ / ระดับชั้น</label>
                                     <select id="faculty" name="faculty">
-                                        <option value="">-- ไม่ระบุ --</option>
-                                        <option value="203">คณะเกษตรศาสตร์ ทรัพยากรธรรมชาติและสิ่งแวดล้อม</option>
-                                        <option value="204">คณะเภสัชศาสตร์</option>
-                                        <option value="206">คณะวิทยาศาสตร์</option>
-                                        <option value="207">คณะวิศวกรรมศาสตร์</option>
-                                        <option value="208">คณะศึกษาศาสตร์</option>
-                                        <option value="209">คณะแพทยศาสตร์</option>
-                                        <option value="210">คณะสาธารณสุขศาสตร์</option>
-                                        <option value="211">คณะวิทยาศาสตร์การแพทย์</option>
-                                        <option value="212">คณะพยาบาลศาสตร์</option>
-                                        <option value="213">คณะทันตแพทยศาสตร์</option>
-                                        <option value="214">คณะสหเวชศาสตร์</option>
-                                        <option value="215">คณะสถาปัตยกรรมศาสตร์</option>
-                                        <option value="216">คณะนิติศาสตร์</option>
-                                        <option value="217">คณะมนุษยศาสตร์</option>
-                                        <option value="218">คณะบริหารธุรกิจ เศรษฐศาสตร์และการสื่อสาร</option>
-                                        <option value="219">คณะสังคมศาสตร์</option>
-
+                                        @foreach($faculty as $value)
+                                            <option value="{{$value}}">{{$value}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="field">
                                     <label>เบอร์โทรศัพท์มือถือ ที่ติดต่อได้</label>
-                                    <input type="text" name="mobilephone" id="mobilephone" placeholder="08x..." value="" />
+                                    <input type="text" name="mobilephone" id="mobilephone" placeholder="08x..." value="{{ old('mobilephone') }}" />
                                 </div>
+                            </div>
+
+                            <div class="fields" id="otherFaculty" style="display: none">
+                                    <input type="text" name="note" id="note" placeholder="อื่นๆ โปรดระบุ : ใส่ชื่อ คณะ / ระดับชั้น ที่สังกัด" value="{{ old('note') }}" />
+
                             </div>
 
 
@@ -249,7 +240,7 @@
 
     <script>
         jQuery(document).ready(function( $ ) {
-            var minPasswordLength = 6;
+
 
             $(".ui.form")
                 .form({
@@ -271,17 +262,17 @@
                         studentid: {
                             identifier: "studentid",
                             rules: [
-                                {type: 'empty', prompt: 'ระบุรหัสนิสิต/นักศึกษา'}
+                                {type: 'empty', prompt: 'ระบุรหัสนักเรียน/นักศึกษา'}
                             ]
                         },
-                        mobilephone: {
-                            identifier: 'mobilephone',
+
+                        player_name: {
+                            identifier: "player_name",
                             rules: [
-                                {
-                                    type: 'regExp[/[0]{1}[0-9]{9,}/]',
-                                    prompt: 'หมายเลขโทรศัพท์ 10 หลัก ตัวอย่าง 085xx01234'
-                                }
-                            ]},
+                                {type: 'empty', prompt: 'ระบุชื่อตัวละครในเกมการแข่งขัน'}
+                            ]
+                        },
+
                         gameid: {
                             identifier: 'gameid',
                             rules: [
@@ -306,6 +297,17 @@
 
                     inline: true
                 });
+
+
+
+            $("select#faculty").change(function(){
+
+                if($("#faculty option:selected").val()==="อื่นๆ"){
+                    $("#otherFaculty").show();
+                }else{
+                    $("#otherFaculty").hide();
+                }
+            });
         });
     </script>
 

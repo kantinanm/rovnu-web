@@ -75,12 +75,12 @@
                         <a class="item">
                             Home
                         </a>
-                        <a class="item">
+                        <div class="item">
                             <span class="markFont">ลงทะเบียนทีม</span>
-                        </a>
-                        <a class="item active">
+                        </div>
+                        <div class="item active">
                             <span class="markFont">รายชื่อสมาชิก</span>
-                        </a>
+                        </div>
                         <div class="right menu">
                             <a class="ui item" href="{{ route('logout') }}"  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -105,9 +105,9 @@
                     <i class="chess knight icon"></i>
                     <div class="content">
                         <div class="header">
-                            <span class="markFont"> ทีม :</span>
+                            <span class="markFont"> ทีม :{{Auth::user()->teamname}}</span>
                         </div>
-                        <p>Get the best news in your e-mail every day.</p>
+                        <p>{{Auth::user()->slug}}</p>
                     </div>
                 </div>
             </div>
@@ -125,79 +125,33 @@
                     <tr>
                         <th>ลำดับ</th>
                         <th>ชื่อ - นามสกุล</th>
-                        <th>รหัสนิสิต/นักศึกษา</th>
-                        <th>คณะ</th>
-                        <th>ID Game</th>
-                        <th>Approve</th>
+                        <th>รหัสนักเรียน/นักศึกษา</th>
+                        <th>คณะ / ระดับชั้น</th>
+                        <th>RoV ID </th>
+                        <th>Player Name</th>
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($players as $player)
                     <tr>
-                        <td>1</td>
+                        <td>{{$loop->index+1}}</td>
                         <td>
-                            <a class="ui teal image label">
-                                <img src="{{ URL::asset('images/christian.jpg') }}">
-                                นายพงศ์พันธุ์ วงค์จันทร์
-                                <div class="detail">Manager</div>
-                            </a>
+                            {{$player->firstname}} {{$player->lastname}}
                         </td>
-                        <td>55362202</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>No</td>
-                        <td class="collapsing">
-                            <div class="ui fitted slider checkbox">
-                                <input type="checkbox" onChange="chkApprove(1,this)"> <label></label>
-                            </div>
+                        <td>{{$player->studentid}}</td>
+                        <td>@if($player->faculty==="อื่นๆ")
+                                {{$player->note}}
+                            @else
+                                {{$player->faculty}}
+                            @endif
                         </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>นายวรรธนัย กองฉลาด</td>
-                        <td>56364014</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>Yes</td>
-                        <td class="collapsing">
-                            <div class="ui fitted slider checkbox">
-                                <input type="checkbox"> <label></label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>นายสุวราม เครือคำ</td>
-                        <td>56364250</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>Yes</td>
-                        <td class="collapsing">
-                            <div class="ui fitted slider checkbox">
-                                <input type="checkbox"> <label></label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>นายชนก ว่องถิ่นป่า</td>
-                        <td>57363795</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>No</td>
-                        <td class="collapsing">
-                            <div class="ui fitted slider checkbox">
-                                <input type="checkbox"> <label></label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>นายชินภัทร เพลิดเพลิน</td>
-                        <td>57363849</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>No</td>
+                        <td>{{$player->rov_id}}</td>
                         <td >
-
-                            <i class="green check circle outline icon"></i>
-
+                            {{$player->player_name}}
                         </td>
                     </tr>
+                    @endforeach
+
 
                     </tbody>
                     <tfoot class="full-width">

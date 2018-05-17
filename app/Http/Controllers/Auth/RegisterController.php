@@ -102,6 +102,7 @@ class RegisterController extends Controller
             'teamname' => $data['teamname'],
             'slug'=> $data['teamslug'],
             'team_type'=> $data['team_type'],
+            'institution'=> $data['institution'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
@@ -112,19 +113,6 @@ class RegisterController extends Controller
         //dd($user);
 
         $role_subscriber = Role::where("name", "subscriber")->first();
-        /*$can_update_team = Permission::where("name", "team-update")->first();
-        $can_list_schedule = Permission::where("name", "schedule-list")->first();
-        $can_update_schedule = Permission::where("name", "schedule-update")->first();
-        $can_negotiation_create = Permission::where("name", "negotiation-create")->first();
-        $can_list_negotiation = Permission::where("name", "negotiation-list")->first();
-        $can_reply_negotiation = Permission::where("name", "negotiation-reply")->first();
-
-        $role_subscriber->attachPermission($can_update_team);
-        $role_subscriber->attachPermission($can_list_schedule);
-        $role_subscriber->attachPermission($can_update_schedule);
-        $role_subscriber->attachPermission($can_negotiation_create);
-        $role_subscriber->attachPermission($can_list_negotiation);
-        $role_subscriber->attachPermission($can_reply_negotiation);*/
 
 
 

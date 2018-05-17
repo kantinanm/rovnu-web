@@ -8,7 +8,7 @@ class Player extends Model
 {
     //
     protected $fillable = [
-        'firstname', 'lastname', 'studentid', 'rov_id', 'player_name', 'mobilephone','team_id'
+        'firstname', 'lastname', 'studentid', 'rov_id', 'player_name','faculty','note' ,'mobilephone','team_id'
     ];
 
     public function user()

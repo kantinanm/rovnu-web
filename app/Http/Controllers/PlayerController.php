@@ -11,10 +11,23 @@ use App\Role;
 use App\Permission;
 use App\Player;
 use Illuminate\Support\Facades\Auth;
+use Config;
 
 class PlayerController extends Controller
 {
     //
+    protected function index()
+    {
+
+        //return view('pages.register.member-add');
+        $players=Player::all();
+        //$players=Player::Where('team_id','=',Auth::user()->id)->first();
+        //$players =Player::Where('team_id'==Auth::user()->id);
+
+        //dd($players);
+        return view('pages.register.member',compact('players',$players));
+    }
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -38,7 +51,7 @@ class PlayerController extends Controller
             'rov_id' => $request->input('hidGameId'),
             'player_name' => $request->input('player_name'),
             'faculty' => $request->input('faculty'),
-            'institution'=> $request->input('institution'),
+            'note'=> $request->input('note'),
             'mobilephone' => $request->input('mobilephone'),
             'team_id' =>  Auth::user()->id
         ];
@@ -70,5 +83,16 @@ class PlayerController extends Controller
         }
 
         return response()->json($result);
+    }
+
+    protected function showPlayerRegisForm()
+    {
+
+        //return view('pages.register.member-add');
+
+        $faculty =Config::get('institution.'.Auth::user()->team_type."_level");
+
+        //dd($faculty);
+        return view('pages.register.member-add',compact('faculty',$faculty));
     }
 }

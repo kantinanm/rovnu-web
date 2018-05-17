@@ -40,8 +40,8 @@ class CreatePlayersTable extends Migration
             $table->string('studentid');
             $table->string('rov_id');
             $table->string('player_name');
-            $table->integer('faculty')->nullable($value = true);
-            $table->string('institution')->nullable($value = true);
+            $table->string('faculty')->nullable($value = true);
+            $table->string('note')->nullable($value = true);
             $table->string('mobilephone')->nullable($value = true);
             $table->boolean('verified')->default(0);
             $table->timestamps();
