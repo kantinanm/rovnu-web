@@ -45,7 +45,7 @@ class PlayerController extends Controller
 
         //dd($player);
         //$player->team_id()
-
+        //$player->associate(Auth::user());
         $player = Player::create($player);
 
         $info="เพิ่มผู้เล่นในทีมเรียบร้อยแล้ว";
