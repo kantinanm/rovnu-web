@@ -17,7 +17,7 @@ use App\Role;
 use App\Permission;
 use App\Jobs\SendEmailJob;
 use Carbon\Carbon;
-
+use Config;
 
 class RegisterController extends Controller
 {
@@ -82,7 +82,10 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        return view('pages.register.create');
+        $institutionList =Config::get('institution.undergraduate');
+
+        //dd($institutionList);
+        return view('pages.register.create',compact('institutionList',$institutionList));
     }
 
 
@@ -176,5 +179,20 @@ class RegisterController extends Controller
         }
 
         return redirect('/login')->with('info', $info);
+    }
+
+    public function listInstitution(Request $request)
+    {
+            //return json
+        $data = $request->json()->all();
+
+        $institutionList =Config::get('institution.'.$data["institution_type"]);
+
+        foreach ($institutionList as $key => $value) {
+            $result[$key]['optionValue']=$value;
+            $result[$key]['optionDisplay']=$value;
+        }
+
+        return response()->json($result);
     }
 }
