@@ -31,4 +31,14 @@ class User extends Authenticatable
     public function players() {
         return $this->hasMany('App\Player');
     }
+
+    public function schedules() {
+        return $this->hasMany('App\Schedule');
+    }
+
+    public function negotiations() {
+        return $this->hasMany('App\Negotiation');
+    }
+
+
 }
