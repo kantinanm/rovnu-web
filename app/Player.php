@@ -15,4 +15,6 @@ class Player extends Model
     {
         return $this->belongsTo('App\User', 'id');
     }
+
+    protected $primaryKey = 'player_id';
 }

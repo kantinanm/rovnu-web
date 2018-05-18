@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 use App\Role;
 use App\Permission;
 use App\Player;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Config;
 
@@ -19,13 +20,25 @@ class PlayerController extends Controller
     protected function index()
     {
 
-        //return view('pages.register.member-add');
-        $players=Player::all();
-        //$players=Player::Where('team_id','=',Auth::user()->id)->first();
-        //$players =Player::Where('team_id'==Auth::user()->id);
+        //return view('pages.register.member');
+        $players=Player::where('team_id',Auth::user()->id)->get();
+        $num_of_player =Config::get('app.player_limit');
+       // return view('pages.register.member',compact('players',$players));
+        return view('pages.register.member')->with(compact('players',$players))
+                                                ->with(compact('num_of_player',$num_of_player));
+    }
 
-        //dd($players);
-        return view('pages.register.member',compact('players',$players));
+    protected function showEditForm($player_id)
+    {
+
+        //return view('pages.register.member-edit');
+        $faculty =Config::get('institution.'.Auth::user()->team_type."_level");
+        $player=Player::where('player_id',$player_id)->get();
+
+        //dd($player);
+
+        return view('pages.register.member-edit')->with(compact('player',$player))
+                                                    ->with(compact('faculty',$faculty));
     }
 
     protected function validator(array $data)
@@ -65,6 +78,31 @@ class PlayerController extends Controller
         return redirect('/register/players')->with('info', $info);
     }
 
+    protected function update(Request $request)
+    {
+
+        $editPlayer =Player::Where('player_id',$request->input('player_id'))->first();
+
+        //dd($editPlayer);
+        //dd($request->input('firstname'));
+        if(isset($editPlayer) ){
+            $editPlayer->firstname=$request->input('firstname');
+            $editPlayer->lastname=$request->input('lastname');
+            $editPlayer->studentid=$request->input('studentid');
+            $editPlayer->player_name=$request->input('player_name');
+            $editPlayer->rov_id=$request->input('hidGameId');
+            $editPlayer->faculty=$request->input('faculty');
+            $editPlayer->note=$request->input('note');
+            $editPlayer->mobilephone=$request->input('mobilephone');
+            $editPlayer->save();
+            $info="ปรับปรุงข้อมูลเรียบร้อยแล้ว";
+        }else{
+            $info="เกิดข้อผิดพลาดในการปรับปรุงข้อมูล";
+        }
+
+        return redirect('/register/players')->with('info', $info);
+    }
+
     protected function checkRovIDExits(Request $request)
     {
         $data = $request->json()->all();
@@ -94,5 +132,18 @@ class PlayerController extends Controller
 
         //dd($faculty);
         return view('pages.register.member-add',compact('faculty',$faculty));
+    }
+
+    protected function showTeamRegisterCompleted()
+    {
+
+        //return view('pages.register.member-add');
+        $user=User::find(Auth::user()->id);
+        //dd($user);
+        $user->register_completed = 1;
+        $user->save();
+        $notification_date =Config::get('app.notification_date');
+
+        return view('pages.register.complete',compact('notification_date',$notification_date));
     }
 }

@@ -61,7 +61,7 @@
                             <i class="ion-information-circled" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">กรอกข้อมูลสมาชิกในทีม</span></div>
-                                <div class="description">ยืนยันข้อมูล และ Activate account ผ่าน email</div>
+                                <div class="description">ใส่รายชื่อผู้ในเล่นทีม</div>
                             </div>
                         </div>
 

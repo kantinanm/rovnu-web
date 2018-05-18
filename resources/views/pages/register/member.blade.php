@@ -51,14 +51,14 @@
                             <i class="ion-compose" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">ลงทะเบียนทีม</span></div>
-                                <div class="description">สำรองที่นั่งในการแข่งขัน</div>
+                                <div class="description">Activate account ผ่าน email</div>
                             </div>
                         </div>
                         <div class="active step">
                             <i class="ion-information-circled" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">กรอกข้อมูลสมาชิกในทีม </span></div>
-                                <div class="description">ยืนยันข้อมูล และ Activate account ผ่าน email</div>
+                                <div class="description">ใส่รายชื่อผู้ในเล่นทีม</div>
                             </div>
                         </div>
 
@@ -106,8 +106,11 @@
                     <div class="content">
                         <div class="header">
                             <span class="markFont"> ทีม :{{Auth::user()->teamname}}</span>
+                            <br/><span class="markFont"></span>
                         </div>
-                        <p>{{Auth::user()->slug}}</p>
+                        <p>"{{Auth::user()->slug}}"</p>
+                        <p><strong> สถาบันการศึกษา :</strong> {{Auth::user()->institution}}</p>
+                        <p><strong>ข้อมูลผู้ติดต่อของทีม </strong>{{Auth::user()->name}} , {{Auth::user()->mobilephone}}</p>
                     </div>
                 </div>
             </div>
@@ -129,6 +132,7 @@
                         <th>คณะ / ระดับชั้น</th>
                         <th>RoV ID </th>
                         <th>Player Name</th>
+                        <th>แก้ไข</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -149,6 +153,14 @@
                         <td >
                             {{$player->player_name}}
                         </td>
+                        <td >
+                            <a href="{{ url('register/players/'.$player->player_id) }}">
+                                <button class="ui basic button primary">
+                                <i class="icon edit outline"></i>
+                                แก้ไข
+                                </button>
+                            </a>
+                        </td>
                     </tr>
                     @endforeach
 
@@ -158,14 +170,34 @@
                     <tr>
                         <th></th>
 
-                        <th colspan="5">
+                        <th colspan="6">
+
+                            @if(count($players)<$num_of_player)
                             <a href="{{ route('register-players-add') }}"> <button class="ui basic button right floated primary">
                                 <i class="icon user"></i>
                                 เพิ่มรายชื่อ
                             </button></a>
+                            @else
+                                <button class="ui basic button right floated primary disabled">
+                                    <i class="icon user"></i>
+                                    เพิ่มรายชื่อ
+                                </button>
+                            @endif
+                            @if(count($players)==$num_of_player)
                             <div class="ui left floated small primary labeled icon button" data-toggle="modal" data-target="#exampleModalCenter">
-                                <i class="user icon"></i> ยืนยันข้อมูลทีม
+                                <i class="handshake icon"></i> ยืนยันข้อมูลทีม
                             </div>
+                            @else
+                                <button class="ui basic button left primary floated disabled">
+                                    <i class="icon handshake"></i>
+                                    ยืนยันข้อมูลทีม
+                                </button>
+                                    <div class="ui left pointing orange basic label"  style="">
+                                        เพิ่มสมาชิกให้ครบ {{$num_of_player}} คน แล้วกดยืนยัน
+                                    </div>
+                            @endif
+
+
 
                         </th>
                     </tr>
@@ -174,6 +206,10 @@
             </div>
 
         </div>
+
+        <form class="ui form" method="POST" id="frmApprove" name="frmApprove" action="{{ route('register-completed') }}">
+        {{ csrf_field() }}
+        </form>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -199,7 +235,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">ย้อนกลับ</button>
-                        <button type="button" class="btn btn-primary">ยืนยันการลงทะเบียนทีม</button>
+                       <button type="button" class="btn btn-primary" onclick="approve()">ยืนยันการลงทะเบียนทีม</button>
                     </div>
                 </div>
             </div>
@@ -231,6 +267,10 @@
         jQuery(document).ready(function( $ ) {
 
         });
+
+        function approve(){
+            $("#frmApprove").submit();
+        }
     </script>
 
     <script>
