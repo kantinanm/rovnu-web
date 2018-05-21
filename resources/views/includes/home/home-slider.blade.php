@@ -23,7 +23,7 @@
                             <h2 class="cta-heading text-white">Greet 'nd Gang Cosplay Party</h2>
                             <p class="text-white slider-para"><span class="markFont">ทีมที่ผ่านเข้ารอบสุดท้าย 4 ทีมเท่านั้น ที่จะได้ Meet & Geet สุด Excursive </span>
                             </p>
-                            <p class="text-white slider-para"><span class="markFont"> กับเหล่า Cosplay และ Net Idol สาวสวยแนวหน้าในเมืองไทย </span>
+                            <p class="text-white slider-para"><span class="markFont"> กับเหล่า Cosplay และ Caster สาวสวยแนวหน้าในเมืองไทย </span>
                             </p>
                             <div class="cta-btn-group">
                                 <a class="btn btn-orange border-none btn-rounded-corner" href="#">ลงทะเบียนแข่งขัน <span class="icon-on-button"><i class="ion-ios-game-controller-b-outline"></i></span></a>
