@@ -8,6 +8,8 @@ NU eSports Tournament : งานเฉลิมฉลองครบรอบ 2
 4. edit value in configulation file: .env
     <p>CACHE_DRIVER=array</p>
     <p>QUEUE_DRIVER=database</p>
+    <p>PLAYER_LIMIT=7</p>// จำนวนผู้เล่นในแต่ละทีม
+    <p>NOTIFICATION_DATE=1 กรกฏาคม 2561</p> //วันประกาศผลการรับสมัคร
 5. php artisan migrate:refresh --seed
 6. php artisan queue:work
 7. php artisan serve

@@ -51,14 +51,14 @@
                             <i class="ion-compose" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">ลงทะเบียนทีม</span></div>
-                                <div class="description">สำรองที่นั่งในการแข่งขัน</div>
+                                <div class="description">Activate account ผ่าน email</div>
                             </div>
                         </div>
                         <div class="active step">
                             <i class="ion-information-circled" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">กรอกข้อมูลสมาชิกในทีม </span></div>
-                                <div class="description">ยืนยันข้อมูล และ Activate account ผ่าน email</div>
+                                <div class="description">ใส่รายชื่อผู้ในเล่นทีม</div>
                             </div>
                         </div>
 
@@ -75,12 +75,12 @@
                         <a class="item">
                             Home
                         </a>
-                        <a class="item">
+                        <div class="item">
                             <span class="markFont">ลงทะเบียนทีม</span>
-                        </a>
-                        <a class="item active">
+                        </div>
+                        <div class="item active">
                             <span class="markFont">รายชื่อสมาชิก</span>
-                        </a>
+                        </div>
                         <div class="right menu">
                             <a class="ui item" href="{{ route('logout') }}"  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -105,9 +105,12 @@
                     <i class="chess knight icon"></i>
                     <div class="content">
                         <div class="header">
-                            <span class="markFont"> ทีม :</span>
+                            <span class="markFont"> ทีม :{{Auth::user()->teamname}}</span>
+                            <br/><span class="markFont"></span>
                         </div>
-                        <p>Get the best news in your e-mail every day.</p>
+                        <p>"{{Auth::user()->slug}}"</p>
+                        <p><strong> สถาบันการศึกษา :</strong> {{Auth::user()->institution}}</p>
+                        <p><strong>ข้อมูลผู้ติดต่อของทีม </strong>{{Auth::user()->name}} , {{Auth::user()->mobilephone}}</p>
                     </div>
                 </div>
             </div>
@@ -125,93 +128,76 @@
                     <tr>
                         <th>ลำดับ</th>
                         <th>ชื่อ - นามสกุล</th>
-                        <th>รหัสนิสิต/นักศึกษา</th>
-                        <th>คณะ</th>
-                        <th>ID Game</th>
-                        <th>Approve</th>
+                        <th>รหัสนักเรียน/นักศึกษา</th>
+                        <th>คณะ / ระดับชั้น</th>
+                        <th>RoV ID </th>
+                        <th>Player Name</th>
+                        <th>แก้ไข</th>
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($players as $player)
                     <tr>
-                        <td>1</td>
+                        <td>{{$loop->index+1}}</td>
                         <td>
-                            <a class="ui teal image label">
-                                <img src="{{ URL::asset('images/christian.jpg') }}">
-                                นายพงศ์พันธุ์ วงค์จันทร์
-                                <div class="detail">Manager</div>
+                            {{$player->firstname}} {{$player->lastname}}
+                        </td>
+                        <td>{{$player->studentid}}</td>
+                        <td>@if($player->faculty==="อื่นๆ")
+                                {{$player->note}}
+                            @else
+                                {{$player->faculty}}
+                            @endif
+                        </td>
+                        <td>{{$player->rov_id}}</td>
+                        <td >
+                            {{$player->player_name}}
+                        </td>
+                        <td >
+                            <a href="{{ url('register/players/'.$player->player_id) }}">
+                                <button class="ui basic button primary">
+                                <i class="icon edit outline"></i>
+                                แก้ไข
+                                </button>
                             </a>
                         </td>
-                        <td>55362202</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>No</td>
-                        <td class="collapsing">
-                            <div class="ui fitted slider checkbox">
-                                <input type="checkbox" onChange="chkApprove(1,this)"> <label></label>
-                            </div>
-                        </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>นายวรรธนัย กองฉลาด</td>
-                        <td>56364014</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>Yes</td>
-                        <td class="collapsing">
-                            <div class="ui fitted slider checkbox">
-                                <input type="checkbox"> <label></label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>นายสุวราม เครือคำ</td>
-                        <td>56364250</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>Yes</td>
-                        <td class="collapsing">
-                            <div class="ui fitted slider checkbox">
-                                <input type="checkbox"> <label></label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>นายชนก ว่องถิ่นป่า</td>
-                        <td>57363795</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>No</td>
-                        <td class="collapsing">
-                            <div class="ui fitted slider checkbox">
-                                <input type="checkbox"> <label></label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>นายชินภัทร เพลิดเพลิน</td>
-                        <td>57363849</td>
-                        <td>คณะวิศวกรรมศาสตร์</td>
-                        <td>No</td>
-                        <td >
+                    @endforeach
 
-                            <i class="green check circle outline icon"></i>
-
-                        </td>
-                    </tr>
 
                     </tbody>
                     <tfoot class="full-width">
                     <tr>
                         <th></th>
 
-                        <th colspan="5">
+                        <th colspan="6">
+
+                            @if(count($players)<$num_of_player)
                             <a href="{{ route('register-players-add') }}"> <button class="ui basic button right floated primary">
                                 <i class="icon user"></i>
                                 เพิ่มรายชื่อ
                             </button></a>
+                            @else
+                                <button class="ui basic button right floated primary disabled">
+                                    <i class="icon user"></i>
+                                    เพิ่มรายชื่อ
+                                </button>
+                            @endif
+                            @if(count($players)==$num_of_player)
                             <div class="ui left floated small primary labeled icon button" data-toggle="modal" data-target="#exampleModalCenter">
-                                <i class="user icon"></i> ยืนยันข้อมูลทีม
+                                <i class="handshake icon"></i> ยืนยันข้อมูลทีม
                             </div>
+                            @else
+                                <button class="ui basic button left primary floated disabled">
+                                    <i class="icon handshake"></i>
+                                    ยืนยันข้อมูลทีม
+                                </button>
+                                    <div class="ui left pointing orange basic label"  style="">
+                                        เพิ่มสมาชิกให้ครบ {{$num_of_player}} คน แล้วกดยืนยัน
+                                    </div>
+                            @endif
+
+
 
                         </th>
                     </tr>
@@ -220,6 +206,10 @@
             </div>
 
         </div>
+
+        <form class="ui form" method="POST" id="frmApprove" name="frmApprove" action="{{ route('register-completed') }}">
+        {{ csrf_field() }}
+        </form>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -245,7 +235,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">ย้อนกลับ</button>
-                        <button type="button" class="btn btn-primary">ยืนยันการลงทะเบียนทีม</button>
+                       <button type="button" class="btn btn-primary" onclick="approve()">ยืนยันการลงทะเบียนทีม</button>
                     </div>
                 </div>
             </div>
@@ -277,6 +267,10 @@
         jQuery(document).ready(function( $ ) {
 
         });
+
+        function approve(){
+            $("#frmApprove").submit();
+        }
     </script>
 
     <script>

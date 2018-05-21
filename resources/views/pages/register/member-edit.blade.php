@@ -79,9 +79,12 @@
                         <div class="item">
                             <span class="markFont">ลงทะเบียนทีม</span>
                         </div>
-                        <a class="item active" href="{{ route('register-players') }}">
+                        <a class="item" href="{{ route('register-players') }}">
                             <span class="markFont">รายชื่อสมาชิก</span>
                         </a>
+                        <div class="item active">
+                            <span class="markFont">แก้ไข</span>
+                        </div>
                         <div class="right menu">
                             <a class="ui item" href="{{ route('logout') }}"  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -132,21 +135,22 @@
                             </div>
                         @endif
 
-                        <form class="ui form" method="POST" action="{{ route('players-add') }}">
+                        <form class="ui form" method="POST" action="{{ route('players-update') }}">
                             {{ csrf_field() }}
 
                             <div class="three fields">
                                 <div class="field">
                                     <label>ชื่อ </label>
-                                    <input type="text" name="firstname" id="firstname"  value="{{ old('firstname') }}" />
+                                    <input type="hidden" name="player_id" id="player_id" value="{{$player[0]->player_id}}" />
+                                    <input type="text" name="firstname" id="firstname"  value="{{$player[0]->firstname}}" />
                                 </div>
                                 <div class="field">
                                     <label>นามสกุล</label>
-                                    <input type="text" name="lastname" id="lastname"  value="{{ old('lastname') }}" />
+                                    <input type="text" name="lastname" id="lastname"  value="{{$player[0]->lastname}}" />
                                 </div>
                                 <div class="field">
                                     <label>รหัสนักเรียน/รหัสนักศึกษา</label>
-                                    <input type="text" name="studentid" id="studentid"  value="{{ old('studentid') }}" />
+                                    <input type="text" name="studentid" id="studentid"  value="{{$player[0]->studentid}}" />
                                 </div>
                             </div>
 
@@ -154,14 +158,14 @@
                                 <div class="two fields">
                                     <div class="field">
                                         <label>Player Name ในเกม ROV </label>
-                                        <input type="text" name="player_name" id="player_name" placeholder="ชื่อตัวละครในเกมการแข่งขัน และรับรางวัล" value="{{ old('player_name') }}" />
+                                        <input type="text" name="player_name" id="player_name" placeholder="ชื่อตัวละครในเกมการแข่งขัน และรับรางวัล" value="{{$player[0]->player_name}}" />
                                     </div>
                                     <div class="field">
                                         <label>ID ในเกม ROV </label>
                                         <div class="ui left icon input">
-                                            <input type="text" name="gameid" id="gameid"  value="{{ old('gameid') }}" onchange="checkIdExits()" /><i class="users icon"></i>
+                                            <input type="text" name="gameid" id="gameid"  value="{{$player[0]->rov_id}}" onchange="checkIdExits()" /><i class="users icon"></i>
                                         </div>
-                                        <input type="hidden" name="hidGameId" id="hidGameId" value="" />
+                                        <input type="hidden" name="hidGameId" id="hidGameId" value="{{$player[0]->rov_id}}" />
                                         <div class="ui pointing red basic label" id="idWarningDiv" style="display: none">
                                             id นี้ถูกใช้ในการแข่งขันแล้ว
                                         </div>
@@ -177,18 +181,18 @@
                                     <label>คณะ / ระดับชั้น</label>
                                     <select id="faculty" name="faculty">
                                         @foreach($faculty as $value)
-                                            <option value="{{$value}}">{{$value}}</option>
+                                            <option value="{{$value}}" <?php if($player[0]->faculty===$value){echo "selected";} ?>>{{$value}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="field">
                                     <label>เบอร์โทรศัพท์มือถือ ที่ติดต่อได้</label>
-                                    <input type="text" name="mobilephone" id="mobilephone" placeholder="08x..." value="{{ old('mobilephone') }}" />
+                                    <input type="text" name="mobilephone" id="mobilephone" placeholder="08x..." value="{{$player[0]->mobilephone}}" />
                                 </div>
                             </div>
 
                             <div class="fields" id="otherFaculty" style="display: none">
-                                    <input type="text" name="note" id="note" placeholder="อื่นๆ โปรดระบุ : ใส่ชื่อ คณะ / ระดับชั้น ที่สังกัด" value="{{ old('note') }}" />
+                                    <input type="text" name="note" id="note" placeholder="อื่นๆ โปรดระบุ : ใส่ชื่อ คณะ / ระดับชั้น ที่สังกัด" value="{{$player[0]->note}}" />
 
                             </div>
 

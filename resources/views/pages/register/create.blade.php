@@ -3,6 +3,7 @@
     :: ลงทะเบียนทีม ::
 @stop
 @section('css_script')
+    <meta name="csrf_token" content="{{ csrf_token() }}" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -60,7 +61,7 @@
                             <i class="ion-information-circled" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">กรอกข้อมูลสมาชิกในทีม</span></div>
-                                <div class="description">ยืนยันข้อมูล และ Activate account ผ่าน email</div>
+                                <div class="description">ใส่รายชื่อผู้ในเล่นทีม</div>
                             </div>
                         </div>
 
@@ -128,11 +129,21 @@
                                 <div class="field">
                                     <label>ประเภททีม</label>
                                     <select name="team_type" id="team_type">
-                                        <option value="university">อุดมศึกษา / มหาวิทยาลัย</option>
-                                        <option value="school">โรงเรียน / อนุปริญญา</option>
+                                        <option value="undergraduate">อุดมศึกษา / มหาวิทยาลัย</option>
+                                        <option value="high_school">โรงเรียน / อนุปริญญา</option>
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="field">
+                                <label>สถาบันการศึกษา</label>
+                                <select name="institution" id="institution">
+                                    @foreach($institutionList as $institution)
+                                        <option value="{{$institution}}">{{$institution}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             <div class="two fields">
                                 <div class="field">
                                     <label>รหัสผ่าน</label>
@@ -249,6 +260,32 @@
 
                     inline: true
                 });
+
+            $("select#team_type").change(function(){
+
+                $.ajax
+                ({
+                    type: "POST",
+                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')},
+                    url: "{{ route('register-team-option') }}",
+                    dataType: 'json',
+                    contentType : 'application/json; charset=utf-8',
+                    data: JSON.stringify({ "institution_type" :$("#team_type option:selected").val(), "_token" :"{{ csrf_token() }}" }),
+                    success: function (data) {
+
+                        console.log(data);
+                        $("#institution").empty();
+
+
+                        var options = '';
+                        for (var i = 0; i < data.length; i++) {
+                            options += '<option value="' + data[i].optionValue + '">' + data[i].optionDisplay + '</option>';
+                        }
+                        $("#institution").html(options);
+                    }
+                })
+
+            })
         });
     </script>
 
