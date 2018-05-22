@@ -95,3 +95,8 @@ Route::post('register/completed', 'PlayerController@showTeamRegisterCompleted')-
 })->name('register-create');*/
 
 //Route::post('create-account', 'Auth\RegisterController@register');
+
+Route::get('/register/continue', 'UserController@index')->name('team-video-form')->middleware(['role:admin|subscriber']);
+Route::post('/register/continue', 'UserController@updateVideo')->name('team-video-post-update')->middleware(['role:admin|subscriber']);
+
+Route::get('/myteam', 'UserController@showInfoTeam')->name('team-info-get')->middleware(['role:admin|subscriber']);
