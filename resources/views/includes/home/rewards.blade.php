@@ -7,9 +7,9 @@
                         <i class="ion-android-hangout"></i>
                     </div>
                     <div class="content">
-                        <h4 class="bottom-line"><span class="markFont">Like 'nd Share เราจัดให้ </span></h4>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;เพียงคุณกด Like Official Page กดแชร์ Post นี้แบบสาธารณะ เพื่อชวนเพื่อนๆที่กำลังเรียนอยู่
-                            มาร่วมก๊วนตั้งแก๊ง  เพื่อเฟ้นหาสุดยอดทีม ที่สามารถผ่านเข้ารอบสุดท้าย ที่จะทำให้หัวใจ <i class="ion-ios-pulse-strong"></i> เต้นรัวๆ กับเหล่าบรรดา Cosplay สาว แสนสวย และ Caster สาวน่ารัก <i class="ion-ios-color-wand"></i></p>
+                        <h4 class="bottom-line"><span class="markFont">Like And Share เราจัดให้ </span></h4>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;เพียงคุณกด Like Official Page กดแชร์ Post กิจกรรมเป็นแบบสาธารณะ เพื่อชวนเพื่อนๆที่กำลังเรียนอยู่
+                            มาร่วมก๊วนตั้งแก๊ง  เพื่อเฟ้นหาสุดยอดทีม ที่สามารถผ่านเข้ารอบ 4 ทีมสุดท้าย ที่จะทำให้หัวใจ <i class="ion-ios-pulse-strong"></i> เต้นรัวๆ กับเหล่าบรรดา Cosplay สาว แสนสวย และ Caster สาวน่ารัก <i class="ion-ios-color-wand"></i></p>
                     </div>
                 </div>
                 <div class="feature-wiget">
@@ -46,8 +46,6 @@
                 </div>
             </div>
             <div class="col-md-6">
-
-
                 <div class="ui one column grid">
                     <div class="column">
                         <div class="ui raised segment">
