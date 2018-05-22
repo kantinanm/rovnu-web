@@ -28,11 +28,20 @@
                 </div>
                 <div class="feature-wiget">
                     <div class="icon-wraper">
+                        <i class="ion-ribbon-a"></i>
+                    </div>
+                    <div class="content">
+                        <h4 class="bottom-line"><span class="markFont">ของรางวัลสำหรับผู้เข้าร่วมงาน</span></h4>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;เพียงเข้ามาร่วมชมการแข่งขันสดๆ รอบ 4 ทีมสุดท้ายในวันงาน ก็มีสิทธิ์ได้รางวัลจาก Garena Thailand เช่นกัน โดยเราจะสุ่มผู้โชคดีได้รับ skin ในเกม จำนวน 10 รางวัล และเสื้อยืด RoV สุดเท่ห์อีก 5 รางวัล</p>
+                    </div>
+                </div>
+                <div class="feature-wiget">
+                    <div class="icon-wraper">
                         <i class="ion-videocamera"></i>
                     </div>
                     <div class="content">
                         <h4 class="bottom-line"><span class="markFont">ทีมนี้พี่รัก ทีมนั้นน้องเชียร์</span></h4>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;ก๊วนไหน แก็คไหน ไม่ผ่านรอบคัดเลือก  ก็มีสิทธิ์ได้รางวัลจาก Garena Thailand เช่นกัน เพียงเข้ามาร่วมชมการแข่งขันสดๆ รอบ 4 ทีมสุดท้ายในวันงาน เราจะสุ่มผู้โชคดีได้รับ skin ในเกม จำนวน 10 รางวัล และเสื้อ RoV อีก 5 รางวัล</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;ก๊วนไหน แก็คไหน ไม่ผ่านรอบคัดเลือก ก็มีสิทธิ์ได้รางวัล Popular Vote จากคลิป video แนะนำตัวที่แนบมาตอนสมัครเข้าร่วมแข่งขันด้วยเช่นกัน </p>
                     </div>
                 </div>
             </div>
