@@ -14,6 +14,21 @@
                 </div>
                 <div class="feature-wiget">
                     <div class="icon-wraper">
+                        <i class="ion-android-share-alt"></i>
+                    </div>
+                    <div class="content">
+                        <h4 class="bottom-line"><span class="markFont">ร่วมสนุกกับกิจกรรมแจกของรางวัล</span></h4>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;เพียงคุณกด Like Official Page และกดแชร์ Post กิจกรรมเป็นแบบสาธารณะ ก็มีสิทธิ์ลุ้นรับของรางวัลจากเรามากมาย ยกตัวอย่างเช่น กิจกรรมแจกของรางวัลครั้งที่ 1 ที่ได้รับการตอบรับอย่างมาก ของรางวัลมีดังนี้</p>
+                        <ul>
+                            <li><p>รางวัลที่ 1 เม้าส์เกมแบบความเร็วสูง ยี่ห้อ logitech G402</p></li>
+                            <li><p>รางวัลที่ 2 รูป PunBNK48 จาก KFC Senbatsu photoset</p></li>
+                            <li><p>รางวัลที่ 3 รูป MobileBNK48 จาก Road show photoset</p></li>
+                        </ul>
+                        <p>สำหรับใครที่พลาดโอกาสในการร่วมสนุกกับกิจกรรมแจกของรางวัลครั้งที่ 1 ของเราไปแล้ว ไม่ต้องเสียใจไป เพราะเรายังมีกิจกรรมดีๆ แบบนี้อีกเพียบ อย่ารอช้าเข้าไปกด Like + Follow Official Page ของเรากันเล้ยย</p>
+                    </div>
+                </div>
+                <div class="feature-wiget">
+                    <div class="icon-wraper">
                         <i class="ion-trophy"></i>
                     </div>
                     <div class="content">
