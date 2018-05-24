@@ -153,11 +153,11 @@
                             <div class="" id="loadingDiv">
                                 <div class="two fields">
                                     <div class="field">
-                                        <label>Player Name ในเกม ROV </label>
+                                        <label>ชื่อตัวละครในเกม ROV </label>
                                         <input type="text" name="player_name" id="player_name" placeholder="ชื่อตัวละครในเกมการแข่งขัน และรับรางวัล" value="{{ old('player_name') }}" />
                                     </div>
                                     <div class="field">
-                                        <label>ID ในเกม ROV </label>
+                                        <label>Garena-ID </label>
                                         <div class="ui left icon input">
                                             <input type="text" name="gameid" id="gameid"  value="{{ old('gameid') }}" onchange="checkIdExits()" /><i class="users icon"></i>
                                         </div>
@@ -271,7 +271,7 @@
                         player_name: {
                             identifier: "player_name",
                             rules: [
-                                {type: 'empty', prompt: 'ระบุชื่อตัวละครในเกมการแข่งขัน'}
+                                {type: 'empty', prompt: 'ชื่อตัวละครในเกม โปรดเขียนและสะกดให้ถูกตามจริงที่จะใช้ในการแข่งขัน'}
                             ]
                         },
 

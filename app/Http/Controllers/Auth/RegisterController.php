@@ -103,6 +103,7 @@ class RegisterController extends Controller
             'slug'=> $data['teamslug'],
             'team_type'=> $data['team_type'],
             'institution'=> $data['institution'],
+            'facebook_id'=> $data['facebook_id'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),

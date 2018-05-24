@@ -232,4 +232,6 @@ return [
     // use for rule of team , each team has 7 player in tournament
     'player_limit' => env('PLAYER_LIMIT', '7'),
     'notification_date'=> env('NOTIFICATION_DATE', '1 กรกฏาคม 2561'),
+    'over_notification_date'=> env('OVER_NOTIFICATION_DATE', false),
+    'how_to_make_video_url'=> env('HOW_TO_MAKE_VIDEO_URL', 'http://www.ecpe.nu.ac.th'),
 ];

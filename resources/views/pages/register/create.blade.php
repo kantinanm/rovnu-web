@@ -121,6 +121,10 @@
                                     <input type="text" name="mobilephone" id="mobilephone"  value="{{ old('mobilephone') }}" />
                                 </div>
                             </div>
+                            <div class="field">
+                                <label>Facebook ID หรือ Facebook URL</label>
+                                <input type="text" name="facebook_id" id="facebook_id"  value="{{ old('facebook_id') }}" placeholder="** ใช้สำหรับการดึงเข้ากลุ่มในการนัดเวลาการแข่งขัน" />
+                            </div>
                             <div class="two fields">
                                 <div class="field">
                                     <label>E-Mail</label>
@@ -228,6 +232,13 @@
                                     prompt: 'หมายเลขโทรศัพท์ 10 หลัก ตัวอย่าง 085xxyyyyy'
                                 }
                             ]},
+                        facebook_id: {
+                            identifier: "facebook_id",
+                            rules: [
+                                {type: 'empty', prompt: '**โปรดระบุ facebook id หรือ facebook url ใช้สำหรับการดึงเข้ากลุ่มในการนัดเวลาการแข่งขัน'}
+                            ]
+                        },
+
                         email: {
                             identifier: 'email',
                             rules: [

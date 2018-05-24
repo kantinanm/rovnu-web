@@ -63,8 +63,14 @@ class LoginController extends Controller
             return redirect()->intended('/admin/dashboard');
         }
 
+        // redirect to submit video form
         if(($user->usr_lvl === 'subscriber')&($user->register_completed==1)) {
-            return redirect()->intended('/myteam/');
+            return redirect()->intended('/register/continue');
+        }
+
+        // waiting result after  submit video link
+        if(($user->usr_lvl === 'subscriber')&($user->register_completed==2)) {
+            return redirect()->intended('/myteam');
         }
 
         return redirect()->intended('/register/players');

@@ -24,6 +24,7 @@
                                 <a href="#" class="list-group-item"><i class="ion-person-add" style="font-size: 30px;"></i>&nbsp;<span class="markFont">ลงทะเบียนเข้าร่วมงาน</span></a>
                                 <a href="#" class="list-group-item"><i class="ion-pin" style="font-size: 30px;"></i>&nbsp;<span class="markFont">ลงทะเบียนการเป็นผู้สนับสนุน</span></a>
                                 <a href="#" class="list-group-item"><i class="ion-chatbubbles" style="font-size: 30px;"></i>&nbsp;<span class="markFont">คำถามที่ถามบ่อย</span></a>
+                                <a href="{{ route('login') }}" class="list-group-item"><i class="chess knight icon" style="font-size: 30px;"></i><span class="markFont">จัดการข้อมูลทีม</span></a>
                             </div>
                         </div>
                     </div>
