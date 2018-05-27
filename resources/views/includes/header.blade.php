@@ -20,9 +20,11 @@
                     <li class="active"><a href="{{ route('home') }}"><span class="menu">หน้าแรก</span> <span class="sr-only">(current)</span></a></li>
                     <li><a href="{{ route('home') }}#rules"><span class="menu">กติกาการแข่งขัน</span></a></li>
                     <li><a href="{{ route('home') }}#rewards"><span class="menu">ของรางวัล</span></a></li>
-                    <li><a href="{{ route('home') }}#schedule"><span class="menu">ตารางการแข่งขัน</span></a></li>
-                    <li><a href="{{ route('home') }}#sponsor"><span class="menu">ผู้ให้การสนับสนุน</span></a></li>
-                    <li><a href="{{ route('register-privacy') }}" class="btn btn-orange border-none btn-rounded-corner btn-navbar">สมัครเข้าร่วมแข่งขัน<span class="icon-on-button"><i class="ion-ios-game-controller-b-outline"></i></span></a></li>
+                    <li><a href="{{ url('/download/tentative_program.pdf') }}" target="_blank"><span class="menu">กิจกรรมภายในงาน</span></a></li>
+                    <li><a href="{{ route('place') }}"><span class="menu">สถานที่จัดงาน</span></a></li>
+                    @if( Auth::guest() )
+                    <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-orange border-none btn-rounded-corner btn-navbar">สมัครเข้าร่วมแข่งขัน<span class="icon-on-button"><i class="ion-ios-game-controller-b-outline"></i></span></a></li>
+                    @endif
                 </ul>
             </div><!-- /.navbar-collapse -->
             <hr class="navbar-divider">

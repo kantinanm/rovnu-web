@@ -184,7 +184,7 @@
                                 </button>
                             @endif
                             @if(count($players)==$num_of_player)
-                            <div class="ui left floated small primary labeled icon button" data-toggle="modal" data-target="#exampleModalCenter">
+                            <div class="ui left floated small primary labeled icon button" data-toggle="modal" data-target="#exampleModalConfirmTeam">
                                 <i class="handshake icon"></i> ยืนยันข้อมูลทีม
                             </div>
                             @else
@@ -212,11 +212,11 @@
         </form>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="exampleModalConfirmTeam" tabindex="-1" role="dialog" aria-labelledby="exampleModalConfirmTeamTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">คุณยืนยันที่จะส่งทีมเข้าแข่งขันตามข้อมูลข้างต้นนี้ </h5>
+                        <h5 class="modal-title" id="exampleModalLongConfirmTeamTitle">คุณยืนยันที่จะส่งทีมเข้าแข่งขันตามข้อมูลข้างต้นนี้ </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -243,6 +243,7 @@
         <!-- Modal -->
 
     </section>
+    @include('includes.home.modal')
 @endsection
 @section('js_plugin')
     <div id="scroll-top-div" class="scroll-top-div">

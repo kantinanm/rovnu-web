@@ -11,11 +11,14 @@
 |
 */
 
+/*
 Route::get('/', function () {
     //return view('welcome');
     //return view('layouts.app');
     return view('pages.home');
-})->name('home');;
+})->name('home');*/
+
+Route::get('/','HomeRovController@index')->name('home');
 
 Auth::routes();
 
@@ -58,11 +61,29 @@ Route::get('home/sponsor', function () {
 })->name('sponsor');
 
 
+Route::get('home/place', function () {
+    //
+    return 'place';
+})->name('place');
+
+
 Route::get('register/privacy', function () {
 
     return view('pages.register.privacy');
 
 })->name('register-privacy');
+
+Route::get('register/paticipant', function () {
+
+    return 'paticipant';
+
+})->name('register-paticipant');
+
+Route::get('register/sponsor', function () {
+
+    return 'sponsor';
+
+})->name('register-sponsor');
 
 /*
 Route::get('register/players', function () {
@@ -100,3 +121,5 @@ Route::get('/register/continue', 'UserController@index')->name('team-video-form'
 Route::post('/register/continue', 'UserController@updateVideo')->name('team-video-post-update')->middleware(['role:admin|subscriber']);
 
 Route::get('/myteam', 'UserController@showInfoTeam')->name('team-info-get')->middleware(['role:admin|subscriber']);
+
+Route::get( '/download/{filename}', 'DownloadController@getDownloadPDF');

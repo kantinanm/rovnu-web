@@ -31,8 +31,9 @@
                     <h3 class="cta-heading text-white">Beyond The Hero <span class="markFont">: คุณพร้อมหรือยังที่จะเป็นฮีโร่ผู้กล้า </span></h3>
                     <p class="text-white">ฝ่าสมรภูมิรบไปด้วยกัน เปิดรับลงทะเบียนทีมแล้ววันนี้</p>
                     <div class="cta-btn-group">
-                        <a class="btn btn-orange border-none btn-rounded-corner" href="{{ route('register-privacy') }}">พร้อม Battle <span class="icon-on-button"><i class="ion-log-in"></i></span></a>
-                        <a class="btn btn-white gradient-white border-none btn-rounded-corner" href="#">ไม่ แต่ฉันจะไปร่วมงานแน่<span class="icon-on-button"><i class="ion-person-add"></i></span></a>
+
+                        <a class="btn btn-orange border-none btn-rounded-corner" href="#" data-toggle="modal" data-target="#exampleModalCenter">พร้อม Battle <span class="icon-on-button"><i class="ion-log-in"></i></span></a>
+                        <a class="btn btn-white gradient-white border-none btn-rounded-corner" href="#" data-toggle="modal" data-target="#exampleModalPaticipicant">ไม่ แต่ฉันจะไปร่วมงานแน่<span class="icon-on-button"><i class="ion-person-add"></i></span></a>
                     </div>
                     <p class="text-white">* สำรองที่นั่งในงาน เพื่อลุ้นของรางวัลและร่วมใกล้ชิด Cosplay สาวสวยภายในงาน (จำนวนจำกัด)</p>
 
@@ -62,9 +63,7 @@
             </div> <!--end row3-->
         </div><!--container-->
     </section>
-    @include('includes.home.testimonial')
-    @include('includes.home.customer-support')
-    @include('includes.home.sponsor')
+    @include('includes.home.modal')
 @endsection
 @section('js_plugin')
     <div id="scroll-top-div" class="scroll-top-div">

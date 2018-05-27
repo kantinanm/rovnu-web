@@ -220,6 +220,7 @@
         </div>
 
     </section>
+    @include('includes.home.modal')
 @endsection
 @section('js_plugin')
     <div id="scroll-top-div" class="scroll-top-div">

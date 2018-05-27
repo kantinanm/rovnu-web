@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Config;
+
 
 class LoginController extends Controller
 {
@@ -79,7 +81,13 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('pages.login');
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
+        return view('pages.login')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 
 

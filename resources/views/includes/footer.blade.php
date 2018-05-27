@@ -20,11 +20,23 @@
                         <div class="footer-list-wiget">
                             <h4>ข้อมูลเพิ่มเติม</h4>
                             <div class="list-group">
-                                <a href="#" class="list-group-item"><i class="ion-ios-game-controller-b-outline" style="font-size: 30px;"></i>&nbsp;<span class="markFont">การรับสมัคร</span></a>
-                                <a href="#" class="list-group-item"><i class="ion-person-add" style="font-size: 30px;"></i>&nbsp;<span class="markFont">ลงทะเบียนเข้าร่วมงาน</span></a>
-                                <a href="#" class="list-group-item"><i class="ion-pin" style="font-size: 30px;"></i>&nbsp;<span class="markFont">ลงทะเบียนการเป็นผู้สนับสนุน</span></a>
-                                <a href="#" class="list-group-item"><i class="ion-chatbubbles" style="font-size: 30px;"></i>&nbsp;<span class="markFont">คำถามที่ถามบ่อย</span></a>
-                                <a href="{{ route('login') }}" class="list-group-item"><i class="chess knight icon" style="font-size: 30px;"></i><span class="markFont">จัดการข้อมูลทีม</span></a>
+                                <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="list-group-item"><i class="ion-ios-game-controller-b-outline" style="font-size: 30px;"></i>&nbsp;<span class="markFont">การรับสมัคร</span></a>
+                                <a href="#" data-toggle="modal" data-target="#exampleModalPaticipicant" class="list-group-item"><i class="ion-person-add" style="font-size: 30px;"></i>&nbsp;<span class="markFont">ลงทะเบียนเข้าร่วมงาน</span></a>
+                                <a href="#" data-toggle="modal" data-target="#exampleModalSponser" class="list-group-item"><i class="ion-pin" style="font-size: 30px;"></i>&nbsp;<span class="markFont">ลงทะเบียนการเป็นผู้สนับสนุน</span></a>
+                                <a href="{{ route('rules') }}"  class="list-group-item"><i class="icon gavel" style="font-size: 30px;"></i>&nbsp;<span class="markFont">กฏและกติกาการแข่งขัน</span></a>
+                                @if( Auth::guest() )
+                                    <a href="{{ route('login') }}" class="list-group-item"><i class="chess knight icon" style="font-size: 30px;"></i><span class="markFont">จัดการข้อมูลทีม</span></a>
+                                @else
+                                    @if(Auth::user()->register_completed==0)
+                                        <a href="{{ route('register-players') }}" class="list-group-item"><i class="chess knight icon" style="font-size: 30px;"></i><span class="markFont">จัดการข้อมูลทีม</span></a>
+                                    @elseif(Auth::user()->register_completed==1)
+                                        <a href="{{ route('team-video-form') }}" class="list-group-item"><i class="chess knight icon" style="font-size: 30px;"></i><span class="markFont">จัดการข้อมูลทีม</span></a>
+                                    @elseif(Auth::user()->register_completed==2)
+                                        <a href="{{ route('team-info-get') }}" class="list-group-item"><i class="chess knight icon" style="font-size: 30px;"></i><span class="markFont">จัดการข้อมูลทีม</span></a>
+                                    @endif
+
+
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -32,10 +44,9 @@
                         <div class="footer-list-wiget">
                             <h4>เกี่ยวกับเรา</h4>
                             <div class="list-group">
-                                <a href="#" class="list-group-item"><i class="ion-videocamera" style="font-size: 30px;"></i>&nbsp;<span class="markFont">สถานที่จัดงาน</span></a>
-                                <a href="#" class="list-group-item"><i class="ion-model-s" style="font-size: 30px;"></i>&nbsp;<span class="markFont">แผนที่และการเดินทาง</span></a>
-                                <a href="#" class="list-group-item"><i class="ion-ios-list-outline" style="font-size: 30px;"></i>&nbsp;<span class="markFont">ข้อมูลสำหรับการติดต่อ</span></a>
-                                <a href="#" class="list-group-item"><i class="ion-social-facebook" style="font-size: 30px;"></i>&nbsp;<span class="markFont">Facebook Page</span></a>
+                                <a href="{{ route('place') }}" class="list-group-item"><i class="ion-videocamera" style="font-size: 30px;"></i>&nbsp;<span class="markFont">สถานที่จัดงาน</span></a>
+
+                                <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank" class="list-group-item"><i class="ion-social-facebook" style="font-size: 30px;"></i>&nbsp;<span class="markFont">Facebook Page</span></a>
                             </div>
                         </div>
                     </div>

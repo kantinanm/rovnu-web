@@ -147,7 +147,7 @@
             </div>
 
         </div>
-
+        @include('includes.home.modal')
 
     </section>
 @endsection

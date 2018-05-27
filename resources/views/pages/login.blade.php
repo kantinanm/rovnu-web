@@ -150,7 +150,7 @@
         </div>
 
 
-
+    @include('includes.home.modal')
     </section>
 @endsection
 @section('js_plugin')
