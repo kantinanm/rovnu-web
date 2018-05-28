@@ -129,7 +129,7 @@ class RegisterController extends Controller
         $user->attachRole($role_subscriber);
 
         $thisUser=User::findOrFail($user->id);
-        $this->sendEmail($thisUser);
+        $this->sendEmail($thisUser,$data['password']);
 
 
     }
@@ -147,13 +147,14 @@ class RegisterController extends Controller
             ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 
-    public function sendEmail($thisUser)
+    public function sendEmail($thisUser,$password)
     {
         /*
         Mail::to($thisUser->email)
             ->send(new verifyEmail($thisUser));
         */
-        dispatch((new SendEmailJob($thisUser))->delay(Carbon::now()->addSeconds(3)));
+        //dd($password);
+        dispatch((new SendEmailJob($thisUser,$password))->delay(Carbon::now()->addSeconds(3)));
     }
 
     public function sendEmailDone($email,$verify_token)

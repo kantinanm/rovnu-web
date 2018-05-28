@@ -18,10 +18,12 @@ class verifyEmail extends Mailable
      * @return void
      */
     public $user;
-    public function __construct(User $user)
+    public $pass;
+    public function __construct(User $user,$pass)
     {
         //
         $this->user=$user;
+        $this->pass=$pass;
     }
 
     /**
@@ -32,6 +34,15 @@ class verifyEmail extends Mailable
     public function build()
     {
         //return $this->view('view.name');
-        return $this->view('email.sendView');
+        //dd($this->user);
+        //dd($this->pass);
+        //return $this->view('email.sendView');
+       /*return $this->view('email.sendView')->with(compact('user',$this->user))
+            ->with(compact('password',$this->pass));*/
+
+        return $this->subject("Verify Your Email โปรดทำการยืนยัน email ที่สมัคร จากกิจกรรม NU e-Sport ROV Tournament ")
+            ->from('ecpe-software@nu.ac.th')
+            ->view('email.sendView')->with(compact('user',$this->user)) ->with(compact('password',$this->pass));
+
     }
 }

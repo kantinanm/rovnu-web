@@ -11,6 +11,7 @@ use App\Mail\verifyEmail;
 use Mail;
 use Illuminate\Mail\Mailer;
 use App\User;
+use Config;
 
 class SendEmailJob implements ShouldQueue
 {
@@ -22,11 +23,13 @@ class SendEmailJob implements ShouldQueue
      * @return void
      */
     public $user;
+    public $pass;
 
-    public function __construct(User $user)
+    public function __construct(User $user ,$pass)
     {
         //
         $this->user=$user;
+        $this->pass=$pass;
     }
 
     /**
@@ -36,8 +39,12 @@ class SendEmailJob implements ShouldQueue
      */
     public function handle()
     {
+
+        $admin_email =Config::get('app.admin_address');
+        //$manager_email =Config::get('app.manager_address');
+
         //
         Mail::to($this->user->email)
-            ->send(new verifyEmail($this->user));
+            ->send(new verifyEmail($this->user,$this->pass));
     }
 }
