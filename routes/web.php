@@ -40,15 +40,17 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
 });
 
 
-Route::get('home/rules', function () {
+/*Route::get('/rules', function () {
     //
     return 'rules';
-})->name('rules');
-
-Route::get('home/rewards', function () {
+})->name('rules');*/
+Route::get('home/rules','HomeRovController@rules')->name('rules');
+/*Route::get('home/rewards', function () {
     //
     return 'rewards';
-})->name('rewards');
+})->name('rewards');*/
+
+Route::get('home/rewards','HomeRovController@rewards')->name('rewards');
 
 Route::get('home/schedule', function () {
     //
@@ -61,17 +63,18 @@ Route::get('home/sponsor', function () {
 })->name('sponsor');
 
 
-Route::get('home/place', function () {
+/*Route::get('home/place', function () {
     //
     return 'place';
-})->name('place');
+})->name('place');*/
+Route::get('home/place','HomeRovController@place')->name('place');
 
-
-Route::get('register/privacy', function () {
+/*Route::get('register/privacy', function () {
 
     return view('pages.register.privacy');
 
-})->name('register-privacy');
+})->name('register-privacy');*/
+Route::get('register/privacy','HomeRovController@privacy')->name('register-privacy');
 
 Route::get('register/paticipant', function () {
 

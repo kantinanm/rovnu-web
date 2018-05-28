@@ -83,9 +83,17 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         $institutionList =Config::get('institution.undergraduate');
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
 
         //dd($institutionList);
-        return view('pages.register.create',compact('institutionList',$institutionList));
+        //return view('pages.register.create',compact('institutionList',$institutionList));
+        return view('pages.register.create')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister))
+            ->with(compact('institutionList',$institutionList));
     }
 
 
@@ -129,7 +137,14 @@ class RegisterController extends Controller
 
     public function verifyEmail()
     {
-        return view('email.verifyEmail');
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
+       // return view('email.verifyEmail');
+        return view('email.verifyEmail')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 
     public function sendEmail($thisUser)
@@ -164,10 +179,25 @@ class RegisterController extends Controller
             //  return redirect('dashboard')->with('status', 'Account activated. !!!');
 
         }else{
-            return redirect('/login')->with('info', "Sorry your email cannot be identified.");
+            $allowTeamRegister =Config::get('app.allow_team_register');
+            $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+            $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
+            return redirect('/login')->with('info', "Sorry your email cannot be identified.")
+                ->with(compact('allowTeamRegister',$allowTeamRegister))
+                ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+                ->with(compact('allowSponsorRegister',$allowSponsorRegister));
         }
 
-        return redirect('/login')->with('info', $info);
+        //return redirect('/login')->with('info', $info);
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
+        return redirect('/login')->with('info', $info)
+            ->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 
     public function listInstitution(Request $request)
