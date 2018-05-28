@@ -26,21 +26,23 @@ class UserController extends Controller
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
-
-
         $overNotificationDate =Config::get('over_notification_date');
+        $clip_video_url =Config::get('app.how_to_make_video_url');
+
         if($overNotificationDate){
             //return view('pages.register.myteam');
             return view('pages.register.myteam')->with(compact('allowTeamRegister',$allowTeamRegister))
                 ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
                 ->with(compact('allowSponsorRegister',$allowSponsorRegister))
-                ->with(compact('overNotificationDate',$overNotificationDate));
+                ->with(compact('overNotificationDate',$overNotificationDate))
+                ->with(compact('clip_video_url',$clip_video_url));
         }else{
             //return view('pages.register.team-video');
             return view('pages.register.team-video')->with(compact('allowTeamRegister',$allowTeamRegister))
                 ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
                 ->with(compact('allowSponsorRegister',$allowSponsorRegister))
-                ->with(compact('overNotificationDate',$overNotificationDate));
+                ->with(compact('overNotificationDate',$overNotificationDate))
+                ->with(compact('clip_video_url',$clip_video_url));
         }
 
 
@@ -60,12 +62,13 @@ class UserController extends Controller
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
-
+        $clip_video_url =Config::get('app.how_to_make_video_url');
 
         return view('pages.register.myteam')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
             ->with(compact('allowSponsorRegister',$allowSponsorRegister))
-            ->with(compact('overNotificationDate',$overNotificationDate));
+            ->with(compact('overNotificationDate',$overNotificationDate))
+            ->with(compact('clip_video_url',$clip_video_url));
 
 
         //return view('pages.register.myteam')->with(compact('overNotificationDate',$overNotificationDate));

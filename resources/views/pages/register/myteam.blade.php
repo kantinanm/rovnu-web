@@ -51,7 +51,7 @@
                             <i class="certificate icon" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">ประกาศผลการสมัคร</span></div>
-                                <div class="description">ภายใน 3 วัน ที่ส่งหลักฐาน </div>
+                                <div class="description">ภายใน 7 วัน ที่ส่งหลักฐาน </div>
                             </div>
                         </div>
                     </div>
@@ -119,10 +119,10 @@
                             </ul>
                             </p>
                             <p>เราต้องการหลักฐานสำหรับการตรวจสอบการมีตัวตนของสมาชิกทุกคนในทีมคุณ </p>
-                            <p>คุณสามารถจัดทำ Clip Video การแนะนำทีม โดยสามารถอ่านข้อกำหนดการจัดทำได้ที่ env </p>
+                            <p>คุณสามารถจัดทำ Clip Video การแนะนำทีม โดยสามารถ<a href="{{$clip_video_url}}" target="_blank">ดูตัวอย่างการจัดทำได้ที่นี่ </a></p>
                         </div>
                     </div>
-                @elseif((Auth::user()->video_link!="")&($overNotificationDate))
+                @elseif((Auth::user()->video_link=="")&($overNotificationDate))
                     <div class="ui icon red message">
                         <i class="ban icon"></i>
                         <div class="content">
@@ -135,7 +135,7 @@
                                 <li>ไม่เป็นไร โอกาสหน้ายังมี สำหรับ ROV Tournament ปีหน้า ทางเราขอขอบคุณทีมของคุณที่เข้ามาร่วมในกิจกรรมของปีนี้ </li>
                             </ul>
                             </p>
-                            <p>ฝากกด Like Page <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu </a> เพื่อติดตามข่าวสารกิจกรรมดีๆที่จะจัดขึ้นในปีหน้า  </p>
+                            <p>ฝากกด Like <i class="thumbs up icon"></i> + Follow <i class="rss icon"></i> Page <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu </a> เพื่อติดตามข่าวสารกิจกรรมดีๆที่จะจัดขึ้นในปีหน้า  </p>
                         </div>
                     </div>
                 @endif
@@ -155,7 +155,7 @@
                                     <li>ไม่เป็นไร โอกาสหน้ายังมี สำหรับ ROV Tournament ปีหน้า ทางเราขอขอบคุณทีมของคุณที่เข้ามาร่วมในกิจกรรมของปีนี้ </li>
                                 </ul>
                                 </p>
-                                <p>ฝากกด Like Page <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu </a> เพื่อติดตามข่าวสารกิจกรรมดีๆที่จะจัดขึ้นในปีหน้า  </p>
+                                <p>ฝากกด Like <i class="thumbs up icon"></i> + Follow <i class="rss icon"></i> Page <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu </a> เพื่อติดตามข่าวสารกิจกรรมดีๆที่จะจัดขึ้นในปีหน้า  </p>
                             </div>
                         </div>
                     @else
@@ -192,7 +192,7 @@
                                 <li>เราตรวจสอบแล้ว ทีมของคุณสมบัติครบถ้วนตามที่ได้ระบุไว้ในกติกาการแข่งขัน </li>
                             </ul>
                             </p>
-                            <p> ติดตามข่าวการจับฉลากแบ่งสาย ผ่านทาง facebook page <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu </a>และช่องทางเว็บไซต์ </p>
+                            <p> ติดตามข่าวการจับฉลากแบ่งสาย ผ่านทาง facebook Like <i class="thumbs up icon"></i> + Follow <i class="rss icon"></i> <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu  </a>และช่องทางเว็บไซต์ </p>
                         </div>
                     </div>
 
