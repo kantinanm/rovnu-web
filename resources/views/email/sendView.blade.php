@@ -67,5 +67,4 @@
 
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ขอบคุณที่ส่งทีมเข้ามาร่วมสนุกกัน&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-</div>
-</div>
+
