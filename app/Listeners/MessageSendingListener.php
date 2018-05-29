@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Config;
 use Mail;
 use Storage;
+use File;
 
 class MessageSendingListener
 {
@@ -34,7 +35,8 @@ class MessageSendingListener
     {
         //
         $message = 'ทีม'.$event->user->teamname . ' ได้ทำการลงทะเบียน '.Carbon::now();
-        Storage::put('registeractivity.txt', $message);
+        //Storage::put('registeractivity.txt', $message);
+        Storage::append('registeractivity.txt', $message);
         dispatch((new SendEmailJob($event->user,$event->pass))->delay(Carbon::now()->addSeconds(3)));
     }
 }
