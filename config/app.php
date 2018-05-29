@@ -240,5 +240,5 @@ return [
     'allow_paticipant_register'=> env('ALLOW_PATICIPANT_REGISTER', false),
     'allow_sponsor_register'=> env('ALLOW_SPONSOR_REGISTER', false),
     'admin_address'=> env('ADMIN_ADDRESS', 'kantinanm@nu.ac.th'),
-    'manager_address'=> env('ADMIN_ADDRESS', 'matzee933@hotmail.com'),
+    'manager_address'=> env('MANAGER_ADDRESS', 'matzee933@hotmail.com'),
 ];
