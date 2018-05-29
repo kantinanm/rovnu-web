@@ -13,6 +13,7 @@ use App\Player;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Config;
+use App\Events\TeamConfirmed;
 
 class PlayerController extends Controller
 {
@@ -162,6 +163,9 @@ class PlayerController extends Controller
         //dd($user);
         $user->register_completed = 1;
         $user->save();
+
+        event(new TeamConfirmed($user));
+
         $notification_date =Config::get('app.notification_date');
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
