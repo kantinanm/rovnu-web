@@ -44,7 +44,18 @@ class SendEmailJob implements ShouldQueue
         //$manager_email =Config::get('app.manager_address');
 
         //
-        Mail::to($this->user->email)
+        $emails = [$this->user->email,$admin_email];
+        Mail::to($emails)
             ->send(new verifyEmail($this->user,$this->pass));
+
+        //$emails = ['tester@blahdomain.com', 'anotheremail@blahdomian.com'];
+        /*Mail::send(new verifyEmail($this->user,$this->pass), function ($message) use ( $emails)
+        {
+            $message->from('no-reply@yourdomain.com', 'Joe Smoe');
+            $message->to( $emails);
+            //Add a subject
+            $message->subject("New Email From Your site");
+        });*/
+
     }
 }
