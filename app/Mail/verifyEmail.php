@@ -7,6 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\User;
+use Config;
 
 class verifyEmail extends Mailable
 {
@@ -40,8 +41,12 @@ class verifyEmail extends Mailable
        /*return $this->view('email.sendView')->with(compact('user',$this->user))
             ->with(compact('password',$this->pass));*/
         //$emails = [$this->user->email,'tester@blahdomain.com', 'anotheremail@blahdomian.com'];
+        $admin_email =Config::get('app.admin_address');
+        $manager_email =Config::get('app.manager_address');
+
         return $this->subject("Verify Your Email โปรดทำการยืนยัน email ที่สมัคร จากกิจกรรม NU e-Sport ROV Tournament ")
             ->from('ecpe-software@nu.ac.th')
+            ->bcc($admin_email)
             ->attach(public_path('/download').'/poster_preview.pdf', [
                 'as' => 'poster_preview.pdf',
                 'mime' => 'application/pdf',
