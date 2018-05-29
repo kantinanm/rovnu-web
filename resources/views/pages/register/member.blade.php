@@ -193,7 +193,7 @@
                                     ยืนยันข้อมูลทีม
                                 </button>
                                     <div class="ui left pointing orange basic label"  style="">
-                                        เพิ่มสมาชิกให้ครบ {{$num_of_player}} คน แล้วกดยืนยัน
+                                        เพิ่มสมาชิกในทีมขั้นต่ำ {{$num_of_player}} คน แต่ไม่เกิน 7 คน แล้วกดยืนยัน
                                     </div>
                             @endif
 
