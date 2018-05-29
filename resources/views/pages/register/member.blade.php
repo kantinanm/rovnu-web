@@ -130,7 +130,7 @@
                         <th>ชื่อ - นามสกุล</th>
                         <th>รหัสนักเรียน/นักศึกษา</th>
                         <th>คณะ / ระดับชั้น</th>
-                        <th>RoV ID </th>
+                        <th>Garena ID </th>
                         <th>Player Name</th>
                         <th>แก้ไข</th>
                     </tr>
@@ -172,7 +172,7 @@
 
                         <th colspan="6">
 
-                            @if(count($players)<$num_of_player)
+                            @if(count($players)>=$num_of_player)
                             <a href="{{ route('register-players-add') }}"> <button class="ui basic button right floated primary">
                                 <i class="icon user"></i>
                                 เพิ่มรายชื่อ
@@ -183,7 +183,7 @@
                                     เพิ่มรายชื่อ
                                 </button>
                             @endif
-                            @if(count($players)==$num_of_player)
+                            @if(count($players)>=$num_of_player)
                             <div class="ui left floated small primary labeled icon button" data-toggle="modal" data-target="#exampleModalConfirmTeam">
                                 <i class="handshake icon"></i> ยืนยันข้อมูลทีม
                             </div>
