@@ -39,9 +39,13 @@ class verifyEmail extends Mailable
         //return $this->view('email.sendView');
        /*return $this->view('email.sendView')->with(compact('user',$this->user))
             ->with(compact('password',$this->pass));*/
-
+        //$emails = [$this->user->email,'tester@blahdomain.com', 'anotheremail@blahdomian.com'];
         return $this->subject("Verify Your Email โปรดทำการยืนยัน email ที่สมัคร จากกิจกรรม NU e-Sport ROV Tournament ")
             ->from('ecpe-software@nu.ac.th')
+            ->attach(public_path('/download').'/poster_preview.pdf', [
+                'as' => 'poster_preview.pdf',
+                'mime' => 'application/pdf',
+            ])
             ->view('email.sendView')->with(compact('user',$this->user)) ->with(compact('password',$this->pass));
 
     }
