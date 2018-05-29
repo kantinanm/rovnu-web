@@ -59,6 +59,7 @@
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;ก๊วนไหน แก็คไหน ไม่ผ่านรอบคัดเลือก ก็มีสิทธิ์ได้รางวัล Popular Vote จากคลิป video แนะนำตัวที่แนบมาตอนสมัครเข้าร่วมแข่งขันด้วยเช่นกัน </p>
                     </div>
                 </div>
+                    <p class="services-content margin-bottom-25"><a href="{{ route('rewards') }}" class="btn btn-orange border-none btn-rounded-corner btn-navbar">ดูของรางวัลทั้งหมด<span class="icon-on-button"><i class="ion-android-bookmark"></i></span></a></p>
             </div>
             <div class="col-md-6">
                 <div class="ui one column grid">
@@ -73,7 +74,6 @@
                 <p>
                     <img class="ui centered fluid image" src="{{ URL::asset('images/t01.jpg') }}">
                 </p>
-
                 <p>
                     <img class="ui centered fluid image" src="{{ URL::asset('images/publish.jpg') }}">
                     <!--<div class="photo sweat16_blur" data-stellar-background-ratio="0.5"></div> -->

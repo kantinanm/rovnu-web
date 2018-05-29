@@ -106,3 +106,9 @@ Route::get('/rules', function () {
     //return view('layouts.app');
     return view('pages.rules');
 })->name('rules');;
+
+Route::get('/rewards', function () {
+    //return view('welcome');
+    //return view('layouts.app');
+    return view('pages.reward');
+})->name('rewards');;
