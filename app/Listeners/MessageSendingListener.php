@@ -6,6 +6,12 @@ use App\Events\Registered;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
+use App\Jobs\SendEmailJob;
+use Carbon\Carbon;
+use Config;
+use Mail;
+use Storage;
+
 class MessageSendingListener
 {
     /**
@@ -27,5 +33,8 @@ class MessageSendingListener
     public function handle(Registered $event)
     {
         //
+        $message = 'ทีม'.$event->user->teamname . ' ได้ทำการลงทะเบียน '.Carbon::now();
+        Storage::put('registeractivity.txt', $message);
+        dispatch((new SendEmailJob($event->user,$event->pass))->delay(Carbon::now()->addSeconds(3)));
     }
 }

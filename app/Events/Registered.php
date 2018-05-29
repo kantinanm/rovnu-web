@@ -9,6 +9,7 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use App\User;
 
 class Registered
 {
@@ -19,9 +20,14 @@ class Registered
      *
      * @return void
      */
-    public function __construct()
+    public $user;
+    public $pass;
+
+    public function __construct(User $user,$pass)
     {
         //
+        $this->user=$user;
+        $this->pass=$pass;
     }
 
     /**

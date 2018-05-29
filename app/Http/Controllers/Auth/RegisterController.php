@@ -18,6 +18,7 @@ use App\Permission;
 use App\Jobs\SendEmailJob;
 use Carbon\Carbon;
 use Config;
+use App\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -154,7 +155,8 @@ class RegisterController extends Controller
             ->send(new verifyEmail($thisUser));
         */
         //dd($password);
-        dispatch((new SendEmailJob($thisUser,$password))->delay(Carbon::now()->addSeconds(3)));
+        event(new Registered($thisUser,$password));
+        //dispatch((new SendEmailJob($thisUser,$password))->delay(Carbon::now()->addSeconds(3)));
     }
 
     public function sendEmailDone($email,$verify_token)
