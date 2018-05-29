@@ -65,13 +65,18 @@
                     <div class="column">
                         <div class="ui raised segment">
                             <a class="ui red ribbon label">ของรางวัล</a>
-                            <span>พบกับกิจกรรมและของรางวัลมากมาย เร็วนี้ที่นี่ </span>
+                            <span>พบกับกิจกรรมและของรางวัลมากมาย</span>
                         </div>
                     </div>
                 </div>
                 <br/>
                 <p>
-                <div class="photo sweat16_blur" data-stellar-background-ratio="0.5"></div>
+                    <img class="ui centered fluid image" src="{{ URL::asset('images/t01.jpg') }}">
+                </p>
+
+                <p>
+                    <img class="ui centered fluid image" src="{{ URL::asset('images/publish.jpg') }}">
+                    <!--<div class="photo sweat16_blur" data-stellar-background-ratio="0.5"></div> -->
                 </p>
             </div>
         </div>

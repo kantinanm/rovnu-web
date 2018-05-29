@@ -100,3 +100,9 @@ Route::get('/register/continue', 'UserController@index')->name('team-video-form'
 Route::post('/register/continue', 'UserController@updateVideo')->name('team-video-post-update')->middleware(['role:admin|subscriber']);
 
 Route::get('/myteam', 'UserController@showInfoTeam')->name('team-info-get')->middleware(['role:admin|subscriber']);
+
+Route::get('/rules', function () {
+    //return view('welcome');
+    //return view('layouts.app');
+    return view('pages.rules');
+})->name('rules');;
