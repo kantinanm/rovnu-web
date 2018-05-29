@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
+
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -13,8 +14,17 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SomeEvent' => [
+        /*'App\Events\SomeEvent' => [
             'App\Listeners\EventListener',
+        ],*/
+        'App\Events\Registered' => [
+            'App\Listeners\MessageSendingListener',
+        ],
+        'App\Events\TeamConfirmed' => [
+            'App\Listeners\SendConfirmationListener',
+        ],
+        'App\Events\VideoUpdated' => [
+            'App\Listeners\TeamValidationListener',
         ],
     ];
 
