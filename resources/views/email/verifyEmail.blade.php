@@ -88,6 +88,7 @@
         </div>
 
     </section>
+    @include('includes.home.modal')
 @stop
 @section('js_plugin')
     <div id="scroll-top-div" class="scroll-top-div">

@@ -11,11 +11,14 @@
 |
 */
 
+/*
 Route::get('/', function () {
     //return view('welcome');
     //return view('layouts.app');
     return view('pages.home');
-})->name('home');;
+})->name('home');*/
+
+Route::get('/','HomeRovController@index')->name('home');
 
 Auth::routes();
 
@@ -37,15 +40,17 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
 });
 
 
-Route::get('home/rules', function () {
+/*Route::get('/rules', function () {
     //
     return 'rules';
-})->name('rules');
-
-Route::get('home/rewards', function () {
+})->name('rules');*/
+Route::get('home/rules','HomeRovController@rules')->name('rules');
+/*Route::get('home/rewards', function () {
     //
     return 'rewards';
-})->name('rewards');
+})->name('rewards');*/
+
+Route::get('home/rewards','HomeRovController@rewards')->name('rewards');
 
 Route::get('home/schedule', function () {
     //
@@ -58,11 +63,30 @@ Route::get('home/sponsor', function () {
 })->name('sponsor');
 
 
-Route::get('register/privacy', function () {
+/*Route::get('home/place', function () {
+    //
+    return 'place';
+})->name('place');*/
+Route::get('home/place','HomeRovController@place')->name('place');
+
+/*Route::get('register/privacy', function () {
 
     return view('pages.register.privacy');
 
-})->name('register-privacy');
+})->name('register-privacy');*/
+Route::get('register/privacy','HomeRovController@privacy')->name('register-privacy');
+
+Route::get('register/paticipant', function () {
+
+    return 'paticipant';
+
+})->name('register-paticipant');
+
+Route::get('register/sponsor', function () {
+
+    return 'sponsor';
+
+})->name('register-sponsor');
 
 /*
 Route::get('register/players', function () {
@@ -112,3 +136,5 @@ Route::get('/rewards', function () {
     //return view('layouts.app');
     return view('pages.reward');
 })->name('rewards');;
+
+Route::get( '/download/{filename}', 'DownloadController@getDownloadPDF');

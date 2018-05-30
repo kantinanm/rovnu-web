@@ -13,19 +13,26 @@ use App\Player;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Config;
+use App\Events\TeamConfirmed;
 
 class PlayerController extends Controller
 {
     //
     protected function index()
     {
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
 
         //return view('pages.register.member');
         $players=Player::where('team_id',Auth::user()->id)->get();
         $num_of_player =Config::get('app.player_limit');
        // return view('pages.register.member',compact('players',$players));
         return view('pages.register.member')->with(compact('players',$players))
-                                                ->with(compact('num_of_player',$num_of_player));
+               ->with(compact('num_of_player',$num_of_player))
+               ->with(compact('allowTeamRegister',$allowTeamRegister))
+               ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+               ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 
     protected function showEditForm($player_id)
@@ -35,10 +42,18 @@ class PlayerController extends Controller
         $faculty =Config::get('institution.'.Auth::user()->team_type."_level");
         $player=Player::where('player_id',$player_id)->get();
 
+
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
         //dd($player);
 
         return view('pages.register.member-edit')->with(compact('player',$player))
-                                                    ->with(compact('faculty',$faculty));
+             ->with(compact('faculty',$faculty))
+            ->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 
     protected function validator(array $data)
@@ -127,11 +142,17 @@ class PlayerController extends Controller
     {
 
         //return view('pages.register.member-add');
-
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
         $faculty =Config::get('institution.'.Auth::user()->team_type."_level");
 
         //dd($faculty);
-        return view('pages.register.member-add',compact('faculty',$faculty));
+        //return view('pages.register.member-add',compact('faculty',$faculty));
+        return view('pages.register.member-add')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister))
+            ->with(compact('faculty',$faculty));
     }
 
     protected function showTeamRegisterCompleted()
@@ -142,8 +163,21 @@ class PlayerController extends Controller
         //dd($user);
         $user->register_completed = 1;
         $user->save();
-        $notification_date =Config::get('app.notification_date');
 
-        return view('pages.register.complete',compact('notification_date',$notification_date));
+        event(new TeamConfirmed($user));
+
+        $notification_date =Config::get('app.notification_date');
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+        $clip_video_url =Config::get('app.how_to_make_video_url');
+
+        //return view('pages.register.complete',compact('notification_date',$notification_date));
+
+        return view('pages.register.complete')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister))
+            ->with(compact('notification_date',$notification_date))
+            ->with(compact('clip_video_url',$clip_video_url));
     }
 }

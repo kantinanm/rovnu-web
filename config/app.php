@@ -234,4 +234,11 @@ return [
     'notification_date'=> env('NOTIFICATION_DATE', '1 กรกฏาคม 2561'),
     'over_notification_date'=> env('OVER_NOTIFICATION_DATE', false),
     'how_to_make_video_url'=> env('HOW_TO_MAKE_VIDEO_URL', 'http://www.ecpe.nu.ac.th'),
+    'how_to_register_url'=> env('HOW_TO_REGISTER_URL', 'http://www.ecpe.nu.ac.th'),
+    'how_to_register_manual'=> env('HOW_TO_REGISTER_MANUAL', 'http://www.ecpe.nu.ac.th'),
+    'allow_team_register'=> env('ALLOW_TEAM_REGISTER', false),
+    'allow_paticipant_register'=> env('ALLOW_PATICIPANT_REGISTER', false),
+    'allow_sponsor_register'=> env('ALLOW_SPONSOR_REGISTER', false),
+    'admin_address'=> env('ADMIN_ADDRESS', 'kantinanm@nu.ac.th'),
+    'manager_address'=> env('MANAGER_ADDRESS', 'matzee933@hotmail.com'),
 ];

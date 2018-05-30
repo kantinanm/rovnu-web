@@ -18,6 +18,7 @@ use App\Permission;
 use App\Jobs\SendEmailJob;
 use Carbon\Carbon;
 use Config;
+use App\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -83,9 +84,17 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         $institutionList =Config::get('institution.undergraduate');
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
 
         //dd($institutionList);
-        return view('pages.register.create',compact('institutionList',$institutionList));
+        //return view('pages.register.create',compact('institutionList',$institutionList));
+        return view('pages.register.create')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister))
+            ->with(compact('institutionList',$institutionList));
     }
 
 
@@ -121,7 +130,7 @@ class RegisterController extends Controller
         $user->attachRole($role_subscriber);
 
         $thisUser=User::findOrFail($user->id);
-        $this->sendEmail($thisUser);
+        $this->sendEmail($thisUser,$data['password']);
 
 
     }
@@ -129,16 +138,25 @@ class RegisterController extends Controller
 
     public function verifyEmail()
     {
-        return view('email.verifyEmail');
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
+       // return view('email.verifyEmail');
+        return view('email.verifyEmail')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 
-    public function sendEmail($thisUser)
+    public function sendEmail($thisUser,$password)
     {
         /*
         Mail::to($thisUser->email)
             ->send(new verifyEmail($thisUser));
         */
-        dispatch((new SendEmailJob($thisUser))->delay(Carbon::now()->addSeconds(3)));
+        //dd($password);
+        event(new Registered($thisUser,$password));
+        //dispatch((new SendEmailJob($thisUser,$password))->delay(Carbon::now()->addSeconds(3)));
     }
 
     public function sendEmailDone($email,$verify_token)
@@ -164,10 +182,25 @@ class RegisterController extends Controller
             //  return redirect('dashboard')->with('status', 'Account activated. !!!');
 
         }else{
-            return redirect('/login')->with('info', "Sorry your email cannot be identified.");
+            $allowTeamRegister =Config::get('app.allow_team_register');
+            $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+            $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
+            return redirect('/login')->with('info', "Sorry your email cannot be identified.")
+                ->with(compact('allowTeamRegister',$allowTeamRegister))
+                ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+                ->with(compact('allowSponsorRegister',$allowSponsorRegister));
         }
 
-        return redirect('/login')->with('info', $info);
+        //return redirect('/login')->with('info', $info);
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
+        return redirect('/login')->with('info', $info)
+            ->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 
     public function listInstitution(Request $request)

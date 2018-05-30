@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('title')
-    :: ของรางวัล ::
+    NU eSports ROV Tournament : งานเฉลิมฉลองครบรอบ 25 ปี คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร
 @stop
 @section('css_script')
     <!-- Bootstrap CSS -->

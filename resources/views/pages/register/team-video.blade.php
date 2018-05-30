@@ -51,7 +51,7 @@
                             <i class="certificate icon" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">ประกาศผลการสมัคร</span></div>
-                                <div class="description">ภายใน 3 วัน ที่ส่งหลักฐาน </div>
+                                <div class="description">ภายใน 7 วัน ที่ส่งหลักฐาน </div>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </div>
-
+            @if($overNotificationDate==false)
             <div class="ui segment">
                 <div class="ui icon yellow message">
                     <i class="video icon"></i>
@@ -112,7 +112,7 @@
                             <li>ลิงค์ Video แนะนำทีม</li>
                         </ul>
                         </p>
-                        <p>คุณสามารถจัดทำ Clip Video การแนะนำทีม โดยสามารถอ่านข้อกำหนดการจัดทำได้ที่  env </p>
+                        <p>คุณสามารถจัดทำ Clip Video การแนะนำทีม โดยสามารถ<a href="{{$clip_video_url}}" target="_blank">ดูตัวอย่างการจัดทำได้ที่นี่ </a></p>
                     </div>
                 </div>
 
@@ -145,9 +145,29 @@
                 </div>
 
             </div>
+            @else
+
+                <div class="ui segment">
+                    <div class="ui icon yellow message">
+                        <i class="hourglass end icon"></i>
+                        <div class="content">
+                            <div class="header">
+                                <span class="markFont"> หมดเวลาการส่งหลักฐาน </span>
+                            </div>
+                            <p>
+                            <ul class="list">
+                                <li>คุณสามารถตรวจสอบผลการสมัครได้ที่นี่ <a href="{{ route('team-info-get') }}">ตรวจสอบผลการสมัคร</a>   </li>
+
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            @endif
 
         </div>
-
+        @include('includes.home.modal')
 
     </section>
 @endsection

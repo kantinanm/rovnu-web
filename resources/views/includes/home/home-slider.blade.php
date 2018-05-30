@@ -26,8 +26,8 @@
                             <p class="text-white slider-para"><span class="markFont"> กับเหล่า Cosplay และ Caster สาวสวยแนวหน้าในเมืองไทย </span>
                             </p>
                             <div class="cta-btn-group">
-                                <a class="btn btn-orange border-none btn-rounded-corner" href="#">ลงทะเบียนแข่งขัน <span class="icon-on-button"><i class="ion-ios-game-controller-b-outline"></i></span></a>
-                                <a class="btn btn-white border-none btn-rounded-corner" href="#">ลงทะเบียนผู้ให้การสนับสนุน<span class="icon-on-button"><i class="ion-ribbon-b"></i></span></a>
+                                <a class="btn btn-orange border-none btn-rounded-corner" href="#" data-toggle="modal" data-target="#exampleModalCenter" >ลงทะเบียนแข่งขัน <span class="icon-on-button"><i class="ion-ios-game-controller-b-outline"></i></span></a>
+                                <a class="btn btn-white border-none btn-rounded-corner" href="#" data-toggle="modal" data-target="#exampleModalSponser">ลงทะเบียนผู้ให้การสนับสนุน<span class="icon-on-button"><i class="ion-ribbon-b"></i></span></a>
                             </div>
                         </div>
                     </div>

@@ -130,7 +130,7 @@
                         <th>ชื่อ - นามสกุล</th>
                         <th>รหัสนักเรียน/นักศึกษา</th>
                         <th>คณะ / ระดับชั้น</th>
-                        <th>RoV ID </th>
+                        <th>Garena ID </th>
                         <th>Player Name</th>
                         <th>แก้ไข</th>
                     </tr>
@@ -172,7 +172,7 @@
 
                         <th colspan="6">
 
-                            @if(count($players)<$num_of_player)
+                            @if(count($players)>=$num_of_player)
                             <a href="{{ route('register-players-add') }}"> <button class="ui basic button right floated primary">
                                 <i class="icon user"></i>
                                 เพิ่มรายชื่อ
@@ -183,8 +183,8 @@
                                     เพิ่มรายชื่อ
                                 </button>
                             @endif
-                            @if(count($players)==$num_of_player)
-                            <div class="ui left floated small primary labeled icon button" data-toggle="modal" data-target="#exampleModalCenter">
+                            @if(count($players)>=$num_of_player)
+                            <div class="ui left floated small primary labeled icon button" data-toggle="modal" data-target="#exampleModalConfirmTeam">
                                 <i class="handshake icon"></i> ยืนยันข้อมูลทีม
                             </div>
                             @else
@@ -193,7 +193,7 @@
                                     ยืนยันข้อมูลทีม
                                 </button>
                                     <div class="ui left pointing orange basic label"  style="">
-                                        เพิ่มสมาชิกให้ครบ {{$num_of_player}} คน แล้วกดยืนยัน
+                                        เพิ่มสมาชิกในทีมขั้นต่ำ {{$num_of_player}} คน แต่ไม่เกิน 7 คน แล้วกดยืนยัน
                                     </div>
                             @endif
 
@@ -212,11 +212,11 @@
         </form>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="exampleModalConfirmTeam" tabindex="-1" role="dialog" aria-labelledby="exampleModalConfirmTeamTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">คุณยืนยันที่จะส่งทีมเข้าแข่งขันตามข้อมูลข้างต้นนี้ </h5>
+                        <h5 class="modal-title" id="exampleModalLongConfirmTeamTitle">คุณยืนยันที่จะส่งทีมเข้าแข่งขันตามข้อมูลข้างต้นนี้ </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -243,6 +243,7 @@
         <!-- Modal -->
 
     </section>
+    @include('includes.home.modal')
 @endsection
 @section('js_plugin')
     <div id="scroll-top-div" class="scroll-top-div">

@@ -23,11 +23,26 @@ class UserController extends Controller
         //check datetime.now() compare Date of Notification : return false if >=, return true if now() < Notification D.
         // passing value to view : bool
 
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
         $overNotificationDate =Config::get('over_notification_date');
+        $clip_video_url =Config::get('app.how_to_make_video_url');
+
         if($overNotificationDate){
-            return view('pages.register.myteam');
+            //return view('pages.register.myteam');
+            return view('pages.register.myteam')->with(compact('allowTeamRegister',$allowTeamRegister))
+                ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+                ->with(compact('allowSponsorRegister',$allowSponsorRegister))
+                ->with(compact('overNotificationDate',$overNotificationDate))
+                ->with(compact('clip_video_url',$clip_video_url));
         }else{
-            return view('pages.register.team-video');
+            //return view('pages.register.team-video');
+            return view('pages.register.team-video')->with(compact('allowTeamRegister',$allowTeamRegister))
+                ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+                ->with(compact('allowSponsorRegister',$allowSponsorRegister))
+                ->with(compact('overNotificationDate',$overNotificationDate))
+                ->with(compact('clip_video_url',$clip_video_url));
         }
 
 
@@ -44,23 +59,21 @@ class UserController extends Controller
         // passing value to view : bool
         $overNotificationDate=Config::get('app.over_notification_date');
 
-        //$overNotificationDate=false;
-        //$temp =Config::get('app.over_notification_date');
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+        $clip_video_url =Config::get('app.how_to_make_video_url');
 
-/*
+        return view('pages.register.myteam')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister))
+            ->with(compact('overNotificationDate',$overNotificationDate))
+            ->with(compact('clip_video_url',$clip_video_url));
 
-            if($temp==="true"){
-                $overNotificationDate=true;
-            }else{
-                $overNotificationDate=false;
-            }
-*/
 
-        return view('pages.register.myteam')->with(compact('overNotificationDate',$overNotificationDate));
+        //return view('pages.register.myteam')->with(compact('overNotificationDate',$overNotificationDate));
 
-        //example
-        //$players=Player::where('team_id',Auth::user()->id)->get();
-        //return view('pages.register.member')->with(compact('players',$players))
+
     }
 
     protected function updateVideo(Request $request)
