@@ -125,16 +125,4 @@ Route::post('/register/continue', 'UserController@updateVideo')->name('team-vide
 
 Route::get('/myteam', 'UserController@showInfoTeam')->name('team-info-get')->middleware(['role:admin|subscriber']);
 
-Route::get('/rules', function () {
-    //return view('welcome');
-    //return view('layouts.app');
-    return view('pages.rules');
-})->name('rules');;
-
-Route::get('/rewards', function () {
-    //return view('welcome');
-    //return view('layouts.app');
-    return view('pages.reward');
-})->name('rewards');;
-
 Route::get( '/download/{filename}', 'DownloadController@getDownloadPDF');
