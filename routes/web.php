@@ -127,4 +127,8 @@ Route::post('/register/continue', 'UserController@updateVideo')->name('team-vide
 
 Route::get('/myteam', 'UserController@showInfoTeam')->name('team-info-get')->middleware(['role:admin|subscriber']);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 Route::get( '/download/{filename}', 'DownloadController@getDownloadPDF');

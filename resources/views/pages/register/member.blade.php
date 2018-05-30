@@ -172,7 +172,7 @@
 
                         <th colspan="6">
 
-                            @if(count($players)>=$num_of_player)
+                            @if(count($players)<7)
                             <a href="{{ route('register-players-add') }}"> <button class="ui basic button right floated primary">
                                 <i class="icon user"></i>
                                 เพิ่มรายชื่อ
