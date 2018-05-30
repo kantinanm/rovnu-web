@@ -119,7 +119,7 @@
                                         </div>
                                         <div class="content">
                                             <div class="header">
-                                                <i class="ion-social-facebook"></i>&nbsp;&nbsp;ร่วมสนุกผ่านเพจ ecpe.nu
+                                                <i class="facebook square icon"></i>&nbsp;&nbsp;ร่วมสนุกผ่านเพจ ecpe.nu
                                             </div>
                                         </div>
                                     </div>
