@@ -69,6 +69,8 @@ Route::get('home/sponsor', function () {
 })->name('place');*/
 Route::get('home/place','HomeRovController@place')->name('place');
 
+Route::get('home/activity','HomeRovController@activity')->name('activity');
+
 /*Route::get('register/privacy', function () {
 
     return view('pages.register.privacy');

@@ -70,4 +70,16 @@ class HomeRovController extends Controller
             ->with(compact('clip_video_url',$clip_video_url))
             ->with(compact('register_manual',$register_manual));
     }
+
+    public function activity()
+    {
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+
+
+        return view('pages.activity')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
+    }
 }

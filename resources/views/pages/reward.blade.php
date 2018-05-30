@@ -18,13 +18,27 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header')
+@include('includes.header_v2')
 @section('content')
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
         <div id="home-slider" class="empty-carousel"></div>
     </section>
 
     <section id="rewards">
+        <div class="container">
+
+            <div class="ui breadcrumb">
+                <a class="section">หน้าแรก</a>
+                <div class="divider"> / </div>
+                <div class="active section">ของรางวัล</div>
+            </div>
+
+            <div class="row padding-top-bottom-20">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="col-md-12" style="margin-top: 20px;">
                 <div class="ui one column grid">
