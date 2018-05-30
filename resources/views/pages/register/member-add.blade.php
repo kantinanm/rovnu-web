@@ -202,7 +202,7 @@
                                                                     <button type="reset" class="btn btn-warning" onClick="clearState()">
                                                                         Reset
                                                                     </button>-->
-                                    <div class="ui clear button" onClick="clearState()">ล้างค่า</div>
+                                <!--       <div class="ui clear button" onClick="clearState()">ล้างค่า</div>  -->
                                 </div>
 
                             </div>

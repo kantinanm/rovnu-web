@@ -26,6 +26,7 @@
     @include('includes.home.rules')
     <section id="cta" class="gradient-violat cta padding-top-bottom-90">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h3 class="cta-heading text-white">Beyond The Hero <span class="markFont">: คุณพร้อมหรือยังที่จะเป็นฮีโร่ผู้กล้า </span></h3>
@@ -37,30 +38,33 @@
                     </div>
                     <p class="text-white">* สำรองที่นั่งในงาน เพื่อลุ้นของรางวัลและร่วมใกล้ชิด Cosplay สาวสวยภายในงาน (จำนวนจำกัด)</p>
 
-                    <div>
+                    <!--<div>
 
                         <span style="display: inline-block; width: 32%;font-size: 60px;"><span class="counter">448</span></span>
                         <span class="counter" style="display: inline-block; width: 32%;font-size: 60px;">64</span>
                         <span class="counter" style="display: inline-block; width: 32%;font-size: 60px;">407</span>
-                    </div>
-                </div> <!--col-md-12-->
-            </div> <!--end row-->
+                    </div>-->
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12 text-center">
 
                 </div> <!--col-md-12-->
             </div> <!--end row2-->
+
+            <!--
             <div class="row">
                 <div class="col-md-4 text-center">
                     <i class="ion-android-contacts" style="font-size: 45px;"></i> ผู้เข้าแข่งขัน
-                </div> <!--col-md-4-->
+                </div>
                 <div class="col-md-4 text-center">
                     <i class="ion-ios-game-controller-b-outline" style="font-size: 45px;"></i> ทีม
-                </div> <!--col-md-4-->
+                </div>
                 <div class="col-md-4 text-center">
                     <i class="ion-person-stalker" style="font-size: 45px;"></i> ผู้สนใจเข้าร่วมงาน
-                </div> <!--col-md-4-->
-            </div> <!--end row3-->
+                </div>
+            </div> -->
+
         </div><!--container-->
     </section>
     @include('includes.home.modal')
@@ -97,6 +101,11 @@
             ;
 
             $("#btnVideoShow").modalVideo({channel:'vimeo'});
+
+            $('ui.special.cards .image').dimmer({
+                on: 'hover'
+            });
+
         });
     </script>
 

@@ -56,7 +56,7 @@
             <div class="modal-body">
                 <div class="ui green message">
                     <div class="header">
-                        <span class="markFont"> เปิดรับลงทะเบียนอย่างเป็นทางการในวันที่ 1 มิถุนายน 2561 เป็นต้นไป จำนวน 300 ที่นั่ง โดยมีของรางวัลให้ร่วมลุ้น</span>
+                        <span class="markFont"> เปิดรับลงทะเบียนอย่างเป็นทางการในวันที่ 20 มิถุนายน 2561 เป็นต้นไป  โดยมีของรางวัลให้ร่วมลุ้น</span>
                     </div>
                     <ul class="list">
                         <p>

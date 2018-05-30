@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header')
+@include('includes.header_v2')
 @section('content')
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
         <div id="home-slider" class="empty-carousel"></div>

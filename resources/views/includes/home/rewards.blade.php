@@ -103,61 +103,69 @@
                     <!--<div class="photo sweat16_blur" data-stellar-background-ratio="0.5"></div> -->
                 </p>
 
-                <div class="ui card">
-                    <div class="blurring dimmable image">
-                        <div class="ui inverted dimmer">
+
+                <div class="ui two column grid">
+                    <div class="column">
+
+                        <div class="ui card">
+                            <div class="blurring dimmable image">
+                                <div class="ui inverted dimmer">
+                                    <div class="content">
+                                        <div class="center">
+                                            <div class="ui primary button" data-toggle="modal" data-target="#exampleModalCenter">ส่งทีมเข้าร่วมแข่งขัน</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="{{ URL::asset('images/reward/money_reward.png') }}">
+
+                            </div>
                             <div class="content">
-                                <div class="center">
-                                    <div class="ui primary button" data-toggle="modal" data-target="#exampleModalCenter">ส่งทีมเข้าร่วมแข่งขัน</div>
+                                <a class="header"><span class="markFont"></span></a>
+                                <div class="meta">
+                                    <span class="date">เงินรางวัล <i class="cog icon red"></i>จาก คณะวิศวกรรมศาสตร์</span>
                                 </div>
                             </div>
+                            <div class="extra content">
+
+
+                                <p><i class="trophy icon yellow"></i>อันดับ 1 เงินรางวัล 5,000 บาท</p>
+                                <p><i class="trophy icon grey"></i>อันดับ 2 เงินรางวัล 3,000 บาท</p>
+                                <p><i class="trophy icon brown"></i>อันดับ 3 เงินรางวัล 1,000 บาท</p>
+                                <p><i class="trophy icon brown"></i>อันดับ 4 เงินรางวัล 1,000 บาท</p>
+
+                            </div>
                         </div>
-                        <img src="{{ URL::asset('images/reward/money_reward.png') }}">
 
                     </div>
-                    <div class="content">
-                        <a class="header"><span class="markFont"></span></a>
-                        <div class="meta">
-                            <span class="date">เงินรางวัล <i class="cog icon red"></i>จาก คณะวิศวกรรมศาสตร์</span>
+                    <div class="column">
+                        <div class="ui card">
+                            <div class="ui move reveal image">
+                                <img src="{{ URL::asset('images/T-Shirt_front.png') }}" class="visible content">
+                                <img src="{{ URL::asset('images/T-Shirt_back.png') }}" class="hidden content">
+                            </div>
+
+                            <div class="content">
+                                <a class="header"><span class="markFont">ของรางวัลภายในงาน</span></a>
+                                <div class="meta">
+                                    <span class="date">สนับสนุนโดย Garena Thailand</span>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <p>
+                                    <i class="gift icon orange"></i>
+                                    เสื้อ 5 รางวัล *
+                                </p>
+                                <p>
+                                    <i class="chess queen icon purple"></i>
+                                    สกินฮีโร่ 10 รางวัล *
+                                </p>
+                            </div>
+                            <div class="extra content">
+                                <span style="color: green">*สำหรับผู้เข้าร่วมงานที่ลงทะเบียนและมาร่วมงานในวันที่ 17 สิงหาคม 2561</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="extra content">
-
-
-                        <p><i class="trophy icon yellow"></i>อันดับ 1 ได้รับเงินรางวัล 5,000 บาท</p>
-                        <p><i class="trophy icon grey"></i>อันดับ 2 ได้รับเงินรางวัล 3,000 บาท</p>
-                        <p><i class="trophy icon brown"></i>อันดับ 3 ได้รับเงินรางวัล 1,000 บาท</p>
-                        <p><i class="trophy icon brown"></i>อันดับ 4 ได้รับเงินรางวัล 1,000 บาท</p>
-
                     </div>
                 </div>
-
-                <div class="ui card">
-                    <div class="ui move reveal image">
-                        <img src="{{ URL::asset('images/T-Shirt_front.png') }}" class="visible content">
-                        <img src="{{ URL::asset('images/T-Shirt_back.png') }}" class="hidden content">
-                    </div>
-                    <div class="content">
-                        <a class="header"><span class="markFont">ของรางวัลภายในงาน</span></a>
-                        <div class="meta">
-                            <span class="date">สนับสนุนโดย Garena Thailand</span>
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <p>
-                            <i class="gift icon orange"></i>
-                            เสื้อ 5 รางวัล *
-                        </p>
-                        <p>
-                            <i class="chess queen icon purple"></i>
-                            สกินฮีโร่ 10 รางวัล *
-                        </p>
-                    </div>
-                    <div class="extra content">
-                        <span style="color: green">*สำหรับผู้เข้าร่วมงานที่ลงทะเบียนและมาร่วมงานในวันที่ 17 สิงหาคม 2561</span>
-                    </div>
-                </div>
-
 
             </div>
         </div>
