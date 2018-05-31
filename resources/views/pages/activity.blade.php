@@ -150,9 +150,10 @@
                 </tbody>
             </table>
         </div>
-        <section>
-            @endsection
-            @section('js_plugin')
+    </section>
+    @include('includes.home.modal')
+@endsection
+@section('js_plugin')
                 <div id="scroll-top-div" class="scroll-top-div">
                     <div class="scroll-top-icon-container">
                         <i class="ion-ios-arrow-thin-up"></i>
