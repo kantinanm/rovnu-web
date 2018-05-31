@@ -46,8 +46,18 @@
                                     <i class="hourglass start icon brown"></i> ร่วมสนุกผ่าน ecpe.nu
                                     <br/> สนับสนุนของรางวัลโดย <a href="https://www.facebook.com/itcorner2012/" target="_blank"> IT.Corner </a>
                                 </p></li>
-                            <li><p>รางวัลที่ 2 รอประกาศจาก <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"><i class="facebook square icon"></i>Official Page</a> </p></li>
-                            <li><p>รางวัลที่ 3 รอประกาศจาก <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"><i class="facebook square icon"></i>Official Page</a> </p></li>
+                            <li>
+                              <p>รางวัลที่ 2 ผ้าพันคอ BNK48 x Changsuek 
+                                <br><img src="{{ URL::asset('images/reward/Bnk48xChangsuek.png') }}" style="width:150px;" >
+                                <i class="hourglass start icon brown"></i> ร่วมสนุกผ่าน ecpe.nu
+                              </p>
+                            </li>
+                            <li>
+                              <p>รางวัลที่ 3 Sweat16! CD 1st Single "วิ่ง" (Run)
+                                <br><img src="{{ URL::asset('images/reward/Sweat16.png') }}" style="width:150px;" >
+                                <i class="hourglass start icon brown"></i> ร่วมสนุกผ่าน ecpe.nu
+                              </p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -62,7 +72,8 @@
                             <li><p>อันดับ 2 ได้รับเงินรางวัลจำนวน 3,000 บาท, คูปองในเกม 300 คูปองต่อคน, สกินฮีโร่คนละ 1 สกินต่อคน</p></li>
                             <li><p>อันดับ 3 - 4 ได้รับเงินรางวัลจำนวน 1,000 บาท, คูปองในเกม 100 คูปองต่อคน</p></li>
                         </ul>
-                        <p><strong>หมายเหตุ</strong> ภายใน 1 ทีม จะสามารถรับรางวัลได้แค่ 5 ไอดีเท่านั้น คือผู้เล่นตัวจริงไม่รวมผู้เล่นสำรอง คูปองและสกินสนับสนุนโดย Garena Thailand</p>
+                        <div class="ui error message"><ul class="list">
+                          <li><strong>หมายเหตุ</strong> ภายใน 1 ทีม จะสามารถรับรางวัลได้แค่ 5 ไอดีเท่านั้น คือผู้เล่นตัวจริงไม่รวมผู้เล่นสำรอง คูปองและสกินสนับสนุนโดย Garena Thailand</li></ul></div>
                     </div>
                 </div>
                 <div class="feature-wiget">
