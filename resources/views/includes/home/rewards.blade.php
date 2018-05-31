@@ -46,8 +46,10 @@
                                     <i class="hourglass start icon brown"></i> ร่วมสนุกผ่าน ecpe.nu
                                     <br/> สนับสนุนของรางวัลโดย <a href="https://www.facebook.com/itcorner2012/" target="_blank"> IT.Corner </a>
                                 </p></li>
-                            <li><p>รางวัลที่ 2 รอประกาศจาก <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"><i class="facebook square icon"></i>Official Page</a> </p></li>
-                            <li><p>รางวัลที่ 3 รอประกาศจาก <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"><i class="facebook square icon"></i>Official Page</a> </p></li>
+                            <li><p>รางวัลที่ 2 ผ้าพันคอ BNK48xChangsuek <br/> <a href="https://shop.bnk48.com" target="_blank" class="ui small image" data-tooltip="กิจกรรม like & share ครั้งที่ 2  จากเพจ ecpe.nu" data-inverted="">
+                                        <img src="{{ URL::asset('images/reward/cotton.png') }}" ></a><i class="hourglass start icon brown"></i> ร่วมสนุกผ่าน ecpe.nu		 </p></li>
+                            <li><p>รางวัลที่ 3 Sweat16! CD 1st Single วิ่ง (run) <br/> <a href="http://sweat16official.com/discography/first-single-run/" target="_blank" class="ui small image" data-tooltip="กิจกรรม like & share ครั้งที่ 2  จากเพจ ecpe.nu" data-inverted="">
+                                        <img src="{{ URL::asset('images/reward/sweat16.png') }}" ></a><i class="hourglass start icon brown"></i> ร่วมสนุกผ่าน ecpe.nu		 </p></li>
                         </ul>
                     </div>
                 </div>
