@@ -115,7 +115,7 @@
                                             <div class="header">กิจกรรม like & share ครั้งที่ 2 </div>
                                         </div>
                                         <div class="image">
-                                            <img src="{{ URL::asset('images/rewards_activity2.jpg') }}">
+                                            <img src="{{ URL::asset('images/reward/like_and_share2.png') }}">
                                         </div>
                                         <div class="content">
                                             <div class="header">
