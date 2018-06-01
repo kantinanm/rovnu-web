@@ -144,8 +144,7 @@
 
                                 <p><i class="trophy icon yellow"></i>อันดับ 1 ได้รับเงินรางวัล 5,000 บาท</p>
                                 <p><i class="trophy icon grey"></i>อันดับ 2 ได้รับเงินรางวัล 3,000 บาท</p>
-                                <p><i class="trophy icon brown"></i>อันดับ 3 ได้รับเงินรางวัล 1,000 บาท</p>
-                                <p><i class="trophy icon brown"></i>อันดับ 4 ได้รับเงินรางวัล 1,000 บาท</p>
+                                <p><i class="trophy icon brown"></i>ชมเชย 2 รางวัล รางวัล 1,000 บาท</p>
 
                             </div>
                         </div>
@@ -173,8 +172,7 @@
 
                                     <p><i class="trophy icon yellow"></i>อันดับ 1 ได้รับ 500 คูปอง/คน +สกิน</p>
                                     <p><i class="trophy icon grey"></i>อันดับ 2 ได้รับ 300 คูปอง/คน +สกิน</p>
-                                    <p><i class="trophy icon brown"></i>อันดับ 3 ได้รับ 100 คูปอง/คน</p>
-                                    <p><i class="trophy icon brown"></i>อันดับ 4 ได้รับ 100 คูปอง/คน</p>
+                                    <p><i class="trophy icon brown"></i>ชมเชย 2 รางวัล ได้รับ 100 คูปอง/คน</p>
                                 </div>
                             </div>
                         </div>

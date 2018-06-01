@@ -139,8 +139,7 @@
 
                                 <p><i class="trophy icon yellow"></i>อันดับ 1 เงินรางวัล 5,000 บาท</p>
                                 <p><i class="trophy icon grey"></i>อันดับ 2 เงินรางวัล 3,000 บาท</p>
-                                <p><i class="trophy icon brown"></i>อันดับ 3 เงินรางวัล 1,000 บาท</p>
-                                <p><i class="trophy icon brown"></i>อันดับ 4 เงินรางวัล 1,000 บาท</p>
+                                <p><i class="trophy icon brown"></i>ชมเชย 2 รางวัล รางวัล 1,000 บาท</p>
 
                             </div>
                         </div>
