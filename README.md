@@ -11,9 +11,9 @@ NU eSports Tournament : งานเฉลิมฉลองครบรอบ 2
     <p>PLAYER_LIMIT=7  (จำนวนผู้เล่นในแต่ละทีม)</p>
     <p>NOTIFICATION_DATE="1 กรกฏาคม 2561" (วันประกาศผลการรับสมัคร)</p> 
     <p>OVER_NOTIFICATION_DATE=false (เกินวันประกาศผลหรือไม่)</p>
-    <p>HOW_TO_MAKE_VIDEO_URL="http://www.ecpe.nu.ac.th" (link สำหรับคำแนะนำในการสร้าง video แนะนำทีม)</p>
-    <p>HOW_TO_REGISTER_URL="#" (link video สำหรับคำแนะนำในลงทะเบียน)</p>
-    <p>HOW_TO_REGISTER_MANUAL="#" (link คู่มือการลงทะเบียน)</p>
+    <p>HOW_TO_MAKE_VIDEO_URL="#" (link สำหรับคำแนะนำในการสร้าง video แนะนำทีม)</p>
+    <p>HOW_TO_REGISTER_URL="https://youtu.be/BXBurSbShYk" (link video สำหรับคำแนะนำในลงทะเบียน)</p>
+    <p>HOW_TO_REGISTER_MANUAL="https://goo.gl/iJkFXw" (link คู่มือการลงทะเบียน)</p>
     <p>ALLOW_TEAM_REGISTER=false (อนุญาตให้ลงทะเบียน)</p>
     <p>ALLOW_PATICIPANT_REGISTER=false (อนุญาตให้ลงทะเบียน)</p>
     <p>ALLOW_SPONSOR_REGISTER=false (อนุญาตให้ลงทะเบียน)</p>
