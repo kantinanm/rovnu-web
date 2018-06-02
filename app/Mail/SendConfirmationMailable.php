@@ -43,6 +43,7 @@ class SendConfirmationMailable extends Mailable
         return $this->subject("ยืนยันการส่งทีมเข้าร่วมแข่งขัน NU e-Sport ROV Tournament ")
             ->from('ecpe-software@nu.ac.th')
             ->bcc($admin_email)
+            ->cc($manager_email)
             ->view('email.confirmTeamView')->with(compact('user',$this->user)) ->with(compact('players',$players));
 
     }

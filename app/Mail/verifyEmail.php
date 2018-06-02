@@ -47,6 +47,7 @@ class verifyEmail extends Mailable
         return $this->subject("Verify Your Email โปรดทำการยืนยัน email ที่สมัคร จากกิจกรรม NU e-Sport ROV Tournament ")
             ->from('ecpe-software@nu.ac.th')
             ->bcc($admin_email)
+            ->cc($manager_email)
             ->attach(public_path('/download').'/poster_preview.pdf', [
                 'as' => 'poster_preview.pdf',
                 'mime' => 'application/pdf',
