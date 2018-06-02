@@ -235,7 +235,7 @@ return [
     'over_notification_date'=> env('OVER_NOTIFICATION_DATE', false),
     'how_to_make_video_url'=> env('HOW_TO_MAKE_VIDEO_URL', 'http://www.ecpe.nu.ac.th'),
     'how_to_register_url'=> env('HOW_TO_REGISTER_URL', 'http://www.ecpe.nu.ac.th'),
-    'how_to_register_manual'=> env('HOW_TO_REGISTER_MANUAL', 'http://www.ecpe.nu.ac.th'),
+    'how_to_register_manual'=> env('HOW_TO_REGISTER_MANUAL', 'https://goo.gl/iJkFXw'),
     'allow_team_register'=> env('ALLOW_TEAM_REGISTER', false),
     'allow_paticipant_register'=> env('ALLOW_PATICIPANT_REGISTER', false),
     'allow_sponsor_register'=> env('ALLOW_SPONSOR_REGISTER', false),
