@@ -100,7 +100,7 @@
                 .transition('jiggle')
             ;
 
-            $("#btnVideoShow").modalVideo({channel:'vimeo'});
+            $("#btnVideoShow").modalVideo({channel:'youtube'});
 
             $('ui.special.cards .image').dimmer({
                 on: 'hover'
