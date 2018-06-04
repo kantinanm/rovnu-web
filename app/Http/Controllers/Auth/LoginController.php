@@ -60,6 +60,7 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         //
+        $by_pass_submit_video =Config::get('app.by_pass_submit_video');
 
         if($user->usr_lvl === 'admin') {
             return redirect()->intended('/admin/dashboard');
@@ -67,7 +68,11 @@ class LoginController extends Controller
 
         // redirect to submit video form
         if(($user->usr_lvl === 'subscriber')&($user->register_completed==1)) {
-            return redirect()->intended('/register/continue');
+            if($by_pass_submit_video==true){
+                return redirect()->intended('/myteam');
+            }else{
+                return redirect()->intended('/register/continue');
+            }
         }
 
         // waiting result after  submit video link

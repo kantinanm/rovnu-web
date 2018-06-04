@@ -40,6 +40,7 @@
                 <div class="col-md-12">
 
                     <div class="ui steps">
+                        @if($by_pass_submit_video==false)
                         <div class="disabled step">
                             <i class="camera icon" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
@@ -47,11 +48,12 @@
                                 <div class="description">ลิงค์ Video แนะนำทีม </div>
                             </div>
                         </div>
+                        @endif
                         <div class="active step">
                             <i class="certificate icon" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">ประกาศผลการสมัคร</span></div>
-                                <div class="description">ภายใน 7 วัน ที่ส่งหลักฐาน </div>
+                                <div class="description">ภายใน 7 วัน @if($by_pass_submit_video==true) ที่กดยืนยันการส่งข้อมูลทีม @else ที่ส่งหลักฐาน @endif </div>
                             </div>
                         </div>
                     </div>
@@ -60,9 +62,11 @@
                         <div class="item">
                             Home
                         </div>
+                        @if($by_pass_submit_video==false)
                         <div class="item">
                             <span class="markFont">ส่งหลักฐานทีม</span>
                         </div>
+                        @endif
                         <div class="item active">
                             <span class="markFont">ตรวจสอบผล</span>
                         </div>
@@ -102,10 +106,60 @@
 
 
             <div class="ui segment">
+                @if($by_pass_submit_video==true)
+                    @if(($day_diff>=7)&(Auth::user()->register_completed==1))
+                        <div class="ui icon green message">
+                            <i class="handshake outline icon"></i>
+                            <div class="content">
+                                <div class="header">
+                                    <span class="markFont"> ยินดีด้วย </span>
+                                </div>
+                                <p>
+                                <ul class="list">
+                                    <li>ทีมของคุณผ่านเข้าสู่การคัดเลือกสำหรับการร่วมแข่งขันใน Tournament นี้ </li>
+                                    <li>เราตรวจสอบแล้ว ทีมของคุณสมบัติครบถ้วนตามที่ได้ระบุไว้ในกติกาการแข่งขัน </li>
+                                </ul>
+                                </p>
+                                <p> ติดตามข่าวการจับฉลากแบ่งสาย ผ่านทาง facebook Like <i class="thumbs up icon"></i> + Follow <i class="rss icon"></i> <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu  </a>และช่องทางเว็บไซต์ </p>
+                            </div>
+                        </div>
+                    @elseif(Auth::user()->register_completed==1)
+                        <div class="ui icon green message">
+                            <i class="handshake outline icon"></i>
+                            <div class="content">
+                                <div class="header">
+                                    <span class="markFont"> เราได้รับข้อมูลของทีมคุณแล้ว </span>
+                                </div>
+                                <p>
+                                <ul class="list">
+                                    <li>เราจะรีบตรวจสอบหลักฐานของทีมคุณ และแจ้งให้คุณทราบ</li>
+                                    <li>เราขอบคุณทุกท่านที่เข้ามามีส่วนร่วมในการแข่งขันรายการนี้ หวังเป็นอย่างยิ่งว่า ทีมนี้จะได้ของรางวัลในภายในงานแล้วเจอกัน  </li>
+                                </ul>
+                                </p>
+                                <p>Video ทีมของคุณก็มีสิทธิถูกเลือก เป็นทีม Popolar Vote พร้อมรับรางวัลจากกิจกรรมย่อยภายในการจัดกิจกรรมการแข่งขันครั้งนี้  </p>
+                            </div>
+                        </div>
+                    @elseif(Auth::user()->register_completed==0)
+                        <div class="ui icon red message">
+                            <i class="ban icon"></i>
+                            <div class="content">
+                                <div class="header">
+                                    <span class="markFont"> เสียใจด้วย </span>
+                                </div>
+                                <p>
+                                <ul class="list">
+                                    <li>ทีมของคุณไม่ได้กดยืนยันการส่งรายชื่อผู้เล่นในทีม  ที่ระบุไว้ในคู่มือการสมัคร </li>
+                                    <li>ไม่เป็นไร โอกาสหน้ายังมี สำหรับ ROV Tournament ปีหน้า ทางเราขอขอบคุณทีมของคุณที่เข้ามาร่วมในกิจกรรมของปีนี้ </li>
+                                </ul>
+                                </p>
+                                <p>ฝากกด Like <i class="thumbs up icon"></i> + Follow <i class="rss icon"></i> Page <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu </a> เพื่อติดตามข่าวสารกิจกรรมดีๆที่จะจัดขึ้นในปีหน้า  </p>
+                            </div>
+                        </div>
+                    @endif
+                @else
 
-
-            @if ((Auth::user()->verified==0)&(Auth::user()->register_completed==1))
-                @if((Auth::user()->video_link=="")&(!$overNotificationDate))
+                @if ((Auth::user()->verified==0)&(Auth::user()->register_completed==1))
+                    @if((Auth::user()->video_link=="")&(!$overNotificationDate))
                     <div class="ui icon yellow message">
                         <i class="paper plane outline icon"></i>
                         <div class="content">
@@ -122,7 +176,7 @@
                             <p>คุณสามารถจัดทำ Clip Video การแนะนำทีม โดยสามารถ<a href="{{$clip_video_url}}" target="_blank">ดูตัวอย่างการจัดทำได้ที่นี่ </a></p>
                         </div>
                     </div>
-                @elseif((Auth::user()->video_link=="")&($overNotificationDate))
+                     @elseif((Auth::user()->video_link=="")&($overNotificationDate))
                     <div class="ui icon red message">
                         <i class="ban icon"></i>
                         <div class="content">
@@ -138,10 +192,10 @@
                             <p>ฝากกด Like <i class="thumbs up icon"></i> + Follow <i class="rss icon"></i> Page <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu </a> เพื่อติดตามข่าวสารกิจกรรมดีๆที่จะจัดขึ้นในปีหน้า  </p>
                         </div>
                     </div>
+                    @endif
                 @endif
-            @endif
 
-            @if ((Auth::user()->verified==0)&(Auth::user()->register_completed==2))
+                @if ((Auth::user()->verified==0)&(Auth::user()->register_completed==2))
                     @if($overNotificationDate)
                         <div class="ui icon red message">
                             <i class="ban icon"></i>
@@ -159,24 +213,46 @@
                             </div>
                         </div>
                     @else
-                        <div class="ui icon green message">
-                            <i class="handshake outline icon"></i>
-                            <div class="content">
-                                <div class="header">
-                                    <span class="markFont"> เราได้รับข้อมูลของทีมคุณแล้ว </span>
+
+                            @if(($day_diff>=7)&($allowShowTeamAcceptedStepVideo==true))
+
+                                <div class="ui icon green message">
+                                    <i class="handshake outline icon"></i>
+                                    <div class="content">
+                                        <div class="header">
+                                            <span class="markFont"> ยินดีด้วย </span>
+                                        </div>
+                                        <p>
+                                        <ul class="list">
+                                            <li>ทีมของคุณผ่านเข้าสู่การคัดเลือกสำหรับการร่วมแข่งขันใน Tournament นี้ </li>
+                                            <li>เราตรวจสอบแล้ว ทีมของคุณสมบัติครบถ้วนตามที่ได้ระบุไว้ในกติกาการแข่งขัน </li>
+                                        </ul>
+                                        </p>
+                                        <p> ติดตามข่าวการจับฉลากแบ่งสาย ผ่านทาง facebook Like <i class="thumbs up icon"></i> + Follow <i class="rss icon"></i> <a href="https://www.facebook.com/ecpenu-124356001077081/"> ecpe.nu  </a>และช่องทางเว็บไซต์ </p>
+                                    </div>
                                 </div>
-                                <p>
-                                <ul class="list">
-                                    <li>เราจะรีบตรวจสอบหลักฐานของทีมคุณ และแจ้งให้คุณทราบ</li>
-                                    <li>เราขอบคุณทุกท่านที่เข้ามามีส่วนร่วมในการแข่งขันรายการนี้ หวังเป็นอย่างยิ่งว่า ทีมนี้จะได้ของรางวัลในภายในงานแล้วเจอกัน  </li>
-                                </ul>
-                                </p>
-                                <p>Video ทีมของคุณก็มีสิทธิถูกเลือก เป็นทีม Popolar Vote พร้อมรับรางวัลจากกิจกรรมย่อยภายในการจัดกิจกรรมการแข่งขันครั้งนี้  </p>
-                            </div>
-                        </div>
+                            @else
+
+                                <div class="ui icon green message">
+                                    <i class="handshake outline icon"></i>
+                                    <div class="content">
+                                        <div class="header">
+                                            <span class="markFont"> เราได้รับข้อมูลของทีมคุณแล้ว </span>
+                                        </div>
+                                        <p>
+                                        <ul class="list">
+                                            <li>เราจะรีบตรวจสอบหลักฐานของทีมคุณ และแจ้งให้คุณทราบ</li>
+                                            <li>เราขอบคุณทุกท่านที่เข้ามามีส่วนร่วมในการแข่งขันรายการนี้ หวังเป็นอย่างยิ่งว่า ทีมนี้จะได้ของรางวัลในภายในงานแล้วเจอกัน  </li>
+                                        </ul>
+                                        </p>
+                                        <p>Video ทีมของคุณก็มีสิทธิถูกเลือก เป็นทีม Popolar Vote พร้อมรับรางวัลจากกิจกรรมย่อยภายในการจัดกิจกรรมการแข่งขันครั้งนี้  </p>
+                                    </div>
+                                </div>
+
+                            @endif
                     @endif
 
-            @endif
+                @endif
 
                 @if ((Auth::user()->verified==1)&(Auth::user()->register_completed==2))
 
@@ -197,6 +273,9 @@
                     </div>
 
                 @endif
+
+                @endif
+
             </div>
         </div>
 

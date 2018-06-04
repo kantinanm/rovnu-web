@@ -241,4 +241,7 @@ return [
     'allow_sponsor_register'=> env('ALLOW_SPONSOR_REGISTER', false),
     'admin_address'=> env('ADMIN_ADDRESS', 'kantinanm@nu.ac.th'),
     'manager_address'=> env('MANAGER_ADDRESS', 'matzee933@hotmail.com'),
+    'show_team_accepted_video'=> env('SHOW_TEAM_ACCEPTED_VIDEO', false),
+    'by_pass_submit_video'=> env('BY_PASS_SUBMIT_VIDEO', false),
+
 ];
