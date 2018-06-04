@@ -37,13 +37,13 @@ class SendConfirmationMailable extends Mailable
         //return $this->view('view.name');
         $admin_email =Config::get('app.admin_address');
         $manager_email =Config::get('app.manager_address');
+        $emails = [$admin_email,$manager_email];
 
         $players=Player::where('team_id',$this->user->id)->get();
 
         return $this->subject("ยืนยันการส่งทีมเข้าร่วมแข่งขัน NU e-Sport ROV Tournament ")
             ->from('ecpe-software@nu.ac.th')
-            ->bcc($admin_email)
-            ->cc($manager_email)
+            ->bcc($emails)
             ->view('email.confirmTeamView')->with(compact('user',$this->user)) ->with(compact('players',$players));
 
     }
