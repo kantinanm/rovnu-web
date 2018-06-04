@@ -12,7 +12,7 @@ use Mail;
 use Illuminate\Mail\Mailer;
 use App\User;
 use Config;
-
+use Illuminate\Support\Facades\Log;
 class SendEmailJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
@@ -24,6 +24,11 @@ class SendEmailJob implements ShouldQueue
      */
     public $user;
     public $pass;
+
+    // The number of times the job may be attempted.
+    public $tries = 10;
+    // The number of seconds the job can run before timing out.
+    public $timeout = 120;
 
     public function __construct(User $user ,$pass)
     {
@@ -57,5 +62,19 @@ class SendEmailJob implements ShouldQueue
             $message->subject("New Email From Your site");
         });*/
 
+    }
+
+    //Determine the time at which the job should timeout.
+    public function retryUntil()
+    {
+        return now()->addSeconds(10);
+    }
+
+    public function failed(Exception $exception)
+    {
+        // Send user notification of failure, etc...
+        $message=" Job failed ";
+        Log::info($message);
+        Log::error($exception->getMessage());
     }
 }
