@@ -19,6 +19,7 @@ use App\Jobs\SendEmailJob;
 use Carbon\Carbon;
 use Config;
 use App\Events\Registered;
+use Illuminate\Support\Facades\Log;
 
 class RegisterController extends Controller
 {
@@ -155,6 +156,11 @@ class RegisterController extends Controller
             ->send(new verifyEmail($thisUser));
         */
         //dd($password);
+        $message ="User register :".$thisUser->teamname.",slug:".$thisUser->slug;
+        $message .=", name:".$thisUser->name.",email:".$thisUser->email;
+        $message .=", facebook_id:".$thisUser->facebook_id.",mobilephone:".$thisUser->mobilephone;
+
+        Log::info($message);
         event(new Registered($thisUser,$password));
         //dispatch((new SendEmailJob($thisUser,$password))->delay(Carbon::now()->addSeconds(3)));
     }
