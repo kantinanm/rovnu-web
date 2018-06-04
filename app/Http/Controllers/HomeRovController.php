@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Config;
+use Illuminate\Support\Facades\Log;
 
 class HomeRovController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeRovController extends Controller
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
-
+        Log::info("Request Index");
 
         return view('pages.home')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
@@ -25,7 +26,7 @@ class HomeRovController extends Controller
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
-
+        Log::info("Request rewards");
 
         return view('pages.reward')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
@@ -48,6 +49,7 @@ class HomeRovController extends Controller
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+        Log::warning("Request place");
 
         return view('pages.place')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
@@ -61,7 +63,7 @@ class HomeRovController extends Controller
         $register_url =Config::get('app.how_to_register_url');
         $clip_video_url =Config::get('app.how_to_make_video_url');
         $register_manual=Config::get('app.how_to_register_manual');
-
+        Log::notice("Request rewards");
 
         return view('pages.rules')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
@@ -76,7 +78,7 @@ class HomeRovController extends Controller
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
-
+        Log::debug("Request rewards");
 
         return view('pages.activity')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
