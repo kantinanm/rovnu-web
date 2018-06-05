@@ -104,7 +104,6 @@
                 </div>
             </div>
 
-
             <div class="ui segment">
                 @if($by_pass_submit_video==true)
                     @if(($day_diff>=7)&(Auth::user()->register_completed==1))
@@ -136,7 +135,9 @@
                                     <li>เราขอบคุณทุกท่านที่เข้ามามีส่วนร่วมในการแข่งขันรายการนี้ หวังเป็นอย่างยิ่งว่า ทีมนี้จะได้ของรางวัลในภายในงานแล้วเจอกัน  </li>
                                 </ul>
                                 </p>
+                                @if($by_pass_submit_video==false)
                                 <p>Video ทีมของคุณก็มีสิทธิถูกเลือก เป็นทีม Popolar Vote พร้อมรับรางวัลจากกิจกรรมย่อยภายในการจัดกิจกรรมการแข่งขันครั้งนี้  </p>
+                                @endif
                             </div>
                         </div>
                     @elseif(Auth::user()->register_completed==0)
