@@ -34,9 +34,9 @@ class UserController extends Controller
         $by_pass_submit_video =Config::get('app.by_pass_submit_video');
 
 
-        $year =date_format(Auth::user()->created_at,"Y"); //updated_at
-        $month =date_format(Auth::user()->created_at,"m");
-        $days =date_format(Auth::user()->created_at,"d");
+        $year =date_format(Auth::user()->updated_at,"Y"); //updated_at
+        $month =date_format(Auth::user()->updated_at,"m");
+        $days =date_format(Auth::user()->updated_at,"d");
 
         $dt = Carbon::createMidnightDate($year, $month, $days);
 
@@ -90,9 +90,9 @@ class UserController extends Controller
         $by_pass_submit_video =Config::get('app.by_pass_submit_video');
 
 
-            $year =date_format(Auth::user()->created_at,"Y"); //updated_at
-            $month =date_format(Auth::user()->created_at,"m");
-            $days =date_format(Auth::user()->created_at,"d");
+            $year =date_format(Auth::user()->updated_at,"Y"); //updated_at
+            $month =date_format(Auth::user()->updated_at,"m");
+            $days =date_format(Auth::user()->updated_at,"d");
 
             $dt = Carbon::createMidnightDate($year, $month, $days);
 
