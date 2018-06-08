@@ -80,10 +80,10 @@
 
 <br />
 
-&nbsp;&nbsp;&nbsp;&nbsp; ภายหลังจากนี้คุณต้องไปทำ Video clip แนะนำทีม และเข้ามาแจ้ง Link ในระบบ โดยการ <a href="{{route('login')}}">login</a> หรือ ข้อมูลเพิ่มเติม -> จัดการข้อมูลทีม
+&nbsp;&nbsp;&nbsp;&nbsp; ภายหลังนี้ 7 วัน คุณสามารถตรวจสอบผลการสมัครได้ด้วยตนเอง โดยเข้าไปที่ <a href="{{route('login')}}">login</a> หรือ ข้อมูลเพิ่มเติม -> จัดการข้อมูลทีม
 
 <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F00;"><strong>*Notice</strong></span> : ระยะเวลาในการ แจ้ง Link video clip แนะนำทีม ตั้งแต่วันนี้ จนถึงวันที่  <span style="color:#F00;"><strong> 30 มิถุนายน 2561  </strong></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หรือรอประกาศรายชื่อทีมทั้งหมดที่ผ่านการตัดเลือก ผ่านทางเว็บไซต์ ภายในวันที่  <span style="color:#F00;"><strong> 1 กรกฏาคม 2561  </strong></span>
 <br />
 <br />โดยสามารถกดติดตามรายละเอียดเพิ่มเติมได้ที่ <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"> เพจ ecpe.nu </a><br />
 
