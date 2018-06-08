@@ -119,7 +119,7 @@
                                         </div>
                                         <div class="content">
                                             <div class="header">
-                                                <i class="facebook square icon"></i>&nbsp;&nbsp;ร่วมสนุกผ่านเพจ ecpe.nu
+                                                <i class="check icon green"></i>แจกแล้ว
                                             </div>
                                         </div>
                                     </div>
