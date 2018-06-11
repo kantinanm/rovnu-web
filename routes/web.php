@@ -78,11 +78,12 @@ Route::get('home/activity','HomeRovController@activity')->name('activity');
 })->name('register-privacy');*/
 Route::get('register/privacy','HomeRovController@privacy')->name('register-privacy');
 
-Route::get('register/paticipant', function () {
+Route::get('paticipant/register','PaticipantController@index')->name('register-paticipant');
+/*Route::get('paticipant/register', function () {
 
-    return 'paticipant';
+    return view('pages.paticipant.register');
 
-})->name('register-paticipant');
+})->name('register-paticipant');*/
 
 Route::get('register/sponsor', function () {
 
