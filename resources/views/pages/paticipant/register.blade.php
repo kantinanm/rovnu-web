@@ -97,21 +97,16 @@
 									</div>
 
 									<div class="ui form">
+                    <label>เหตุผลที่มาลงทะเบียนเข้าร่วมงาน</label>
 										<div class="field">
 											<div class="ui checkbox">
 												<input type="checkbox" name="choice1">
-												<label>มาร่วมงาน 25 ปีคณะ</label>
-											</div>
-										</div>
-										<div class="field">
-											<div class="ui checkbox">
-												<input type="checkbox" name="choice2">
-												<label>มาลุ้นรับของรางวัล</label>
-											</div>
-										</div>
-										<div class="field">
-											<div class="ui checkbox">
-												<input type="checkbox" name="choice3">
+												<label>มาร่วมงาน 25 ปีคณะวิศวกรรมศาสตร์</label>
+                        <input type="checkbox" name="choice2">
+												<label>มาถ่ายรูปกับน้องๆ คอสเพลย์</label>
+                        <input type="checkbox" name="choice3">
+												<label>มาลุ้นรับของรางวัลจาก garena</label>
+                        <input type="checkbox" name="choice4">
 												<label>มาเชียร์เพื่อน</label>
 											</div>
 										</div>
@@ -136,8 +131,8 @@
 	          <div class="col-md-4">
 	           <div class="ui card">
 				  <div class="ui move reveal image">
-					<img src="images/T-Shirt_front.png" class="visible content">
-					<img src="images/T-Shirt_back.png" class="hidden content">
+					<img src="../../images/T-Shirt_front.png" class="visible content">
+					<img src="../../images/T-Shirt_back.png" class="hidden content">
 				  </div>
 				  <div class="content">
 					  <a class="header"><span class="markFont">ของรางวัลภายในงาน</span></a>
