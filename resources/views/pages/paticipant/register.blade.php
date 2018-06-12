@@ -3,6 +3,7 @@
     :: ลงทะเบียนเข้าร่วมงาน ::
 @stop
 @section('css_script')
+	<meta name="csrf_token" content="{{ csrf_token() }}" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -57,7 +58,7 @@
 						<li>สมดุลการใช้ชีวิตควบคู่กับกิจกรรมเกมและกีฬา E-sport</li>
 					  </ol>
 				</p>
-				<p>โดยสามารถดูกำหนดการได้ ที่นี่</p>
+				<p>โดยสามารถดูกำหนดการได้ <a href="{{ route('activity') }}" target="_blank" >ที่นี่</a></p>
 			  </div>
 			</div>
 
@@ -69,12 +70,37 @@
                    <form class="ui form">
 										<div class="two fields">
 											<div class="field">
-												<label >ชื่อ </label>
+												<label >ชื่อ</label>
 												<input type="text" name="firstname" id="firstname"  value="" />
 											</div>
 											<div class="field">
 												<label >นามสกุล</label>
 												<input type="text" name="lastname" id="lastname"  value="" />
+											</div>
+									</div>
+									<div class="field">
+											<label >Garena ID หรือ OpenID</label>
+											<input type="text" name="garenaid" id="garenaid" placeholder="**หากไม่ระบุอาจไม่ได้รับสกินฮีโร่ จาก Garena" />
+										</div>
+									<div class="two fields">
+											<div class="field">
+												<label >เพศ</label>
+												<select name="gen" id="gen" >
+												<option value="0">ชาย</option>
+												<option value="1">หญิง</option>
+												<option value="2">ไม่ระบุ</option>
+											</select>
+											</div>
+											<div class="field">
+												<label >ช่วงอายุ</label>
+												<select name="age" id="age" >
+												<option value="0">น้อยกว่า 10 ปี</option>
+												<option value="1">10 - 19 ปี</option>
+												<option value="2">20 - 29 ปี</option>
+												<option value="3">30 - 39 ปี</option>
+												<option value="4">40 - 50 ปี</option>
+												<option value="5">มากกว่า 50 ปี</option>
+											</select>
 											</div>
 									</div>
 									<div class="two fields">
@@ -97,18 +123,41 @@
 									</div>
 
 									<div class="ui form">
-                    <label>เหตุผลที่มาลงทะเบียนเข้าร่วมงาน</label>
+                    <label>เหตุผลที่ลงทะเบียนเข้าร่วมงาน (เลือกตอบได้หลายข้อ)</label>
 										<div class="field">
-											<div class="ui checkbox">
-												<input type="checkbox" name="choice1">
-												<label>มาร่วมงาน 25 ปีคณะวิศวกรรมศาสตร์</label>
-                        <input type="checkbox" name="choice2">
-												<label>มาถ่ายรูปกับน้องๆ คอสเพลย์</label>
-                        <input type="checkbox" name="choice3">
-												<label>มาลุ้นรับของรางวัลจาก garena</label>
-                        <input type="checkbox" name="choice4">
-												<label>มาเชียร์เพื่อน</label>
+										<div class="list">
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="choice1">
+													<label>มาร่วมงาน 25 ปีคณะวิศวกรรมศาสตร์</label>
+												</div>
 											</div>
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="choice2">
+													<label>มาลุ้นรับของรางวัลภายในงานจาก Garena</label>
+												</div>
+											</div>
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="choice3">
+													<label>มาเชียร์เพื่อน/น้อง แข่งรอบ 4 ทีมสุดท้าย</label>
+												</div>
+											</div>
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="choice4">
+													<label>อยากถ่ายรูปกับคอสเพลย์สาวสวย</label>
+												</div>
+											</div>
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="choice5">
+													<label>อื่นๆ</label>
+													<input type="text" name="choiceetc" id="choiceetc" placeholder="กรุณาระบุเหตุผล..."/>
+												</div>
+											</div>
+										</div>
 										</div>
 									</div>
 									<div class="form-group">
@@ -131,8 +180,8 @@
 	          <div class="col-md-4">
 	           <div class="ui card">
 				  <div class="ui move reveal image">
-					<img src="../../images/T-Shirt_front.png" class="visible content">
-					<img src="../../images/T-Shirt_back.png" class="hidden content">
+					<img src="{{ URL::asset('images/T-Shirt_front.png') }}" class="visible content">
+					<img src="{{ URL::asset('images/T-Shirt_back.png') }}" class="hidden content">
 				  </div>
 				  <div class="content">
 					  <a class="header"><span class="markFont">ของรางวัลภายในงาน</span></a>
@@ -184,7 +233,7 @@
 
  <script>
      jQuery(document).ready(function( $ ) {
-
+			$('.ui.checkbox').checkbox();
      });
  </script>
 
