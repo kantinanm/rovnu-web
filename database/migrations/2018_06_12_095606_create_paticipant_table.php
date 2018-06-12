@@ -14,7 +14,20 @@ class CreatePaticipantTable extends Migration
     public function up()
     {
         Schema::create('paticipant', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('p_id');
+            $table->string('fullname');
+            $table->string('email');
+            $table->string('garena_id')->nullable($value = true);
+            $table->string('gender');
+            $table->string('age');
+            $table->string('provice');
+            $table->string('member_type');
+            $table->string('choice1')->nullable($value = true);
+            $table->string('choice2')->nullable($value = true);
+            $table->string('choice3')->nullable($value = true);
+            $table->string('choice4')->nullable($value = true);
+            $table->string('choice5')->nullable($value = true);
+            $table->string('choiceetc')->nullable($value = true);
             $table->timestamps();
         });
     }
@@ -26,6 +39,7 @@ class CreatePaticipantTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('paticipant');
     }
 }

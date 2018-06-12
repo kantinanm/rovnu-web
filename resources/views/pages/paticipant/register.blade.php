@@ -70,22 +70,22 @@
                    <form class="ui form">
 										<div class="two fields">
 											<div class="field">
-												<label >ชื่อ</label>
-												<input type="text" name="firstname" id="firstname"  value="" />
+												<label >ชื่อ - นามสกุล</label>
+												<input type="text" name="fullname" id="fullname"  value="" />
 											</div>
 											<div class="field">
-												<label >นามสกุล</label>
-												<input type="text" name="lastname" id="lastname"  value="" />
+												<label >E-Mail</label>
+												<input type="text" name="email" id="email"  value="" />
 											</div>
 									</div>
 									<div class="field">
 											<label >Garena ID หรือ OpenID</label>
-											<input type="text" name="garenaid" id="garenaid" placeholder="**หากไม่ระบุอาจไม่ได้รับสกินฮีโร่ จาก Garena" />
+											<input type="text" name="garenaid" id="garenaid" placeholder="**หากไม่ระบุจะถือว่าสละสิทธิ์ในการรับของรางวัลที่เป็นสกินฮีโร่ จากทาง Garena" />
 										</div>
 									<div class="two fields">
 											<div class="field">
 												<label >เพศ</label>
-												<select name="gen" id="gen" >
+												<select name="gender" id="gender" >
 												<option value="0">ชาย</option>
 												<option value="1">หญิง</option>
 												<option value="2">ไม่ระบุ</option>
@@ -115,9 +115,9 @@
 										<div class="field">
 											<label >ประเภทผู้ลงทะเบียน</label>
 											<select name="membertype" id="membertype" >
-												<option value="2">นิสิต/นักศึกษา</option>
+												<option value="0">นิสิต/นักศึกษา</option>
 												<option value="1">นักเรียน</option>
-												<option value="0">บุคคลทั่วไป</option>
+												<option value="2">บุคคลทั่วไป</option>
 											</select>
 										</div>
 									</div>
