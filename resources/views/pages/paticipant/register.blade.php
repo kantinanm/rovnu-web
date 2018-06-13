@@ -132,27 +132,33 @@
 													<label>มาร่วมงาน 25 ปีคณะวิศวกรรมศาสตร์</label>
 												</div>
 											</div>
-											<div class="item">
+                      <div class="item">
 												<div class="ui checkbox">
 													<input type="checkbox" name="choice2">
-													<label>มาลุ้นรับของรางวัลภายในงานจาก Garena</label>
+													<label>มาเที่ยวงานสัปดาห์วิทยาศาสตร์</label>
 												</div>
 											</div>
 											<div class="item">
 												<div class="ui checkbox">
 													<input type="checkbox" name="choice3">
-													<label>มาเชียร์เพื่อน/น้อง แข่งรอบ 4 ทีมสุดท้าย</label>
+													<label>มาลุ้นรับของรางวัลภายในงานจาก Garena</label>
 												</div>
 											</div>
 											<div class="item">
 												<div class="ui checkbox">
 													<input type="checkbox" name="choice4">
-													<label>อยากถ่ายรูปกับคอสเพลย์สาวสวย</label>
+													<label>มาเชียร์เพื่อน/น้อง แข่งรอบ 4 ทีมสุดท้าย</label>
 												</div>
 											</div>
 											<div class="item">
 												<div class="ui checkbox">
 													<input type="checkbox" name="choice5">
+													<label>อยากถ่ายรูปกับคอสเพลย์สาวสวย</label>
+												</div>
+											</div>
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="choice6">
 													<label>อื่นๆ</label>
 													<input type="text" name="choiceetc" id="choiceetc" placeholder="กรุณาระบุเหตุผล..."/>
 												</div>
@@ -160,6 +166,52 @@
 										</div>
 										</div>
 									</div>
+
+                  <div class="ui form">
+                    <label>รู้จักงาน NU eSport RoV Tournament 2018 ได้จากที่ใด (เลือกตอบได้หลายข้อ)</label>
+										<div class="field">
+										<div class="list">
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="nuchoice1">
+                          <label>โปสเตอร์งาน / บอร์ด - ป้ายประกาศต่าง ๆ</label>
+												</div>
+											</div>
+                      <div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="nuchoice2">
+												  <label>facebook</label>
+												</div>
+											</div>
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="nuchoice3">
+													<label>เพื่อน / คนรู้จักแนะนำ</label>
+												</div>
+											</div>
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="nuchoice4">
+													<label>ประชาสัมพันธ์จากคณะ</label>
+												</div>
+											</div>
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="nuchoice5">
+													<label>ประชาสัมพันธ์จากโรงเรียน / ครู</label>
+												</div>
+											</div>
+											<div class="item">
+												<div class="ui checkbox">
+													<input type="checkbox" name="nuchoice6">
+													<label>อื่นๆ</label>
+													<input type="text" name="nuchoiceetc" id="nuchoiceetc" placeholder="กรุณาระบุเหตุผล..."/>
+												</div>
+											</div>
+										</div>
+										</div>
+									</div>
+
 									<div class="form-group">
 										<div class="col-md-6 col-md-offset-4">
 												<button type="submit" class="btn btn-primary">
