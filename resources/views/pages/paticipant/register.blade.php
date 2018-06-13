@@ -67,7 +67,8 @@
 			   <div class="panel panel-default">
                 <div class="panel-heading">ลงทะเบียนเข้าร่วมงาน</div>
                 <div class="panel-body">
-                   <form class="ui form">
+                   <form class="ui form" method="POST" action="{{ route('players-add') }}">
+                    {{ csrf_field() }}
 										<div class="two fields">
 											<div class="field">
 												<label >ชื่อ - นามสกุล</label>
@@ -80,7 +81,10 @@
 									</div>
 									<div class="field">
 											<label >Garena ID หรือ OpenID</label>
-											<input type="text" name="garenaid" id="garenaid" placeholder="**หากไม่ระบุจะถือว่าสละสิทธิ์ในการรับของรางวัลที่เป็นสกินฮีโร่ จากทาง Garena" />
+											<input type="text" name="garenaid" id="garenaid" placeholder="**กรอกเพื่อได้รับสิทธิ์ในการรับของรางวัลที่เป็นสกินฮีโร่ จากทาง Garena" />
+                      <div class="ui pointing red basic label" id="idWarningDiv" style="display: block;">
+                        **หากไม่ระบุจะถือว่าสละสิทธิ์ในการรับของรางวัลที่เป็นสกินฮีโร่ จากทาง Garena
+                      </div>
 										</div>
 									<div class="two fields">
 											<div class="field">
@@ -115,9 +119,10 @@
 										<div class="field">
 											<label >ประเภทผู้ลงทะเบียน</label>
 											<select name="membertype" id="membertype" >
-												<option value="0">นิสิต/นักศึกษา</option>
-												<option value="1">นักเรียน</option>
-												<option value="2">บุคคลทั่วไป</option>
+												<option value="0">นิสิต / นักศึกษา</option>
+                        <option value="1">ครู / อาจารย์</option>
+												<option value="2">นักเรียน</option>
+												<option value="3">บุคคลทั่วไป</option>
 											</select>
 										</div>
 									</div>
@@ -214,7 +219,7 @@
 
 									<div class="form-group">
 										<div class="col-md-6 col-md-offset-4">
-												<button type="submit" class="btn btn-primary">
+												<button type="button" id="btnSubmit" onclick="chkSubmit()" class="btn btn-primary">
 													ลงทะเบียน
 												</button>
 										</div>
@@ -286,10 +291,34 @@
  <script>
      jQuery(document).ready(function( $ ) {
 			$('.ui.checkbox').checkbox();
+
+      $(".ui.form")
+        .form({
+            fields: {
+              fullname: {
+                    identifier: "fullname",
+                    rules: [
+                        {type: 'empty', prompt: 'ระบุชื่อ - นามสกุล'}
+                    ]
+                }
+                ,
+                email: {
+                    identifier: "email",
+                    rules: [
+                        {type: 'empty', prompt: 'ระบุอีเมลเพื่อรับ QRcode ในการเข้างาน'}
+                    ]
+                },
+            },
+
+            inline: true
+        });
      });
  </script>
 
  <script>
-
+    function chkSubmit(){
+      $('#fullname').focus();
+      $('#btnSubmit').submit();
+    }
  </script>
  @endsection

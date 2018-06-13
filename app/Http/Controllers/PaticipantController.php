@@ -31,7 +31,7 @@ class PaticipantController extends Controller
             ->with(compact('provice',$provice));
     }
 
-    protected function showEditForm($player_id)
+    /*protected function showEditForm($player_id)
     {
 
         //return view('pages.register.member-edit');
@@ -61,7 +61,7 @@ class PaticipantController extends Controller
             'hidGameId' => 'required|max:255',
             'player_name' => 'required|max:255'
         ]);
-    }
+    }*/
 
     protected function create(Request $request)
     {
@@ -89,7 +89,7 @@ class PaticipantController extends Controller
         return redirect('/register/players')->with('info', $info);
     }
 
-    protected function update(Request $request)
+    /*protected function update(Request $request)
     {
 
         $editPlayer =Player::Where('player_id',$request->input('player_id'))->first();
@@ -175,5 +175,5 @@ class PaticipantController extends Controller
             ->with(compact('allowSponsorRegister',$allowSponsorRegister))
             ->with(compact('notification_date',$notification_date))
             ->with(compact('clip_video_url',$clip_video_url));
-    }
+    }*/
 }
