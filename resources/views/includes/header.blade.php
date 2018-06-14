@@ -22,6 +22,7 @@
                     <li><a href="{{ route('home') }}#rewards"><span class="menu">ของรางวัล</span></a></li>
                     <li><a href="{{ route('activity') }}"><span class="menu">กิจกรรมภายในงาน</span></a></li>
                     <li><a href="{{ route('place') }}"><span class="menu">สถานที่จัดงาน</span></a></li>
+                    <li><a href="{{ route('question') }}"><span class="menu">คำถามที่พบบ่อย</span></a></li>
                     @if( Auth::guest() )
                     <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-orange border-none btn-rounded-corner btn-navbar">สมัครเข้าร่วมแข่งขัน<span class="icon-on-button"><i class="ion-ios-game-controller-b-outline"></i></span></a></li>
                     @endif

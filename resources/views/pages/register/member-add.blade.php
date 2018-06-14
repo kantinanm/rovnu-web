@@ -155,7 +155,7 @@
                                         <input type="text" name="player_name" id="player_name" placeholder="ชื่อตัวละครในเกมการแข่งขัน และรับรางวัล" value="{{ old('player_name') }}" />
                                     </div>
                                     <div class="field">
-                                        <label>Garena-ID </label>
+                                        <label>Garena-ID หรือ Open ID</label>
                                         <div class="ui left icon input">
                                             <input type="text" name="gameid" id="gameid"  value="{{ old('gameid') }}" onchange="checkIdExits()" /><i class="users icon"></i>
                                         </div>
