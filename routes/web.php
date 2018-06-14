@@ -79,11 +79,8 @@ Route::get('home/activity','HomeRovController@activity')->name('activity');
 Route::get('register/privacy','HomeRovController@privacy')->name('register-privacy');
 
 Route::get('paticipant/register','PaticipantController@index')->name('register-paticipant');
-/*Route::get('paticipant/register', function () {
-
-    return view('pages.paticipant.register');
-
-})->name('register-paticipant');*/
+Route::post('paticipant/register/add', 'PaticipantController@create')->name('paticipant-add');
+Route::post('paticipant/completed','PaticipantController@showTeamRegisterCompleted')->name('paticipant-completed');
 
 Route::get('register/sponsor', function () {
 

@@ -67,7 +67,7 @@
 			   <div class="panel panel-default">
                 <div class="panel-heading">ลงทะเบียนเข้าร่วมงาน</div>
                 <div class="panel-body">
-                   <form class="ui form" method="POST" action="{{ route('players-add') }}">
+                   <form class="ui form" method="POST" action="{{ route('paticipant-add') }}">
                     {{ csrf_field() }}
 										<div class="two fields">
 											<div class="field">
@@ -163,7 +163,7 @@
 											</div>
 											<div class="item">
 												<div class="ui checkbox">
-													<input type="checkbox" name="choice6">
+													<input type="checkbox" name="choice6" id="choice6">
 													<label>อื่นๆ</label>
 													<input type="text" name="choiceetc" id="choiceetc" placeholder="กรุณาระบุเหตุผล..."/>
 												</div>
@@ -208,7 +208,7 @@
 											</div>
 											<div class="item">
 												<div class="ui checkbox">
-													<input type="checkbox" name="nuchoice6">
+													<input type="checkbox" name="nuchoice6" id="nuchoice6">
 													<label>อื่นๆ</label>
 													<input type="text" name="nuchoiceetc" id="nuchoiceetc" placeholder="กรุณาระบุเหตุผล..."/>
 												</div>
