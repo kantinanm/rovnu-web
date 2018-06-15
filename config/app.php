@@ -179,6 +179,8 @@ return [
 
         Zizaco\Entrust\EntrustServiceProvider::class,
 
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+
     ],
 
     /*
@@ -228,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
     ],
     // use for rule of team , each team has 7 player in tournament
     'player_limit' => env('PLAYER_LIMIT', '7'),
