@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Config;
+use App\User;
 use Illuminate\Support\Facades\Log;
 
 class HomeRovController extends Controller
@@ -15,9 +16,23 @@ class HomeRovController extends Controller
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
         Log::info("Request Index");
+        //$activeUserTeam =User::where('active', '=', 1)->get()->count();
+        $teamActive =User::where('active', '=', 1)->get()->count();
+        $playerConfirmTeam= User::join('players', 'players.team_id', '=', 'users.id')->where('users.register_completed', '=', '1')
+            ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
+            ->get()->count();
+        $teamConfirm=User::where('register_completed', '=', 1)->get()->count();
+        $playerPaticipant=User::join('players', 'players.team_id', '=', 'users.id')->where('users.register_completed', '=', '0')
+            ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
+            ->get()->count();
+
 
         return view('pages.home')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('teamActive',$teamActive))
+            ->with(compact('playerConfirmTeam',$playerConfirmTeam))
+            ->with(compact('teamConfirm',$teamConfirm))
+            ->with(compact('playerPaticipant',$playerPaticipant))
             ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 

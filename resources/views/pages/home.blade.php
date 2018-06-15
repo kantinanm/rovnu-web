@@ -52,18 +52,36 @@
                 </div> <!--col-md-12-->
             </div> <!--end row2-->
 
-            <!--
             <div class="row">
-                <div class="col-md-4 text-center">
-                    <i class="ion-android-contacts" style="font-size: 45px;"></i> ผู้เข้าแข่งขัน
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="ion-ios-game-controller-b-outline" style="font-size: 45px;"></i> ทีม
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="ion-person-stalker" style="font-size: 45px;"></i> ผู้สนใจเข้าร่วมงาน
-                </div>
-            </div> -->
+                <div class="col-md-3 text-center">
+                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$playerConfirmTeam}}</span>
+                </div> <!--col-md-12-->
+                <div class="col-md-3 text-center">
+                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$teamConfirm}}</span>
+                </div> <!--col-md-12-->
+                <div class="col-md-3 text-center">
+                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$teamActive}}</span>
+                </div> <!--col-md-12-->
+                <div class="col-md-3 text-center">
+                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$playerPaticipant}}</span>
+                </div> <!--col-md-12-->
+            </div> <!--end row2-->
+
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <i class="ion-android-contacts" style="font-size: 30px;"></i> ผู้เข้าแข่งขัน
+                </div> <!--col-md-4-->
+                <div class="col-md-3 text-center">
+                    <i class="ion-ios-game-controller-b-outline" style="font-size: 30px;"></i> ทีมที่ยืนยันแล้ว
+                </div> <!--col-md-4-->
+                <div class="col-md-3 text-center">
+                    <i class="hourglass start icon" style="font-size: 30px;"></i>  ทีมที่รอยืนยัน
+                </div> <!--col-md-4-->
+                <div class="col-md-3 text-center">
+                    <i class="ion-person-stalker" style="font-size: 30px;"></i> ผู้เล่นที่รอยืนยันทีม
+                </div> <!--col-md-4-->
+
+            </div> <!--end row3-->
 
         </div><!--container-->
     </section>
