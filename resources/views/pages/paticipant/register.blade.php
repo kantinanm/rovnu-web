@@ -219,7 +219,7 @@
 
 									<div class="form-group">
 										<div class="col-md-6 col-md-offset-4">
-												<button type="submit" id="btnSubmit" class="btn btn-primary">
+												<button type="submit" onclick="chkSubmit()" id="btnSubmit" class="btn btn-primary">
 													ลงทะเบียน
 												</button>
 										</div>
@@ -319,8 +319,15 @@
 
  <script>
     function chkSubmit(){
-      $('#fullname').focus();
-      $('#btnSubmit').submit();
+			if($('#fullname').val() == ''){
+				$('#fullname').focus();
+			}else{
+				if($('#email').val() == ''){
+					$('#email').focus();
+				}else{
+					$('#btnSubmit').submit();
+				}
+			}
     }
  </script>
  @endsection
