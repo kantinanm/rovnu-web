@@ -63,7 +63,7 @@ class PaticipantController extends Controller
         $paticipant = Paticipant::create($paticipant);
 
         $info="ลงทะเบียนเรียบร้อยแล้ว";
-        return redirect('/paticipant/complete')->with('info', $info);
+        return redirect('/paticipant/completed')->with('info', $info);
     }
 
     protected function showRegisterCompleted()

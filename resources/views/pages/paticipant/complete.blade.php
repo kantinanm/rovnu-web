@@ -28,7 +28,7 @@
     </section>
 
     <section id="formUI" class="newsletter">
-        <!--<div class="container">
+        <div class="container">
 
             <div class="ui breadcrumb">
                 <a class="section">หน้าแรก</a>
@@ -95,11 +95,9 @@
                             </form>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-        </div>-->
+        </div>
 
         <div class="container">
 
