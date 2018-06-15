@@ -63,17 +63,16 @@ class PaticipantController extends Controller
         $paticipant = Paticipant::create($paticipant);
 
         $info="ลงทะเบียนเรียบร้อยแล้ว";
-        return redirect('/paticipant/completed')->with('info', $info);
-    }
-
-    protected function showRegisterCompleted()
-    {
+        $notification_date =Config::get('app.notification_date');
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
 
         return view('pages.paticipant.complete')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
-            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister))
+            ->with(compact('notification_date',$notification_date))
+            ->with('info',$info);
+        
     }
 }

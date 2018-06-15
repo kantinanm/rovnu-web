@@ -67,7 +67,7 @@
                         <div class="feature-wiget">
                             <div class="content">
                                 <h4><i class="ion-android-hangout"></i> <span class="markFont">ไม่สามารถเข้าสู่ระบบได้ ?</span></h4>
-                                <p>ตอบ : ให้เช็ค E-mail กด Activate account ก่อน จากนั้นคลิก <a href="http://www.ecpe.nu.ac.th/rov/login" target="_blank">ที่นี่</a> เพื่อ login เข้าสู่ระบบ (สามารถดูวิดีโอตัวอย่างการสมัครได้ <a href="https://www.youtube.com/watch?v=BXBurSbShYk" target="_blank"><i class="youtube icon"></i>ที่นี่</a> หรือดาวน์โหลดคู่มือการสมัครได้ <a href="https://drive.google.com/file/d/1YBJceh4bLu6Bx21p9rfJ3YOAkHwqwPEf/view" target="_blank">ที่นี่</a> )
+                                <p>ตอบ : ให้เช็ค E-mail กด Activate account ก่อน จากนั้นคลิก <a href="http://www.ecpe.nu.ac.th/rov/login" target="_blank">Login</a> เพื่อเข้าสู่ระบบ (สามารถดูวิดีโอตัวอย่างการสมัครได้ <a href="https://www.youtube.com/watch?v=BXBurSbShYk" target="_blank"><i class="youtube icon"></i>ที่นี่</a> หรือดาวน์โหลดคู่มือการสมัครได้ <a href="https://drive.google.com/file/d/1YBJceh4bLu6Bx21p9rfJ3YOAkHwqwPEf/view" target="_blank">ที่นี่</a> )
                                     หากยังไม่ได้สามารถแจ้งความผิดพลาดได้ทาง <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"><i class="facebook square icon"></i>Official Page</a> เราจะทำการตรวจสอบให้ค่ะ</p>
                             </div>
                         </div>
@@ -94,8 +94,8 @@
                                 <h4><i class="ion-android-hangout"></i> <span class="markFont">หากผ่านเข้ารอบ 4 ทีมสุดท้ายแต่ไม่สามารถมาแข่งในวันที่ 17 สิงหาคมได้ จะโดนปรับแพ้เลยไหม ?</span></h4>
                                 <p>ตอบ : ต้องดูสาเหตุที่ไม่สามารถมาร่วมแข่งได้เป็นกรณีไป คือ
                                     <ul>
-                                        <li><p>ติดเรียนเพราะไม่ใช่วันหยุด เราจะออกหนังสือขออนุญาตกับทางโรงเรียนให้</p></li>
-                                <li><p>ติดธุระส่วนตัวสามารถให้ผู้เล่นสำรองในทีมแข่งแทนผู้เล่นตัวจริงได้ แต่หากไม่มาทั้งทีมจะโดนปรับแพ้</p></li>
+                                      <li><p>ติดเรียนเพราะไม่ใช่วันหยุด เราจะออกหนังสือขออนุญาตเพื่อแจ้งกับทางโรงเรียนให้</p></li>
+                                      <li><p>ติดธุระส่วนตัวสามารถให้ผู้เล่นสำรองในทีมแข่งแทนผู้เล่นตัวจริงได้ แต่หากไม่มาทั้งทีมจะโดนปรับแพ้</p></li>
                                 </ul>
                                 </p>
                             </div>
