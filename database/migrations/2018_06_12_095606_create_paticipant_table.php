@@ -27,12 +27,14 @@ class CreatePaticipantTable extends Migration
             $table->string('choice3')->nullable($value = true);
             $table->string('choice4')->nullable($value = true);
             $table->string('choice5')->nullable($value = true);
+            $table->string('choice6')->nullable($value = true);
             $table->string('choiceetc')->nullable($value = true);
             $table->string('nuchoice1')->nullable($value = true);
             $table->string('nuchoice2')->nullable($value = true);
             $table->string('nuchoice3')->nullable($value = true);
             $table->string('nuchoice4')->nullable($value = true);
             $table->string('nuchoice5')->nullable($value = true);
+            $table->string('nuchoice6')->nullable($value = true);
             $table->string('nuchoiceetc')->nullable($value = true);
             $table->timestamps();
         });
