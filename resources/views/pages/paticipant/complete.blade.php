@@ -52,10 +52,7 @@
                           <li>กรุณาเก็บ QR code ไว้เพื่อใช้ในการแสดงตัวเข้าร่วมงาน</li>
                         </ul>
                       </p>
-                      <div class="visible-print text-center">
-                        {!! QrCode::generate('Make me into a QrCode!'); !!}
-                        <p>Scan me to return to the original page.</p>
-                      </div>
+                        <p>{!! QrCode::size(300)->generate('Make me into a QrCode!'); !!}</P>
                     </div>
                 </div>
             </div>
