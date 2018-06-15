@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Session;
 use App\Role;
 use App\Permission;
-use App\Player;
+use App\Paticipant;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Config;
@@ -33,17 +33,17 @@ class PaticipantController extends Controller
 
     protected function create(Request $request)
     {
-        $this->validator($request->all())->validate();
+        //$this->validator($request->all())->validate();
 
         // Auth()->
         $paticipant= [
             'fullname' => $request->input('fullname'),
             'email' => $request->input('email'),
-            'garenaid'=> $request->input('garenaid'),
+            'garena_id'=> $request->input('garenaid'),
             'gender'=> $request->input('gender'),
             'age' => $request->input('age'),
             'provice' => $request->input('provice'),
-            'membertype' => $request->input('membertype'),
+            'member_type' => $request->input('membertype'),
             'choice1'=> $request->input('choice1'),
             'choice2'=> $request->input('choice5'),
             'choice3'=> $request->input('choice3'),
@@ -63,10 +63,10 @@ class PaticipantController extends Controller
         $paticipant = Paticipant::create($paticipant);
 
         $info="ลงทะเบียนเรียบร้อยแล้ว";
-        return redirect('/paticipant/register')->with('info', $info);
+        return redirect('/paticipant/complete')->with('info', $info);
     }
 
-    protected function showTeamRegisterCompleted()
+    protected function showRegisterCompleted()
     {
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');

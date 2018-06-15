@@ -219,7 +219,7 @@
 
 									<div class="form-group">
 										<div class="col-md-6 col-md-offset-4">
-												<button type="button" id="btnSubmit" onclick="chkSubmit()" class="btn btn-primary">
+												<button type="submit" id="btnSubmit" class="btn btn-primary">
 													ลงทะเบียน
 												</button>
 										</div>
@@ -291,7 +291,7 @@
  <script>
      jQuery(document).ready(function( $ ) {
 			$('.ui.checkbox').checkbox();
-
+			
       $(".ui.form")
         .form({
             fields: {
@@ -312,6 +312,8 @@
 
             inline: true
         });
+
+			
      });
  </script>
 
