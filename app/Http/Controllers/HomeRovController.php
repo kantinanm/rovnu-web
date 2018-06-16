@@ -17,13 +17,18 @@ class HomeRovController extends Controller
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
         Log::info("Request Index");
         //$activeUserTeam =User::where('active', '=', 1)->get()->count();
-        $all_active=User::where('active', '=', 1)->get()->count();
+        $teamActive=User::where('active', '=', 1)
+            ->whereIn('users.register_completed', [0])
+            ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
+            ->get()->count();
 
         $playerConfirmTeam= User::join('players', 'players.team_id', '=', 'users.id')->where('users.register_completed', '=', '1')
             ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
             ->get()->count();
-        $teamConfirm=User::where('register_completed', '=', 1)->get()->count();
-        $teamActive =$all_active-$teamConfirm;
+        $teamConfirm=User::where('register_completed', '=', 1)
+            ->whereIn('users.active', [1])
+            ->get()->count();
+        //$teamActive =$all_active-$teamConfirm;
         $playerPaticipant=User::join('players', 'players.team_id', '=', 'users.id')->where('users.register_completed', '=', '0')
             ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
             ->get()->count();
