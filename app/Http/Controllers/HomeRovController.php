@@ -23,6 +23,7 @@ class HomeRovController extends Controller
             ->get()->count();
 
         $playerConfirmTeam= User::join('players', 'players.team_id', '=', 'users.id')->where('users.register_completed', '=', '1')
+            ->whereIn('users.active', [1])
             ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
             ->get()->count();
         $teamConfirm=User::where('register_completed', '=', 1)
@@ -31,6 +32,7 @@ class HomeRovController extends Controller
             ->get()->count();
         //$teamActive =$all_active-$teamConfirm;
         $playerPaticipant=User::join('players', 'players.team_id', '=', 'users.id')->where('users.register_completed', '=', '0')
+            ->whereIn('users.active', [1])
             ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
             ->get()->count();
 
