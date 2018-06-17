@@ -43,8 +43,8 @@
                         </div>
                         <div class="feature-wiget">
                             <div class="content">
-                                <h4><i class="ion-android-hangout"></i> <span class="markFont">สมัครแล้วไม่มี E-mail เข้ามา ?</span></h4>
-                                <p>ตอบ : อาจมีปัญหาทาง internet หรือเกิดเหตุขัดข้องกับ server กรุณารอสักครู่ ทั้งนี้สามารถแจ้งความผิดพลาดได้ทาง <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"><i class="facebook square icon"></i>Official Page</a> เราจะทำการตรวจสอบให้ค่ะ</p>
+                                <h4><i class="ion-android-hangout"></i> <span class="markFont">คลิปวิดีโอแนะนำตัวสมาชิกจำเป็นต้องทำส่งเลยไหม ?</span></h4>
+                                <p>ตอบ : ยังไม่ต้องทำส่งค่ะ คลิปแนะนำตัวไว้สำหรับทีมที่ผ่านเข้ารอบ 4 ทีมสุดท้ายเท่านั้นที่ต้องทำ โดยเราจะเปิดโหวตเพื่อหาทีมในดวงใจ ทีมที่ชนะ Popular Vote จะได้รับ gift voucher จากร้าน have a seat มูลค่า 1,000 บาทค่ะ</p>
                             </div>
                         </div>
                         <div class="feature-wiget">
@@ -62,6 +62,12 @@
                             <div class="content">
                                 <h4><i class="ion-android-hangout"></i> <span class="markFont">กดยืนยันทีมไปแล้วแก้ไขข้อมูลไม่ได้ ?</span></h4>
                                 <p>ตอบ : ถ้ากดยืนยันทีมแล้วจะไม่สามารถแก้ไขข้อมูลเองได้เนื่องจากป้องกันการเปลี่ยนตัวผู้เล่นภายหลัง หากกรอกข้อมูลผิดสามารถแจ้งมาทาง <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"><i class="facebook square icon"></i>Official Page</a> แล้วบอกส่วนที่จะแก้ เราจะทำการแก้ไขให้ค่ะ</p>
+                            </div>
+                        </div>
+                        <div class="feature-wiget">
+                            <div class="content">
+                                <h4><i class="ion-android-hangout"></i> <span class="markFont">สมัครแล้วไม่มี E-mail เข้ามา ?</span></h4>
+                                <p>ตอบ : อาจมีปัญหาทาง internet หรือเกิดเหตุขัดข้องกับ server กรุณารอสักครู่ ทั้งนี้สามารถแจ้งความผิดพลาดได้ทาง <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"><i class="facebook square icon"></i>Official Page</a> เราจะทำการตรวจสอบให้ค่ะ</p>
                             </div>
                         </div>
                         <div class="feature-wiget">
