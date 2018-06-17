@@ -80,8 +80,8 @@ Route::get('home/question','HomeRovController@question')->name('question');
 })->name('register-privacy');*/
 Route::get('register/privacy','HomeRovController@privacy')->name('register-privacy');
 
-Route::get('paticipant/register','PaticipantController@index')->name('register-paticipant');
-Route::post('paticipant/completed', 'PaticipantController@create')->name('paticipant-add');
+Route::get('paticipant/register','ParticipantController@index')->name('register-paticipant');
+Route::post('paticipant/completed', 'ParticipantController@create')->name('paticipant-add');
 
 Route::get('register/sponsor', function () {
 
