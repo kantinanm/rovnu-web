@@ -9,13 +9,13 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Session;
 use App\Role;
 use App\Permission;
-use App\Paticipant;
+use App\Participant;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Config;
 use App\Events\TeamConfirmed;
 
-class PaticipantController extends Controller
+class ParticipantController extends Controller
 {
     //
     protected function index()
@@ -36,7 +36,7 @@ class PaticipantController extends Controller
         //$this->validator($request->all())->validate();
 
         // Auth()->
-        $paticipant= [
+        $participant= [
             'fullname' => $request->input('fullname'),
             'email' => $request->input('email'),
             'garena_id'=> $request->input('garenaid'),
@@ -60,20 +60,20 @@ class PaticipantController extends Controller
             'nuchoiceetc'=> $request->input('nuchoiceetc')
         ];
 
-        $paticipant = Paticipant::create($paticipant);
+        $participant = Participant::create($participant);
 
+        $last_id=$participant->p_id;
         $info="ลงทะเบียนเรียบร้อยแล้ว";
-        return redirect('/paticipant/complete')->with('info', $info);
-    }
-
-    protected function showRegisterCompleted()
-    {
+        $notification_date =Config::get('app.notification_date');
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
 
         return view('pages.paticipant.complete')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
-            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister))
+            ->with(compact('notification_date',$notification_date))
+            ->with('info',$info);
+        
     }
 }

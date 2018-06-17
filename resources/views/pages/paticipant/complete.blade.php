@@ -28,78 +28,15 @@
     </section>
 
     <section id="formUI" class="newsletter">
-        <!--<div class="container">
+        <div class="container">
 
             <div class="ui breadcrumb">
                 <a class="section">หน้าแรก</a>
                 <div class="divider"> / </div>
-                <div class="active section">ตรวจสอบข้อมูล</div>
+                <div class="active section">ลงทะเบียนเข้าร่วมงาน</div>
             </div>
-
-            <div class="row padding-top-bottom-20">
-                <div class="col-md-12">
-
-                    <div class="ui steps">
-                        <div class="step disabled">
-                            <i class="ion-android-lock" style="font-size: 32px;"></i>&nbsp;&nbsp;
-                            <div class="content">
-                                <div class="title"><span class="markFont">นโยบายข้อมูลส่วนบุคคล</span></div>
-                                <div class="description">โปรดอ่านและยอมรับเงื่อนไข</div>
-                            </div>
-                        </div>
-                        <div class="disabled step">
-                            <i class="ion-compose" style="font-size: 32px;"></i>&nbsp;&nbsp;
-                            <div class="content">
-                                <div class="title"><span class="markFont">ลงทะเบียนทีม</span></div>
-                                <div class="description">Activate account ผ่าน email</div>
-                            </div>
-                        </div>
-                        <div class="disabled step">
-                            <i class="ion-information-circled" style="font-size: 32px;"></i>&nbsp;&nbsp;
-                            <div class="content">
-                                <div class="title"><span class="markFont">กรอกข้อมูลสมาชิกในทีม </span></div>
-                                <div class="description">ใส่รายชื่อผู้ในเล่นทีม</div>
-                            </div>
-                        </div>
-
-                        <div class="active step">
-                            <i class="ion-checkmark-circled" style="font-size: 32px;"></i>&nbsp;&nbsp;
-                            <div class="content">
-                                <div class="title"><span class="markFont">ตรวจสอบข้อมูล</span></div>
-                                <div class="description">กับ Garana Thailand </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="ui pointing menu">
-                        <div class="item">
-                            Home
-                        </div>
-                        <div class="item">
-                            <span class="markFont">ลงทะเบียนทีม</span>
-                        </div>
-                        <div class="item">
-                            <span class="markFont">รายชื่อสมาชิก</span>
-                        </div>
-                        <div class="item active">
-                            <span class="markFont">ตรวจสอบข้อมูล</span>
-                        </div>
-                        <div class="right menu">
-                            <a class="ui item" href="{{ route('logout') }}"  onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                <i class="icon power off"></i>
-                                <span class="markFont">ออกจากระบบ</span>
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        </div>
-                    </div>
-
-
-                </div>
             </div>
-        </div>-->
+        </div>
 
         <div class="container">
 
@@ -110,13 +47,16 @@
                         <div class="header">
                             <span class="markFont"> คุณได้ลงทะเบียนสำเร็จ </span>
                         </div>
-                        <!--<p>
+                        <p>
                         <ul class="list">
-                            <li>ภายหลังจากนี้จะมีการนำข้อมูลไปตรวจสอบกับทาง Garana Thailand ระยะเวลาประมาณ 5-7 วัน</li>
-                            <li>ภายหลังนี้ 7 วัน คุณสามารถตรวจสอบผลการสมัครได้ด้วยตนเอง โดยเข้าไปที่ ข้อมูลเพิ่มเติม -> จัดการข้อมูลทีม  </li>
-                            <li> เราจะประกาศผลการสมัครอย่างเป็นทางการในวันที่ <strong>{{$notification_date}}</strong>  </li>
+                          <li>กรุณาเก็บ QR code ไว้เพื่อใช้ในการแสดงตัวเข้าร่วมงาน NU eSports ROV Tournament และโครงการฝึกอบรมฯอุตสาหกรรมเกมและการแข่งขันกีฬา E-sport วันที่ 17 สิงหาคม 2561 ณ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร</li>
+                            <li>โปรด Save <i class="download icon"></i> ลงใน <i class="mobile alternate icon"></i> โทรศัพท์มือถือของท่าน หรือเครื่องคอมพิวเตอร์ <i class="laptop icon"></i> และยื่นให้ทีมงาน <i class="id badge outline icon"></i> ทำการ SCAN ในวันงาน เพื่อสิทธิในการร่วมลุ้นของรางวัลภายในงาน</li>
+                            <li><a href="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->merge( '/public/images/qrcode_cop.png')->color(0,51,170)->generate('Make me into an QrCode!')) !!} " class="btn btn-primary" download>Download</a></li>
                         </ul>
-                      </p>-->
+                      </p>
+                        <p>
+                            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->merge( '/public/images/qrcode_cop.png')->color(0,51,170)->generate('Make me into an QrCode!')) !!} ">
+                        </P>
                     </div>
                 </div>
             </div>
