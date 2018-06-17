@@ -81,8 +81,7 @@ Route::get('home/question','HomeRovController@question')->name('question');
 Route::get('register/privacy','HomeRovController@privacy')->name('register-privacy');
 
 Route::get('paticipant/register','PaticipantController@index')->name('register-paticipant');
-Route::post('paticipant/register/add', 'PaticipantController@create')->name('paticipant-add');
-Route::post('paticipant/completed','PaticipantController@showRegisterCompleted')->name('paticipant-completed');
+Route::post('paticipant/completed', 'PaticipantController@create')->name('paticipant-add');
 
 Route::get('register/sponsor', function () {
 

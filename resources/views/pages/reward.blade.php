@@ -88,6 +88,35 @@
                 <div class="ui one column grid">
                     <div class="column">
                         <div class="ui raised segment">
+                            <a class="ui red ribbon label">รางวัล Popular Vote สุดยอดทีมในดวงใจ</a>
+                            <div class="feature-wiget">
+                                <div class="icon-wraper">
+                                    <i class="ion-videocamera"></i>
+                                </div>
+                                <div class="content">
+                                    <h4 class="bottom-line"><span class="markFont">รางวัล Popular Vote สำหรับทีมที่เข้ามาถึงรอบ 4 ทีมสุดท้าย</span></h4>
+                                    <ul>
+                                        <li><p><i class="trophy icon yellow"></i>ลุ้นทีมไหน เชียร์ทีมไหน สามารถมาโหวตสุดยอดทีมในดวงใจจากทีมที่ผ่านเข้ารอบ 4 ทีมสุดท้าย <br>เพื่อรับ gift voucher จากร้าน have a seat มูลค่า 1,000 บาท กันไปเลย</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ui three column grid">
+                                <div class="column">
+                                    <div class="ui fluid card">
+                                        <div class="image">
+                                            <img src="{{ URL::asset('images/gift.png') }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" style="margin-top: 20px;">
+                <div class="ui one column grid">
+                    <div class="column">
+                        <div class="ui raised segment">
                             <a class="ui red ribbon label">กิจกรรมแจกของรางวัล</a>
                             <div class="feature-wiget">
                                 <div class="icon-wraper">
