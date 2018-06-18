@@ -3,10 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
-=======
 use DirapeToken;
->>>>>>> master
 
 class Participant extends Model
 {
