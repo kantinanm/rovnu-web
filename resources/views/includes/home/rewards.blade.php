@@ -43,9 +43,8 @@
                                     <br/><a href="https://www.logitechg.com/th-th/product/g231-prodigy-gaming-headset" target="_blank" class="ui small image" data-tooltip="กิจกรรม like & share ครั้งที่ 2 จากเพจ ecpe.nu" data-inverted="">
                                         <img src="{{ URL::asset('images/reward/g213_headset.png') }}" >
                                     </a>
-                                    <i class="check icon green"></i> แจกแล้ว</p></li>
                                     <br/> สนับสนุนของรางวัลโดย <a href="https://www.facebook.com/itcorner2012/" target="_blank"> IT.Corner </a>
-                                </p></li>
+                                <i class="check icon green"></i> แจกแล้ว</p></li>
                             <li><p>รางวัลที่ 2 ผ้าพันคอ BNK48xChangsuek <br/> <a href="https://shop.bnk48.com" target="_blank" class="ui small image" data-tooltip="กิจกรรม like & share ครั้งที่ 2  จากเพจ ecpe.nu" data-inverted="">
                                         <img src="{{ URL::asset('images/reward/cotton.png') }}" ></a><i class="check icon green"></i> แจกแล้ว</p></li>
                             <li><p>รางวัลที่ 3 Sweat16! CD 1st Single วิ่ง (run) <br/> <a href="http://sweat16official.com/discography/first-single-run/" target="_blank" class="ui small image" data-tooltip="กิจกรรม like & share ครั้งที่ 2  จากเพจ ecpe.nu" data-inverted="">
