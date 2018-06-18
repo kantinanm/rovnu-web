@@ -180,7 +180,10 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
 
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+<<<<<<< HEAD
+=======
         Dirape\Token\TokenServiceProvider::class,
+>>>>>>> e576c52d076e51d1bd236c4e690aea00a3ab9a95
 
     ],
 
