@@ -180,6 +180,10 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
 
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+<<<<<<< HEAD
+=======
+        Dirape\Token\TokenServiceProvider::class,
+>>>>>>> e576c52d076e51d1bd236c4e690aea00a3ab9a95
 
     ],
 
@@ -231,6 +235,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+        'Token'=>\Dirape\Token\Facades\Facade::class
     ],
     // use for rule of team , each team has 7 player in tournament
     'player_limit' => env('PLAYER_LIMIT', '7'),

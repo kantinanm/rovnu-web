@@ -14,6 +14,7 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Config;
 use App\Events\TeamConfirmed;
+use Dirape\Token\Token;
 
 class ParticipantController extends Controller
 {
@@ -39,6 +40,7 @@ class ParticipantController extends Controller
         $participant= [
             'fullname' => $request->input('fullname'),
             'email' => $request->input('email'),
+            'unique_id'=>  (new Token())->Unique('participant', 'unique_id', 40),
             'garena_id'=> $request->input('garenaid'),
             'gender'=> $request->input('gender'),
             'age' => $request->input('age'),
@@ -62,7 +64,7 @@ class ParticipantController extends Controller
 
         $participant = Participant::create($participant);
 
-        $last_id=$participant->p_id;
+        $token=$participant->unique_id;
         $info="ลงทะเบียนเรียบร้อยแล้ว";
         $notification_date =Config::get('app.notification_date');
         $allowTeamRegister =Config::get('app.allow_team_register');
@@ -73,6 +75,7 @@ class ParticipantController extends Controller
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
             ->with(compact('allowSponsorRegister',$allowSponsorRegister))
             ->with(compact('notification_date',$notification_date))
+            ->with(compact('token',$token))
             ->with('info',$info);
         
     }
