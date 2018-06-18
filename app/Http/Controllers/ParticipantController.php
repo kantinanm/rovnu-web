@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Auth;
 use Config;
 use App\Events\TeamConfirmed;
 use Dirape\Token\Token;
+use Storage;
+use File;
+use Carbon\Carbon;
+use SimpleSoftwareIO\QrCode\BaconQrCodeGenerator;
 
 class ParticipantController extends Controller
 {
@@ -63,8 +67,24 @@ class ParticipantController extends Controller
         ];
 
         $participant = Participant::create($participant);
-
         $token=$participant->unique_id;
+        $p_id=$participant->p_id;
+        $qrcode = new BaconQrCodeGenerator;
+        ;
+
+        $upload_dir = public_path('images/qrcode/');
+        //$img = str_replace('data:image/png;base64,', '', base64_encode($qrcode->format('png')->size(300)->color(0,51,170)->generate($token)));
+        //$img = str_replace(' ', '+', $img);
+        $data = base64_decode(base64_encode($qrcode->format('png')->size(300)->color(0,51,170)->generate($token)));
+        $file = $upload_dir . "qrcode-".$p_id."-".Carbon::now('Asia/Bangkok')->format('Y-m-d').".png";
+        file_put_contents($file, $data);
+
+        //Storage::put('file.png', $data);
+        //File::put(public_path('uploads'));
+        //Storage::disk('local')->putFile('images', $file);
+
+
+
         $info="ลงทะเบียนเรียบร้อยแล้ว";
         $notification_date =Config::get('app.notification_date');
         $allowTeamRegister =Config::get('app.allow_team_register');
