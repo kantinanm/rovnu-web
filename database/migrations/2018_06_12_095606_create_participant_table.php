@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePaticipantTable extends Migration
+class CreateParticipantTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreatePaticipantTable extends Migration
      */
     public function up()
     {
-        Schema::create('paticipant', function (Blueprint $table) {
+        Schema::dropIfExists('paticipant');
+        Schema::create('participant', function (Blueprint $table) {
             $table->increments('p_id');
             $table->string('fullname');
             $table->string('email');
+            $table->string('unique_id')->nullable($value = true);
             $table->string('garena_id')->nullable($value = true);
             $table->string('gender');
             $table->string('age');
@@ -48,6 +50,6 @@ class CreatePaticipantTable extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('paticipant');
+        Schema::dropIfExists('participant');
     }
 }

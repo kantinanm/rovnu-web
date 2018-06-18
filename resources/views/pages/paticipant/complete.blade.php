@@ -33,7 +33,7 @@
             <div class="ui breadcrumb">
                 <a class="section">หน้าแรก</a>
                 <div class="divider"> / </div>
-                <div class="active section">ตรวจสอบข้อมูล</div>
+                <div class="active section">ลงทะเบียนเข้าร่วมงาน</div>
             </div>
             </div>
         </div>
@@ -49,10 +49,14 @@
                         </div>
                         <p>
                         <ul class="list">
-                          <li>กรุณาเก็บ QR code ไว้เพื่อใช้ในการแสดงตัวเข้าร่วมงาน</li>
+                          <li>กรุณาเก็บ QR code ไว้เพื่อใช้ในการแสดงตัวเข้าร่วมงาน NU eSports ROV Tournament และโครงการฝึกอบรมฯอุตสาหกรรมเกมและการแข่งขันกีฬา E-sport วันที่ 17 สิงหาคม 2561 ณ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร</li>
+                            <li>โปรด Save <i class="download icon"></i> ลงใน <i class="mobile alternate icon"></i> โทรศัพท์มือถือของท่าน หรือเครื่องคอมพิวเตอร์ <i class="laptop icon"></i> และยื่นให้ทีมงาน <i class="id badge outline icon"></i> ทำการ SCAN ในวันงาน เพื่อสิทธิในการร่วมลุ้นของรางวัลภายในงาน</li>
+                            <li><a href="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate($token)) !!} " class="btn btn-primary" download="my-qrcode">Download</a></li>
                         </ul>
                       </p>
-                        <p>{!! QrCode::size(300)->generate('Make me into a QrCode!'); !!}</P>
+                        <p>
+                            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->color(0,51,170)->generate($token)) !!} ">
+                        </P>
                     </div>
                 </div>
             </div>
