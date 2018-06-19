@@ -36,10 +36,30 @@ class ParticipantController extends Controller
             ->with(compact('provice',$provice));
     }
 
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'garenaid' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:participant',
+            'hidReasonCount' =>  'required|integer|min:1|digits_between: 1,6',
+            'hidSourceRecognition' =>  'required|integer|min:1|digits_between: 1,6',
+
+        ],
+         [
+                'garenaid.required'   => 'Garena ID หากไม่ระบุจะถือว่าสละสิทธิ์ในการรับของรางวัลที่เป็นสกินฮีโร่ จากทาง Garena',
+                'email.required'        => 'โปรดระบุอีเมล์ที่ใช้รับ QR-CODE ในการ scan เพื่อเข้าร่วมงาน',
+                'hidReasonCount.min' =>  'เลือกเหตุผลที่ลงทะเบียนเข้าร่วมงานมา  อย่างน้อย 1 เหตุผล',
+                'hidSourceRecognition.min' =>  'เลือกที่มาของการรู้จักงาน NU eSport RoV Tournament 2018  อย่างน้อย 1 ที่มา ',
+         ]);
+    }
+
     protected function create(Request $request)
     {
-        //$this->validator($request->all())->validate();
+        $validator =$this->validator($request->all())->validate();
 
+        if($validator->fails()) {
+            return  Redirect::back()->withErrors($validator);
+        }
         // Auth()->
         $participant= [
             'fullname' => $request->input('fullname'),

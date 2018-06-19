@@ -67,22 +67,34 @@
 			   <div class="panel panel-default">
                 <div class="panel-heading">ลงทะเบียนเข้าร่วมงาน</div>
                 <div class="panel-body">
+
+					@if (count($errors) > 0)
+						<div class="alert alert-danger">
+							<strong>คุณยังไม่ได้กรอกข้อมูลที่เราต้องการครบถ้วน</strong> ตามรายการต่อไปนี้.<br><br>
+							<ul>
+								@foreach ($errors->all() as $error)
+									<li>{{ $error }}</li>
+								@endforeach
+							</ul>
+						</div>
+					@endif
+
                    <form class="ui form" method="POST" action="{{ route('paticipant-add') }}">
                     {{ csrf_field() }}
 										<div class="two fields">
 											<div class="field">
 												<label >ชื่อ - นามสกุล</label>
-												<input type="text" name="fullname" id="fullname"  value="" />
+												<input type="text" name="fullname" id="fullname"  value="{{ old('fullname') }}" />
 											</div>
 											<div class="field">
 												<label >E-Mail</label>
-												<input type="text" name="email" id="email"  value="" />
+												<input type="text" name="email" id="email"  value="{{ old('email') }}" />
 											</div>
 									</div>
 									<div class="field">
 											<label >Garena ID หรือ OpenID</label>
-											<input type="text" name="garenaid" id="garenaid" placeholder="**กรอกเพื่อได้รับสิทธิ์ในการรับของรางวัลที่เป็นสกินฮีโร่ จากทาง Garena" />
-                      <div class="ui pointing red basic label" id="idWarningDiv" style="display: block;">
+											<input type="text" name="garenaid" id="garenaid" placeholder="**กรอกเพื่อได้รับสิทธิ์ในการรับของรางวัลที่เป็นสกินฮีโร่ จากทาง Garena" value="{{ old('garenaid') }}" />
+                      <div class="ui pointing green basic label" id="idWarningDiv" style="display: block;">
                         **หากไม่ระบุจะถือว่าสละสิทธิ์ในการรับของรางวัลที่เป็นสกินฮีโร่ จากทาง Garena
                       </div>
 										</div>
@@ -90,39 +102,39 @@
 											<div class="field">
 												<label >เพศ</label>
 												<select name="gender" id="gender" >
-												<option value="0">ชาย</option>
-												<option value="1">หญิง</option>
-												<option value="2">ไม่ระบุ</option>
-											</select>
+													<option value="0" {{ old('gender')==0 ? 'selected' : '' }}>ชาย</option>
+													<option value="1" {{ old('gender')==1 ? 'selected' : '' }}>หญิง</option>
+													<option value="2" {{ old('gender')==2 ? 'selected' : '' }}>ไม่ระบุ</option>
+												</select>
 											</div>
 											<div class="field">
 												<label >ช่วงอายุ</label>
 												<select name="age" id="age" >
-												<option value="0">น้อยกว่า 10 ปี</option>
-												<option value="1">10 - 19 ปี</option>
-												<option value="2">20 - 29 ปี</option>
-												<option value="3">30 - 39 ปี</option>
-												<option value="4">40 - 50 ปี</option>
-												<option value="5">มากกว่า 50 ปี</option>
-											</select>
+													<option value="0" {{ old('age')==0 ? 'selected' : '' }}>น้อยกว่า 10 ปี</option>
+													<option value="1" selected {{ old('age')==1 ? 'selected' : '' }}>10 - 19 ปี</option>
+													<option value="2" {{ old('age')==2 ? 'selected' : '' }}>20 - 29 ปี</option>
+													<option value="3" {{ old('age')==3 ? 'selected' : '' }}>30 - 39 ปี</option>
+													<option value="4" {{ old('age')==4 ? 'selected' : '' }}>40 - 50 ปี</option>
+													<option value="5" {{ old('age')==5 ? 'selected' : '' }}>มากกว่า 50 ปี</option>
+												</select>
 											</div>
 									</div>
 									<div class="two fields">
-                    <div class="field">
-                        <label>จังหวัด</label>
-                        <select name="provice" id="provice">
-                            @foreach($provice as $proviceList)
-                                <option value="{{$proviceList}}">{{$proviceList}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-										<div class="field">
+                   						 <div class="field">
+											<label>จังหวัด</label>
+											<select name="provice" id="provice">
+												@foreach($provice as $proviceList)
+													<option value="{{$proviceList}}" value="{{$proviceList}}" {{ old('provice')==$proviceList ? 'selected' : '' }}>{{$proviceList}}</option>
+												@endforeach
+											</select>
+										</div>
+										 <div class="field">
 											<label >ประเภทผู้ลงทะเบียน</label>
 											<select name="membertype" id="membertype" >
-												<option value="0">นิสิต / นักศึกษา</option>
-                        <option value="1">ครู / อาจารย์</option>
-												<option value="2">นักเรียน</option>
-												<option value="3">บุคคลทั่วไป</option>
+												<option value="0" {{ old('membertype')==0 ? 'selected' : '' }} >นิสิต / นักศึกษา</option>
+												<option value="1" {{ old('membertype')==1 ? 'selected' : '' }}>ครู / อาจารย์</option>
+												<option value="2" {{ old('membertype')==2 ? 'selected' : '' }}>นักเรียน</option>
+												<option value="3" {{ old('membertype')==3 ? 'selected' : '' }}>บุคคลทั่วไป</option>
 											</select>
 										</div>
 									</div>
@@ -130,93 +142,102 @@
 									<div class="ui form">
                     <label>เหตุผลที่ลงทะเบียนเข้าร่วมงาน (เลือกตอบได้หลายข้อ)</label>
 										<div class="field">
-										<div class="list">
-											<div class="item">
-												<div class="ui checkbox">
-													<input type="checkbox" name="choice1">
-													<label>มาร่วมงาน 25 ปีคณะวิศวกรรมศาสตร์</label>
+										    <div class="list">
+												<div class="item">
+													<div class="ui checkbox">
+														<input type="checkbox" name="choice1" value="1" {{ old('choice1') ? 'checked' : '' }} onChange="chkReasonChange(this)">
+														<label>มาร่วมงาน 25 ปี คณะวิศวกรรมศาสตร์ <i class="cog icon red" style="font-size: 32px"></i></label>
+													</div>
 												</div>
-											</div>
-                      <div class="item">
-												<div class="ui checkbox">
-													<input type="checkbox" name="choice2">
-													<label>มาเที่ยวงานสัปดาห์วิทยาศาสตร์</label>
+						  <div class="item">
+													<div class="ui checkbox">
+														<input type="checkbox" name="choice2" value="2" {{ old('choice2') ? 'checked' : '' }}  onChange="chkReasonChange(this)">
+														<label>มาเที่ยวงานสัปดาห์วิทยาศาสตร์ <i class="connectdevelop icon yellow" style="font-size: 32px"></i></label>
+													</div>
 												</div>
-											</div>
-											<div class="item">
-												<div class="ui checkbox">
-													<input type="checkbox" name="choice3">
-													<label>มาลุ้นรับของรางวัลภายในงานจาก Garena</label>
+												<div class="item">
+													<div class="ui checkbox">
+														<input type="checkbox" name="choice3" value="3" {{ old('choice3') ? 'checked' : '' }}  onChange="chkReasonChange(this)">
+														<label>มาลุ้นรับของรางวัลภายในงานจาก Garena <i class="gift icon orange" style="font-size: 32px"></i></label>
+													</div>
 												</div>
-											</div>
-											<div class="item">
-												<div class="ui checkbox">
-													<input type="checkbox" name="choice4">
-													<label>มาเชียร์เพื่อน/น้อง แข่งรอบ 4 ทีมสุดท้าย</label>
+												<div class="item">
+													<div class="ui checkbox">
+														<input type="checkbox" name="choice4" value="4" {{ old('choice4') ? 'checked' : '' }}  onChange="chkReasonChange(this)">
+														<label>มาเชียร์เพื่อน/น้อง แข่งรอบ 4 ทีมสุดท้าย <i class="trophy icon yellow" style="font-size: 32px"></i></label>
+													</div>
 												</div>
-											</div>
-											<div class="item">
-												<div class="ui checkbox">
-													<input type="checkbox" name="choice5">
-													<label>อยากถ่ายรูปกับคอสเพลย์สาวสวย</label>
+												<div class="item">
+													<div class="ui checkbox">
+														<input type="checkbox" name="choice5" value="5" {{ old('choice5') ? 'checked' : '' }}  onChange="chkReasonChange(this)">
+														<label>อยากถ่ายรูปกับคอสเพลย์สาวสวย <i class="hand peace outline icon pink" style="font-size: 32px"></i></label>
+													</div>
 												</div>
-											</div>
-											<div class="item">
-												<div class="ui checkbox">
-													<input type="checkbox" name="choice6" id="choice6">
-													<label>อื่นๆ</label>
-													<input type="text" name="choiceetc" id="choiceetc" placeholder="กรุณาระบุเหตุผล..."/>
+												<div class="item">
+													<div class="ui checkbox">
+														<input type="checkbox" name="choice6" id="choice6" {{ old('choice6') ? 'checked' : '' }}  value="6" onChange="checkOtherReason(this)">
+														<label>อื่นๆ</label>
+													</div>
 												</div>
-											</div>
-										</div>
+												<div class="item">
+													<input type="text" name="choiceetc" id="choiceetc" {{ old('choice6') ? '' : 'disabled' }}  placeholder="กรุณาระบุเหตุผล..." value="{{ old('choiceetc') }}"/>
+												</div>
+										  </div>
 										</div>
 									</div>
 
-                  <div class="ui form">
+					   				<div class="ui form">
                     <label>รู้จักงาน NU eSport RoV Tournament 2018 ได้จากที่ใด (เลือกตอบได้หลายข้อ)</label>
 										<div class="field">
 										<div class="list">
 											<div class="item">
 												<div class="ui checkbox">
-													<input type="checkbox" name="nuchoice1">
-                          <label>โปสเตอร์งาน / บอร์ด - ป้ายประกาศต่าง ๆ</label>
+													<input type="checkbox" name="nuchoice1" {{ old('nuchoice1') ? 'checked' : '' }} onChange="chkRecognitionChange(this)">
+                          <label>โปสเตอร์งาน / บอร์ด - ป้ายประกาศต่าง ๆ <i class="clipboard outline icon purple" style="font-size: 32px"> </i></label>
 												</div>
 											</div>
                       <div class="item">
 												<div class="ui checkbox">
-													<input type="checkbox" name="nuchoice2">
-												  <label>facebook</label>
+													<input type="checkbox" name="nuchoice2" {{ old('nuchoice2') ? 'checked' : '' }} onChange="chkRecognitionChange(this)">
+												  <label>Facebook <i class="facebook square icon blue" style="font-size: 32px"></i></label>
 												</div>
 											</div>
 											<div class="item">
 												<div class="ui checkbox">
-													<input type="checkbox" name="nuchoice3">
-													<label>เพื่อน / คนรู้จักแนะนำ</label>
+													<input type="checkbox" name="nuchoice3" {{ old('nuchoice3') ? 'checked' : '' }} onChange="chkRecognitionChange(this)">
+													<label>เพื่อน / คนรู้จักแนะนำ <i class="comment alternate outline icon grey" style="font-size: 32px"> </i></label>
 												</div>
 											</div>
 											<div class="item">
 												<div class="ui checkbox">
-													<input type="checkbox" name="nuchoice4">
-													<label>ประชาสัมพันธ์จากคณะ</label>
+													<input type="checkbox" name="nuchoice4" {{ old('nuchoice4') ? 'checked' : '' }} onChange="chkRecognitionChange(this)">
+													<label>ประชาสัมพันธ์จากคณะ <i class="newspaper outline icon brown" style="font-size: 32px"> </i></label>
 												</div>
 											</div>
 											<div class="item">
 												<div class="ui checkbox">
-													<input type="checkbox" name="nuchoice5">
-													<label>ประชาสัมพันธ์จากโรงเรียน / ครู</label>
+													<input type="checkbox" name="nuchoice5" {{ old('nuchoice5') ? 'checked' : '' }} onChange="chkRecognitionChange(this)">
+													<label>ประชาสัมพันธ์จากโรงเรียน / ครู <i class="microphone icon olive" style="font-size: 32px"> </i></label>
 												</div>
 											</div>
 											<div class="item">
 												<div class="ui checkbox">
-													<input type="checkbox" name="nuchoice6" id="nuchoice6">
+													<input type="checkbox" name="nuchoice6" id="nuchoice6" {{ old('nuchoice6') ? 'checked' : '' }} onChange="checkOtherRecognition(this)">
 													<label>อื่นๆ</label>
-													<input type="text" name="nuchoiceetc" id="nuchoiceetc" placeholder="กรุณาระบุเหตุผล..."/>
 												</div>
+											</div>
+											<div class="item">
+												<input type="text" name="nuchoiceetc" id="nuchoiceetc" {{ old('nuchoice6') ? '' : 'disabled' }}  placeholder="กรุณาระบุเหตุผล..." value="{{ old('nuchoiceetc') }}"/>
 											</div>
 										</div>
 										</div>
 									</div>
 
+					   <div class="field">
+
+						   <input type="hidden" name="hidReasonCount" id="hidReasonCount" value="{{ old('hidReasonCount')==""?0:old('hidReasonCount') }}"/>
+						   <input type="hidden" name="hidSourceRecognition" id="hidSourceRecognition" value="{{ old('hidSourceRecognition')==""?0:old('hidSourceRecognition') }}"/>
+					   </div>
 									<div class="form-group">
 										<div class="col-md-6 col-md-offset-4">
 												<button type="submit" onclick="chkSubmit()" id="btnSubmit" class="btn btn-primary">
@@ -235,7 +256,7 @@
 
 	        </div>
 	          <div class="col-md-4">
-	           <div class="ui card">
+				  <div class="ui card">
 				  <div class="ui move reveal image">
 					<img src="{{ URL::asset('images/T-Shirt_front.png') }}" class="visible content">
 					<img src="{{ URL::asset('images/T-Shirt_back.png') }}" class="hidden content">
@@ -261,6 +282,17 @@
 				  </div>
 				</div>
 
+				  <div class="ui card">
+					  <a class="image" href="{{ url('/download/infograohic.pdf')  }}" target="_blank">
+						  <img src="{{ URL::asset('images/card_cover_register.png') }}">
+					  </a>
+					  <div class="content">
+						  <a class="header" href="{{ url('/download/infograohic.pdf')  }}" target="_blank"><span class="markFont">ขั้นตอนลงทะเบียนเข้าร่วมงาน</span></a>
+						  <div class="meta">
+							  <a>*โปรดอ่านก่อนที่จะพลาดของรางวัล</a>
+						  </div>
+					  </div>
+				  </div>
 			  </div>
            </div>
 
@@ -328,6 +360,109 @@
 					$('#btnSubmit').submit();
 				}
 			}
+    }
+
+    function chkReasonChange(obj){
+        //console.log($(obj).is(':checked'));
+        //console.log($(obj).attr( 'value' ));
+
+		var lastValue=$("#hidReasonCount").val();
+
+        if($(obj).is(':checked')==true){
+
+            lastValue++;
+            $("#hidReasonCount").val(lastValue);
+
+        }else{
+
+            lastValue--;
+            $("#hidReasonCount").val(lastValue);
+
+        }
+        updateHidReason();
+    }
+
+    function chkRecognitionChange(obj){
+        //console.log($(obj).is(':checked'));
+        //console.log($(obj).attr( 'value' ));
+
+        var lastValue=$("#hidSourceRecognition").val();
+
+        if($(obj).is(':checked')==true){
+
+            lastValue++;
+            $("#hidSourceRecognition").val(lastValue);
+
+        }else{
+
+            lastValue--;
+            $("#hidSourceRecognition").val(lastValue);
+
+        }
+        updateSourceRecognition();
+    }
+
+    function updateHidReason(){
+        console.log("last update="+$("#hidReasonCount").val());
+	}
+    function updateSourceRecognition(){
+        console.log("last update="+$("#hidSourceRecognition").val());
+    }
+
+	function checkOtherReason(obj){
+
+        	var lastValue=$("#hidReasonCount").val();
+
+			if($(obj).is(':checked')==true){
+				//alert('true');
+				$("#choiceetc").removeAttr('disabled');
+				$("#choiceetc").css( "background-color", "#FFFFFF" );
+
+
+                lastValue++;
+                $("#hidReasonCount").val(lastValue);
+
+			}else{
+				//alert('false');
+				$("#choiceetc").val("");
+				$("#choiceetc").attr('disabled','disabled');
+				$("#choiceetc").css( "background-color", "#BCBCBC" );
+
+
+				lastValue--;
+                $("#hidReasonCount").val(lastValue);
+
+			}
+			updateHidReason();
+
+	}
+
+    function checkOtherRecognition(obj){
+
+        var lastValue=$("#hidSourceRecognition").val();
+
+        if($(obj).is(':checked')==true){
+            //alert('true');
+            $("#nuchoiceetc").removeAttr('disabled');
+            $("#nuchoiceetc").css( "background-color", "#FFFFFF" );
+
+
+            lastValue++;
+            $("#hidSourceRecognition").val(lastValue);
+
+        }else{
+            //alert('false');
+            $("#nuchoiceetc").val("");
+            $("#nuchoiceetc").attr('disabled','disabled');
+            $("#nuchoiceetc").css( "background-color", "#BCBCBC" );
+
+
+            lastValue--;
+            $("#hidSourceRecognition").val(lastValue);
+
+        }
+        updateSourceRecognition();
+
     }
  </script>
  @endsection
