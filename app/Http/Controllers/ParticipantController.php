@@ -19,6 +19,8 @@ use Storage;
 use File;
 use Carbon\Carbon;
 use SimpleSoftwareIO\QrCode\BaconQrCodeGenerator;
+use App\Jobs\SendQrCodeEmailJob;
+
 
 class ParticipantController extends Controller
 {
@@ -39,14 +41,14 @@ class ParticipantController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'garenaid' => 'required|max:255',
+
             'email' => 'required|email|max:255|unique:participant',
             'hidReasonCount' =>  'required|integer|min:1|digits_between: 1,6',
             'hidSourceRecognition' =>  'required|integer|min:1|digits_between: 1,6',
 
         ],
          [
-                'garenaid.required'   => 'Garena ID หากไม่ระบุจะถือว่าสละสิทธิ์ในการรับของรางวัลที่เป็นสกินฮีโร่ จากทาง Garena',
+                'email.unique'        => 'โปรดใช้อีเมล์อื่น อีเมล์นี้ได้ลงทะเบียนแล้ว',
                 'email.required'        => 'โปรดระบุอีเมล์ที่ใช้รับ QR-CODE ในการ scan เพื่อเข้าร่วมงาน',
                 'hidReasonCount.min' =>  'เลือกเหตุผลที่ลงทะเบียนเข้าร่วมงานมา  อย่างน้อย 1 เหตุผล',
                 'hidSourceRecognition.min' =>  'เลือกที่มาของการรู้จักงาน NU eSport RoV Tournament 2018  อย่างน้อย 1 ที่มา ',
@@ -55,11 +57,11 @@ class ParticipantController extends Controller
 
     protected function create(Request $request)
     {
-        $validator =$this->validator($request->all())->validate();
-
-        if($validator->fails()) {
+        //$validator =$this->validator($request->all())->validate();
+        $this->validator($request->all())->validate();
+        /*if($validator->fails()) {
             return  Redirect::back()->withErrors($validator);
-        }
+        }*/
         // Auth()->
         $participant= [
             'fullname' => $request->input('fullname'),
@@ -96,13 +98,16 @@ class ParticipantController extends Controller
         //$img = str_replace('data:image/png;base64,', '', base64_encode($qrcode->format('png')->size(300)->color(0,51,170)->generate($token)));
         //$img = str_replace(' ', '+', $img);
         $data = base64_decode(base64_encode($qrcode->format('png')->size(300)->color(0,51,170)->generate($token)));
-        $file = $upload_dir . "qrcode-".$p_id."-".Carbon::now('Asia/Bangkok')->format('Y-m-d').".png";
+        $fileName="qrcode-".$p_id."-".Carbon::now('Asia/Bangkok')->format('Y-m-d').".png";
+        $file = $upload_dir . $fileName;
         file_put_contents($file, $data);
 
         //Storage::put('file.png', $data);
         //File::put(public_path('uploads'));
         //Storage::disk('local')->putFile('images', $file);
 
+
+        dispatch(new SendQrCodeEmailJob($participant->email,$participant->fullname,$fileName));
 
 
         $info="ลงทะเบียนเรียบร้อยแล้ว";

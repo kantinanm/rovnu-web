@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('title')
-    :: ตรวจสอบข้อมูล ::
+    :: ลงทะเบียนเข้าร่วมงาน ::
 @stop
 @section('css_script')
     <!-- Bootstrap CSS -->

@@ -287,7 +287,7 @@
 						  <img src="{{ URL::asset('images/card_cover_register.png') }}">
 					  </a>
 					  <div class="content">
-						  <a class="header" href="{{ url('/download/infograohic.pdf')  }}" target="_blank"><span class="markFont">ขั้นตอนลงทะเบียนเข้าร่วมงาน</span></a>
+						  <a class="header" href="{{ url('/download/infographic.pdf')  }}" target="_blank"><span class="markFont">ขั้นตอนลงทะเบียนเข้าร่วมงาน</span></a>
 						  <div class="meta">
 							  <a>*โปรดอ่านก่อนที่จะพลาดของรางวัล</a>
 						  </div>
