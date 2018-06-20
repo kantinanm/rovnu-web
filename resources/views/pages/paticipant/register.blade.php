@@ -283,7 +283,7 @@
 				</div>
 
 				  <div class="ui card">
-					  <a class="image" href="{{ url('/download/infograohic.pdf')  }}" target="_blank">
+					  <a class="image" href="{{ url('/download/infographic.pdf')  }}" target="_blank">
 						  <img src="{{ URL::asset('images/card_cover_register.png') }}">
 					  </a>
 					  <div class="content">
