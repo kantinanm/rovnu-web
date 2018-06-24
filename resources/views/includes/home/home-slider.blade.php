@@ -2,15 +2,11 @@
     <div id="home-slider" class="owl-carousel">
         <div>
             <div class="sliding-card-with-bottom-image text-center padding-top-90">
-                <h2 class="cta-heading text-white"><span class="markFont">ROV Player EP1  </span></h2>
-                <p class="text-white slider-para"><span class="markFont">‘แรงค์ต่ำๆ มันต้องอยู่อย่างนี้ไปก่อน เพราะว่าไม่งั้นมันจะแบกทีมไม่ได้’ </span></p>
-                <h3 class="cta-heading text-white"><span class="markFont">ส่งทีมเข้าร่วมแล้วมาลองกัน อย่างน้อยก็จะได้รู้ว่าตัวเองทำได้แค่ไหนก็ยังดี <sup>NU e-Sport ROV Tournament</sup> </span></h3>
-                <div class="cta-btn-group">
-
-                    <a class="btn-video text-white"  data-video-id="EuXiMB6uiew" id="btnVideoShow"><span class="icon-rounded bordered-ios"><i class="ion-ios-play-outline"></i></span>ไปชมกันเลย</a>
-                </div>
+                <h2 class="cta-heading text-white"><span class="markFont">พร้อมแล้วหรือยัง....?</span></h2>
+                <p class="text-white slider-para"><span class="markFont">ไปลองฟังเสียงจากทีมผู้เข้าแข่งขันกันเลย</span></p>
+                <a href="#testimonial"><span class="icon-rounded bordered-ios"><i class="ion-ios-play-outline"></i></span>วิวาทะจากทีมผู้เข้าแข่งขัน</a>
                 <div class="image-container text-center sm-display-none">
-                    <img class="img-responsive" src="images/rov_player_ep1_cover2.png" alt="" id="logo25">
+                    <img class="img-responsive" src="images/cover.jpg" alt="" id="logo25">
                 </div>
             </div>
         </div>

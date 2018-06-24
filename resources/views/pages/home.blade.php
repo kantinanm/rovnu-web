@@ -23,6 +23,7 @@
 @section('content')
     @include('includes.home.home-slider')
     @include('includes.home.rewards')
+    @include('includes.home.testimonial')
     @include('includes.home.rules')
     <section id="cta" class="gradient-violat cta padding-top-bottom-90">
         <div class="container">
@@ -119,6 +120,9 @@
             ;
 
             $("#btnVideoShow").modalVideo({channel:'youtube'});
+            $("#btnTeamVideo1").modalVideo({channel:'youtube'});
+            $("#btnTeamVideo2").modalVideo({channel:'youtube'});
+            $("#btnTeamVideo3").modalVideo({channel:'youtube'});
 
             $('ui.special.cards .image').dimmer({
                 on: 'hover'
