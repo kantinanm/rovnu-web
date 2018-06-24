@@ -22,11 +22,11 @@ class HomeRovController extends Controller
             ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
             ->get()->count();
 
-        $playerConfirmTeam= User::join('players', 'players.team_id', '=', 'users.id')->where('users.register_completed', '=', '1')
+        $playerConfirmTeam= User::join('players', 'players.team_id', '=', 'users.id')->where('users.register_completed', '>=', '1')
             ->whereIn('users.active', [1])
             ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
             ->get()->count();
-        $teamConfirm=User::where('register_completed', '=', 1)
+        $teamConfirm=User::where('register_completed', '>=', 1)
             ->whereIn('users.active', [1])
             ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
             ->get()->count();
