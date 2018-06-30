@@ -61,7 +61,7 @@
                     <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$teamConfirm}}</span>
                 </div> <!--col-md-12-->
                  <div class="col-md-4 text-center">
-                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">4</span>
+                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">7</span>
                 </div>
                <!--  <div class="col-md-3 text-center">
                     <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;"></span>
