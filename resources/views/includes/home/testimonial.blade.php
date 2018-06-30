@@ -7,6 +7,59 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div id="testimonial-carousel" class="owl-carousel">
+
+                    <div>
+                        <div class="testimonial-container">
+                            <div class="client-details text-center">
+                                <img src="{{ URL::asset('images/tor.png') }}" alt="">
+                                <h5 class="client-name">น้องตัวต่อ แห่งภาควิชาวิศวกรรมไฟฟ้าและคอมพิวเตอร์</h5>
+                                <p class="client-designation"><span class="markFont">เกมเมอร์สาว สุดหนึบหนับ ระดับ Plat 1</span></p>
+                                <div class="description">
+                                    <a href="https://www.facebook.com/124356001077081/videos/959326970913309/" target="_blank"><i class="play circle icon"></i>ROV Player EP.2</a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p><i class="ion-quote"></i></p>
+                                <p class="testimonial-speech"><span class="markFont">ชัยชนะไม่ได้มาจากการสังหารหรือการคิวเยอะ  แต่มาจากกลยุทธในการทำลายสิ่งก่อสร้าง เพื่อให้ได้ชัยชนะในทีม</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="testimonial-container">
+                            <div class="client-details text-center">
+                                <img src="{{ URL::asset('images/fin18_one.png') }}" alt="">
+                                <h5 class="client-name">รัตนชาติ อินเรือน จาก คณะวิศวกรรมศาสตร์</h5>
+                                <p class="client-designation"><span class="markFont">หัวหน้าทีม Fin18</span></p>
+                                <div class="description">
+                                    <a href="#"  data-video-id="i6fKYkVND9o" id="btnTeamVideo4"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p><i class="ion-quote"></i></p>
+                                <p class="testimonial-speech"><span class="markFont">คนจริงตีบ้าน ไม่พูดมาก เจ็บคอ~</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="testimonial-container">
+                            <div class="client-details text-center">
+                                <img src="{{ URL::asset('images/red_dragon.png') }}" alt="">
+                                <h5 class="client-name">ธัญชนก ทองเเท้ จาก โรงเรียนพิษณุโลกพิทยาคม</h5>
+                                <p class="client-designation"><span class="markFont">หัวหน้าทีม Red dragon</span></p>
+                                <div class="description">
+                                    <a href="#"  data-video-id="keCKeXdNND8" id="btnTeamVideo5"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p><i class="ion-quote"></i></p>
+                                <p class="testimonial-speech"><span class="markFont">ทีมผมเก่งครับ</span></p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div>
                         <div class="testimonial-container">
                             <div class="client-details text-center">

@@ -129,6 +129,8 @@
             $("#btnTeamVideo1").modalVideo({channel:'youtube'});
             $("#btnTeamVideo2").modalVideo({channel:'youtube'});
             $("#btnTeamVideo3").modalVideo({channel:'youtube'});
+            $("#btnTeamVideo4").modalVideo({channel:'youtube'});
+            $("#btnTeamVideo5").modalVideo({channel:'youtube'});
 
             $('ui.special.cards .image').dimmer({
                 on: 'hover'

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Config;
 use App\User;
+use App\Player;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Log;
 
 class HomeRovController extends Controller
@@ -120,5 +122,60 @@ class HomeRovController extends Controller
         return view('pages.question')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
             ->with(compact('allowSponsorRegister',$allowSponsorRegister));
+    }
+
+    public function overallTeam()
+    {
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+        Log::info("Request overall-team-list");
+
+        $teamListConfirm=User::where('register_completed', '>=', 1)
+            ->whereIn('users.active', [1])
+            ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
+            ->get();
+
+        return view('pages.team_approve')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('teamListConfirm',$teamListConfirm))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
+    }
+    protected function getTeamDetail(Request $request)
+    {
+        $data = $request->json()->all();
+
+        $exitsPlayer =Player::Where(['team_id'=>$data["team_id"]])->get();
+        $teamInfo=User::where('id', '=', $data["team_id"])->first();
+
+        $result["teamname"]=$teamInfo->teamname;
+        $result["detail"]=$teamInfo->name;
+        $result["institution"]=$teamInfo->institution;
+
+        $result["member"]= array();
+
+        foreach($exitsPlayer as $player){
+            $data = array();
+            $data["name"]=$player->firstname." ".$player->lastname;
+            $data["studentid"]=$player->studentid;
+            $data["faculty"]=$player->faculty;
+            $data["rov_id"]=$player->player_name;
+            $data["verify"]=true;
+
+            array_push($result["member"], $data);
+        }
+
+        //$result["member"]=$data;
+
+        if($teamInfo==null){
+
+            $result["status"]=0;
+
+        }else{
+            $result["status"]=1;
+
+        }
+
+        return response()->json($result);
     }
 }
