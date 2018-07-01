@@ -222,6 +222,10 @@
                         $(li2).html(data.institution)
                             .appendTo($("#listInfo"));
 
+                        li3 = document.createElement('li');
+                        $(li3).html("<i class='facebook square icon'></i>"+data.facebook)
+                            .appendTo($("#listInfo"));
+
                         for(val of data.member){
                             console.log(val);
 

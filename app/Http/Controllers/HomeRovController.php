@@ -149,8 +149,9 @@ class HomeRovController extends Controller
         $teamInfo=User::where('id', '=', $data["team_id"])->first();
 
         $result["teamname"]=$teamInfo->teamname;
-        $result["detail"]=$teamInfo->name;
+        $result["detail"]=$teamInfo->name.", ".$teamInfo->mobilephone.", ".$teamInfo->email;
         $result["institution"]=$teamInfo->institution;
+        $result["facebook"]=$teamInfo->facebook_id;
 
         $result["member"]= array();
 
