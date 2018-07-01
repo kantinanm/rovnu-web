@@ -33,7 +33,7 @@
         <div class="container">
 
             <div class="ui breadcrumb">
-                <a class="section">หน้าแรก</a>
+                <a class="section" href="{{ route('home') }}">หน้าแรก</a>
                 <div class="divider"> / </div>
                 <div class="active section">ประกาศรายชื่อทีม</div>
             </div>
@@ -46,9 +46,7 @@
                         <a class="item active">
                             <span class="markFont">ทีมที่ผ่านการพิจารณา</span>
                         </a>
-                        <a class="item ">
-                            <span class="markFont">ทีมที่รอพิจารณาใหม่</span>
-                        </a>
+
 
 
                     </div>

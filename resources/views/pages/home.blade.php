@@ -61,7 +61,7 @@
                     <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$teamConfirm}}</span>
                 </div> <!--col-md-12-->
                  <div class="col-md-4 text-center">
-                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">7</span>
+                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">4</span>
                 </div>
                <!--  <div class="col-md-3 text-center">
                     <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;"></span>
@@ -76,7 +76,7 @@
                     <i class="ion-ios-game-controller-b-outline" style="font-size: 30px;"></i> ทีมที่เข้าร่วม
                 </div> <!--col-md-4-->
                 <div class="col-md-4 text-center">
-                    <i class="hourglass start icon" style="font-size: 30px;"></i>  ทีมที่รอพิจารณาใหม่
+                    <i class="map outline icon" style="font-size: 30px;"></i>  จังหวัด
                 </div> <!--col-md-4-->
 
 
@@ -85,13 +85,16 @@
 
         </div><!--container-->
     </section>
-    <section id="testimonial2" class="testimonial-section padding-top-bottom-90" style="background-color: #880000">
+
+    @include('includes.home.notification')
+    @include('includes.home.sponsor')
+    <!-- <section id="testimonial2" class="testimonial-section padding-top-bottom-90" style="background-color: #880000">
         <div class="row">
             <div class="col-md-12 text-center">
                 <p class="text-white">* เราจะประกาศรายชื่อทีมอย่างเป็นทางการ วันนี้ หลัง 16.00 น.</p>
             </div>
-        </div> <!--end row3-->
-    </section>
+        </div>
+    </section>-->
     @include('includes.home.modal')
 @endsection
 @section('js_plugin')
