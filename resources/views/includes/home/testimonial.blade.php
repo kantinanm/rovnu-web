@@ -11,6 +11,40 @@
                     <div>
                         <div class="testimonial-container">
                             <div class="client-details text-center">
+                                <img src="{{ URL::asset('images/Mylegen.png') }}" alt="">
+                                <h5 class="client-name">สิรภพ เอี่ยมบางทราย จากโรงเรียนพิษณุโลกพิทยาคม </h5>
+                                <p class="client-designation"><span class="markFont">หัวหน้าทีม MeLegends</span></p>
+                                <div class="description">
+                                    <a href="#"  data-video-id="Huc6aWlHoqU" id="btnTeamVideo6"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p><i class="ion-quote"></i></p>
+                                <p class="testimonial-speech"><span class="markFont">เราไม่ใช่ทีม แต่เราคือครอบครัว</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="testimonial-container">
+                            <div class="client-details text-center">
+                                <img src="{{ URL::asset('images/restart.png') }}" alt="">
+                                <h5 class="client-name">อนุรักษ์ วงศ์วินิจศร จากโรงเรียนพิษณุโลกพิทยาคม </h5>
+                                <p class="client-designation"><span class="markFont">หัวหน้าทีม Réstart</span></p>
+                                <div class="description">
+                                    <a href="#"  data-video-id="pKetJMHt194" id="btnTeamVideo7"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p><i class="ion-quote"></i></p>
+                                <p class="testimonial-speech"><span class="markFont">มาเพื่อหาประสบการณ์ใหม่ๆให้กับคนที่สนใจและการที่อยากทำให้ฝันของคนในทีมเป็นจริง</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="testimonial-container">
+                            <div class="client-details text-center">
                                 <img src="{{ URL::asset('images/tor.png') }}" alt="">
                                 <h5 class="client-name">น้องตัวต่อ แห่งภาควิชาวิศวกรรมไฟฟ้าและคอมพิวเตอร์</h5>
                                 <p class="client-designation"><span class="markFont">เกมเมอร์สาว สุดหนึบหนับ ระดับ Plat 1</span></p>
