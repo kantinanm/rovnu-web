@@ -86,6 +86,7 @@
         </div><!--container-->
     </section>
 
+    @include('includes.home.schedule')
     @include('includes.home.notification')
     @include('includes.home.sponsor')
     <!-- <section id="testimonial2" class="testimonial-section padding-top-bottom-90" style="background-color: #880000">
@@ -126,6 +127,10 @@
 
             $('#logo25')
                 .transition('jiggle')
+            ;
+
+            $('.menu .item')
+                .tab()
             ;
 
             $("#btnVideoShow").modalVideo({channel:'youtube'});
