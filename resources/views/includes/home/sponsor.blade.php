@@ -38,11 +38,11 @@
                                             <img src="{{ URL::asset('images/sponser/thawandang.jpg') }}">
                                         </a>
                                     </div> <!--col-md-2-->
-                                    <div class="col-md-3 text-center">
+                                    <!--<div class="col-md-3 text-center">
                                         <a href="https://www.facebook.com/fathaifarm" target="_blank" class="ui small image" data-tooltip="ฟ้าไทยฟาร์ม ร้านอาหารพิษณุโลก" data-inverted="">
                                             <img src="{{ URL::asset('images/sponser/fhathai_fm.png') }}">
                                         </a>
-                                    </div> <!--col-md-2-->
+                                    </div>--> <!--col-md-2-->
                                     <!--							  <div class="col-md-2 text-center">
                                                                     <a href="http://truemoveh.truecorp.co.th/" target="_blank" class="ui small image" data-tooltip="Truemove H 4G+ แรงที่สุด เร็วที่สุด" data-inverted="" >
                                                                       <img src="images/sponser/truemove_4g.png" >
@@ -54,7 +54,7 @@
                                                                 </a>
                                                               </div> --><!--col-md-2-->
 
-                                    <div class="col-md-3 text-center">
+                                    <!--<div class="col-md-3 text-center">
                                         <a href="https://www.facebook.com/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B5%E0%B8%94%E0%B8%B5-SALAD-D-378881588863740/" target="_blank" class="ui small image" data-tooltip="ร้านสาระดีดี SALAD D สลัด สด ใหม่ ทุกวัน" data-inverted="" >
                                             <img src="{{ URL::asset('images/sponser/saladd.jpg') }}" >
                                         </a>
@@ -65,7 +65,7 @@
                                         <a href="#" class="ui small image" data-tooltip="บุญชัย แอร์ & เซอร์วิช  จำหน่ายและติดตั้งแอร์โดยช่างมืออาชีพ" data-inverted="">
                                             <img src="{{ URL::asset('images/sponser/boonchai.png') }}" >
                                         </a>
-                                    </div>
+                                    </div>-->
 
                                 </div> <!--end row2-->
                             </div>
