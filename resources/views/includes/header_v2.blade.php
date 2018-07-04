@@ -20,11 +20,12 @@
                     <li class="active"><a href="{{ route('home') }}"><span class="menu">หน้าแรก</span> <span class="sr-only">(current)</span></a></li>
                     <li><a href="{{ route('rules') }}"><span class="menu">กติกาการแข่งขัน</span></a></li>
                     <li><a href="{{ route('rewards') }}"><span class="menu">ของรางวัล</span></a></li>
-                    <li><a href="{{ route('activity') }}"><span class="menu">กิจกรรมภายในงาน</span></a></li>
+
                     <li><a href="{{ route('place') }}"><span class="menu">สถานที่จัดงาน</span></a></li>
                     <li><a href="{{ route('question') }}"><span class="menu">คำถามที่พบบ่อย</span></a></li>
+                    <li><a href="{{ route('schedule') }}"><span class="menu">ตารางการแข่งขัน</span></a></li>
                     @if( Auth::guest() )
-                    <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-orange border-none btn-rounded-corner btn-navbar">สมัครเข้าร่วมแข่งขัน<span class="icon-on-button"><i class="ion-ios-game-controller-b-outline"></i></span></a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#exampleModalPaticipicant" class="btn btn-orange border-none btn-rounded-corner btn-navbar">ลงทะเบียนเข้าร่วมงาน<span class="icon-on-button"><i class="ion-ios-game-controller-b-outline"></i></span></a></li>
                     @endif
                 </ul>
             </div><!-- /.navbar-collapse -->

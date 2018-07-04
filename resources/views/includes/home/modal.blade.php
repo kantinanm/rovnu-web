@@ -86,7 +86,7 @@
                             <li>สมดุลการใช้ชีวิตควบคู่กับกิจกรรมเกมและกีฬา E-sport</li>
                         </ol>
                         </p>
-                        <p>โดยสามารถดู<a href="{{ url('/download/tentative_program.pdf')  }}" target="_blank">กำหนดการได้ ที่นี่</a></p>
+                        <p>โดยสามารถดู<a href="{{ route('activity') }}" target="_blank">กำหนดการได้ ที่นี่</a></p>
                     </div>
                 </div>
 

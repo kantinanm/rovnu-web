@@ -55,7 +55,7 @@
 
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$playerConfirmTeam+7}}</span>
+                    <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$playerConfirmTeam}}</span>
                 </div> <!--col-md-12-->
                 <div class="col-md-4 text-center">
                     <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$teamConfirm}}</span>

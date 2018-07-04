@@ -69,6 +69,8 @@ Route::get('home/sponsor', function () {
 })->name('place');*/
 Route::get('home/place','HomeRovController@place')->name('place');
 
+Route::get('home/schedule','HomeRovController@schedule')->name('schedule');
+
 Route::get('home/activity','HomeRovController@activity')->name('activity');
 
 Route::get('home/question','HomeRovController@question')->name('question');

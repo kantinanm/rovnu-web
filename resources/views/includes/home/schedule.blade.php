@@ -263,6 +263,80 @@
                             </ul>
                         </div>
                     </div>
+
+                    <table class="ui celled structured orange table">
+                        <thead>
+                        <tr>
+
+                            <th>รอบ</th>
+                            <th>คู่</th>
+                            <th>ทีม A</th>
+                            <th>ทีม B</th>
+                            <th>วันที่แข่ง</th>
+                            <th>ผลการแข่งขัน</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td rowspan="7" >Round 1</td>
+                            <td>1 </td>
+                            <td>PP CITY</td>
+                            <td>8-BIT</td>
+                            <td>7 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 6 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>2</td>
+                            <td>MeLegends</td>
+                            <td>White Bears</td>
+                            <td>7 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 6 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>เก๋สั่งลุย</td>
+                            <td>IT.OverKill</td>
+                            <td>7 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 6 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>TheLast1</td>
+                            <td>The memes</td>
+                            <td>7 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 6 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Eric</td>
+                            <td>Ares</td>
+                            <td>7 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 6 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>BLueDragon</td>
+                            <td>OTA BOYZ</td>
+                            <td>7 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 6 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>GSL</td>
+                            <td>EX-Chapter</td>
+                            <td>7 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 6 ก.ค. 2561 ไม่ควรเกิน 18.00 น. </td>
+                        </tr>
+
+                        </tbody>
+
+                    </table>
                 </div>
                 <div class="ui bottom attached tab segment" data-tab="groupD">
                     <div class="card">
@@ -284,6 +358,79 @@
                         </div>
 
                     </div>
+                    <table class="ui celled structured violet table">
+                        <thead>
+                        <tr>
+
+                            <th>รอบ</th>
+                            <th>คู่</th>
+                            <th>ทีม A</th>
+                            <th>ทีม B</th>
+                            <th>วันที่แข่ง</th>
+                            <th>ผลการแข่งขัน</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td rowspan="7" >Round 1</td>
+                            <td>1 </td>
+                            <td>Wrigleys</td>
+                            <td>SLP</td>
+                            <td>9 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>2</td>
+                            <td>MEEPOOH</td>
+                            <td>Epicshark</td>
+                            <td>9 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>PLKT</td>
+                            <td>แอ๋วอยู่ไหน</td>
+                            <td>9 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Rookie</td>
+                            <td>SixDion</td>
+                            <td>9 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>JupaJub</td>
+                            <td>ROV_AFK</td>
+                            <td>9 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>ปังเย็นคุง</td>
+                            <td>อ๊บไสไม้</td>
+                            <td>9 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>DoubleA</td>
+                            <td>Seaplus</td>
+                            <td>9 ก.ค. 61 </td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น. </td>
+                        </tr>
+
+                        </tbody>
+
+                    </table>
                 </div>
 
             </div>

@@ -82,6 +82,20 @@ class HomeRovController extends Controller
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
             ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
+
+    public function schedule()
+    {
+        $allowTeamRegister =Config::get('app.allow_team_register');
+        $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
+        $allowSponsorRegister =Config::get('app.allow_sponsor_register');
+        Log::warning("Request schedule");
+
+        return view('pages.schedule')->with(compact('allowTeamRegister',$allowTeamRegister))
+            ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+            ->with(compact('allowSponsorRegister',$allowSponsorRegister));
+    }
+
+
     public function rules()
     {
         $allowTeamRegister =Config::get('app.allow_team_register');
