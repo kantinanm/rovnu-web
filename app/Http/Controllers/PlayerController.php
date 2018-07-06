@@ -23,7 +23,7 @@ class PlayerController extends Controller
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
-
+        $overNotificationDate=Config::get('app.over_notification_date');
         //return view('pages.register.member');
         $players=Player::where('team_id',Auth::user()->id)->get();
         $num_of_player =Config::get('app.player_limit');
@@ -32,6 +32,7 @@ class PlayerController extends Controller
                ->with(compact('num_of_player',$num_of_player))
                ->with(compact('allowTeamRegister',$allowTeamRegister))
                ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
+               ->with(compact('overNotificationDate',$overNotificationDate))
                ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 

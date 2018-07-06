@@ -172,6 +172,7 @@
 
                         <th colspan="6">
 
+                            @if($overNotificationDate!=true)
                             @if(count($players)<7)
                             <a href="{{ route('register-players-add') }}"> <button class="ui basic button right floated primary">
                                 <i class="icon user"></i>
@@ -196,7 +197,7 @@
                                         เพิ่มสมาชิกในทีมขั้นต่ำ {{$num_of_player}} คน แต่ไม่เกิน 7 คน แล้วกดยืนยัน
                                     </div>
                             @endif
-
+                            @endif
 
 
                         </th>

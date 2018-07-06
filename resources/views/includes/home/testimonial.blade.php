@@ -8,6 +8,24 @@
             <div class="col-md-8 col-md-offset-2">
                 <div id="testimonial-carousel" class="owl-carousel">
 
+
+                    <div>
+                        <div class="testimonial-container">
+                            <div class="client-details text-center">
+                                <img src="{{ URL::asset('images/arm.png') }}" alt="">
+                                <h5 class="client-name">อาร์ม หนุ่มนิติฯหน้ามน </h5>
+                                <p class="client-designation"><span class="markFont">เกมเมอร์สายลุย </span></p>
+                                <div class="description">
+                                    <a href="#"  data-video-id="hH6Nze_rcnM" id="btnTeamVideo9"><i class="play circle icon"></i>รับชม ROV Player EP3</a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p><i class="ion-quote"></i></p>
+                                <p class="testimonial-speech"><span class="markFont">ผู้เล่นจะเล่นเก่ง ไม่เก่งไม่สำคัญ มันฝึกฝนกันได้  แต่ถ้าเข้ามาแล้วขออย่างเดียวครับ  อย่าออก</span></p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div>
                         <div class="testimonial-container">
                             <div class="client-details text-center">
@@ -49,7 +67,7 @@
                                 <h5 class="client-name">น้องตัวต่อ แห่งภาควิชาวิศวกรรมไฟฟ้าและคอมพิวเตอร์</h5>
                                 <p class="client-designation"><span class="markFont">เกมเมอร์สาว สุดหนึบหนับ ระดับ Plat 1</span></p>
                                 <div class="description">
-                                    <a href="https://www.facebook.com/124356001077081/videos/959326970913309/" target="_blank"><i class="play circle icon"></i>ROV Player EP.2</a>
+                                    <a href="#"  data-video-id="LfsPj47L_iw" id="btnTeamVideo8"><i class="play circle icon"></i>รับชม ROV Player EP2</a>
                                 </div>
                             </div>
                             <div class="testimonial-content">
