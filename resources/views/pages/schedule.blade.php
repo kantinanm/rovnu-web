@@ -205,7 +205,7 @@
                             <tr>
                                 <td>4</td>
                                 <td>Holy Light</td>
-                                <td>Sakura</td>
+                                <td>Réstart </td>
                                 <td>11 ก.ค. 61 </td>
                                 <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 10 ก.ค. 2561 ไม่เกิน 18.00 น.</td>
                             </tr>
