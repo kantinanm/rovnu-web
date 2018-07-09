@@ -509,7 +509,7 @@
                             <td>Wrigleys</td>
                             <td>SLP</td>
                             <td>9 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                            <td>Wrigleys ชนะ</td>
 
                         </tr>
                         <tr>
@@ -518,14 +518,14 @@
                             <td>MEEPOOH</td>
                             <td>Epicshark</td>
                             <td>9 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                            <td>MEEPOOH ชนะ</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>PLKT</td>
                             <td>แอ๋วอยู่ไหน</td>
                             <td>9 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                            <td><i class="red balance scale icon"></i> รอตรวจสอบจากทาง Garena <sup style="color:red">เนื่องจากมีคนคัดค้านเรื่องตัวละคร มีบัค <sup> </td>
 
                         </tr>
                         <tr>
@@ -533,14 +533,14 @@
                             <td>Rookie</td>
                             <td>SixDion</td>
                             <td>9 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                            <td>SixDion ชนะ</td>
                         </tr>
                         <tr>
                             <td>5</td>
                             <td>JupaJub</td>
                             <td>ROV_AFK</td>
                             <td>9 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                            <td>ROV_AFK ชนะ</td>
                         </tr>
 
                         <tr>
@@ -548,7 +548,7 @@
                             <td>ปังเย็นคุง</td>
                             <td>อ๊บไสไม้</td>
                             <td>9 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น.</td>
+                            <td>ปังเย็นคุง ชนะ</td>
                         </tr>
 
                         <tr>
@@ -556,15 +556,15 @@
                             <td>DoubleA</td>
                             <td>Seaplus</td>
                             <td>9 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 8 ก.ค. 2561 ไม่ควรเกิน 18.00 น. </td>
+                            <td>DoubleA ชนะ</td>
                         </tr>
 
 
                         <tr>
                             <td rowspan="3" >Round 2</td>
                             <td>1 </td>
-                            <td>ทีมผู้ชนะ คู่ที่ 1 (R1)</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 2 (R1)</td>
+                            <td>Wrigleys</td>
+                            <td>MEEPOOH</td>
                             <td>17 ก.ค. 61 </td>
                             <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 16 ก.ค. 2561 ไม่เกิน 18.00 น.</td>
 
@@ -572,15 +572,15 @@
                         <tr>
                             <td>2</td>
                             <td>ทีมผู้ชนะ คู่ที่ 3 (R1)</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 4 (R1)</td>
+                            <td>SixDion</td>
                             <td>17 ก.ค. 61 </td>
                             <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 16 ก.ค. 2561 ไม่เกิน 18.00 น.</td>
                         </tr>
                         <tr>
 
                             <td>3</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 5 (R1)</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 6 (R1)</td>
+                            <td>ROV_AFK</td>
+                            <td>ปังเย็นคุง</td>
                             <td>17 ก.ค. 61 </td>
                             <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 16 ก.ค. 2561 ไม่เกิน 18.00 น.</td>
                         </tr>
@@ -597,7 +597,7 @@
                         <tr>
                             <td>2</td>
                             <td>ทีมผู้ชนะ คู่ที่ 3 (R2)</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 7 (R1)</td>
+                            <td>DoubleA</td>
                             <td>25 ก.ค. 61 </td>
                             <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 24 ก.ค. 2561 ไม่เกิน 18.00 น.</td>
                         </tr>
