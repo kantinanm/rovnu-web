@@ -402,7 +402,7 @@
                             <td>BLueDragon</td>
                             <td>OTA BOYZ</td>
                             <td>7 ก.ค. 61 </td>
-                            <td><i class="trash alternate outline icon"></i> รอแจ้งผลการแข่งขันที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> <span style="color:red"><sup>** ทีมชนะไม่มาแจ้งผล จะเปิดโอกาสให้ทีมแพ้เข้ารอบ</sup></span> </td>
+                            <td>BLueDragon ชนะ</td>
                         </tr>
 
                         <tr>
@@ -433,7 +433,7 @@
 
                             <td>3</td>
                             <td>Eric</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 6 (R1)</td>
+                            <td>BLueDragon</td>
                             <td>15 ก.ค. 61 </td>
                             <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 14 ก.ค. 2561 ไม่เกิน 18.00 น.</td>
                         </tr>
