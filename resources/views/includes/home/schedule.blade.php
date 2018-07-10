@@ -471,7 +471,7 @@
                 </div>
                 <div class="ui bottom attached tab segment" data-tab="groupD">
                     <div class="card">
-                        <img class="card-img-top img-responsive" src="{{ URL::asset('images/schedue/group_D.png') }}" alt="Card image cap">
+                        <img class="card-img-top img-responsive" src="{{ URL::asset('images/result/Round1_groupD.png') }}" alt="Card image cap">
 
                         <div class="ui brown info message">
                             <i class="close icon"></i>
