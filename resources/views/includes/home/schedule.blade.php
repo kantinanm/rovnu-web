@@ -476,7 +476,7 @@
                         <div class="ui brown info message">
                             <i class="close icon"></i>
                             <div class="header">
-                                <span class="markFont">การแข่งขันรอบแรก Round 1 สาย D</span>
+                                <span class="markFont">การแข่งขันรอบแรก Round 2 สาย D</span>
                             </div>
                             <ul class="list">
                                 <li>ทุกทีมในสาย D ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่ควรเกินวันที่ 8 กรกฎาคม 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 9 ก.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
