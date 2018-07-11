@@ -38,34 +38,24 @@
                                             <img src="{{ URL::asset('images/sponser/thawandang.jpg') }}">
                                         </a>
                                     </div> <!--col-md-2-->
-                                    <!--<div class="col-md-3 text-center">
-                                        <a href="https://www.facebook.com/fathaifarm" target="_blank" class="ui small image" data-tooltip="ฟ้าไทยฟาร์ม ร้านอาหารพิษณุโลก" data-inverted="">
-                                            <img src="{{ URL::asset('images/sponser/fhathai_fm.png') }}">
-                                        </a>
-                                    </div>--> <!--col-md-2-->
-                                    <!--							  <div class="col-md-2 text-center">
-                                                                    <a href="http://truemoveh.truecorp.co.th/" target="_blank" class="ui small image" data-tooltip="Truemove H 4G+ แรงที่สุด เร็วที่สุด" data-inverted="" >
-                                                                      <img src="images/sponser/truemove_4g.png" >
-                                                                    </a>
-                                                                  </div>--> <!--col-md-2-->
-                                    <!--						  <div class="col-md-2 text-center">
-                                                                <a href="http://www.ais.co.th/" target="_blank" class="ui small image" data-tooltip="AIS ชีวิตในแบบคุณ" data-inverted="">
-                                                                  <img src="images/sponser/ais.png">
-                                                                </a>
-                                                              </div> --><!--col-md-2-->
 
-                                    <!--<div class="col-md-3 text-center">
-                                        <a href="https://www.facebook.com/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B5%E0%B8%94%E0%B8%B5-SALAD-D-378881588863740/" target="_blank" class="ui small image" data-tooltip="ร้านสาระดีดี SALAD D สลัด สด ใหม่ ทุกวัน" data-inverted="" >
-                                            <img src="{{ URL::asset('images/sponser/saladd.jpg') }}" >
+                                    <div class="col-md-3 text-center">
+                                        <a href="https://www.facebook.com/itcorner2012/" target="_blank" class="ui small image" data-tooltip="ไอทีคอร์เนอร์ พิษณุโลก" data-inverted="">
+                                            <img src="{{ URL::asset('images/sponser/itconner.jpg') }}" >
                                         </a>
                                     </div>
 
+                                    <div class="col-md-3 text-center">
+                                        <a href="#" target="_blank" class="ui small image" data-tooltip="ห้างหุ้นส่วนจำกัด วิษณุบุตร เอ็นจิเนียริ่ง" data-inverted="" >
+                                            <img src="{{ URL::asset('images/sponser/vitsanub.jpg') }}" >
+                                        </a>
+                                    </div>
 
                                     <div class="col-md-3 text-center">
                                         <a href="#" class="ui small image" data-tooltip="บุญชัย แอร์ & เซอร์วิช  จำหน่ายและติดตั้งแอร์โดยช่างมืออาชีพ" data-inverted="">
-                                            <img src="{{ URL::asset('images/sponser/boonchai.png') }}" >
+                                            <img src="{{ URL::asset('images/sponser/boonchai_logo.png') }}" >
                                         </a>
-                                    </div>-->
+                                    </div>
 
                                 </div> <!--end row2-->
                             </div>
@@ -93,11 +83,7 @@
                 <div class="ui raised segment">
                     <a class="ui green ribbon label">ร่วมส่งความสุขโดย</a>
                     <div class="row">
-                        <div class="col-md-1 text-center">
-                            <a href="https://www.facebook.com/itcorner2012/" target="_blank" class="ui small image" data-tooltip="ไอทีคอร์เนอร์ พิษณุโลก" data-inverted="">
-                                <img src="{{ URL::asset('images/sponser/itconner.jpg') }}" >
-                            </a>
-                        </div> <!--col-md-2-->
+                    <!--col-md-2-->
 
                         <div class="col-md-1 text-center">
                             <a href="https://www.facebook.com/HAVEASEAT2009/?rf=141505385898766" target="_blank" class="ui small image" data-tooltip="Have a seat (แฮฟอะซีท)" data-inverted="" >
@@ -105,12 +91,19 @@
                             </a>
                         </div> <!--col-md-2-->
 
+                        <div class="col-md-1 text-center">
+                                        <a href="https://www.facebook.com/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B5%E0%B8%94%E0%B8%B5-SALAD-D-378881588863740/" target="_blank" class="ui small image" data-tooltip="ร้านสาระดีดี SALAD D สลัด สด ใหม่ ทุกวัน" data-inverted="" >
+                                            <img src="{{ URL::asset('images/sponser/saladd.jpg') }}" >
+                                        </a>
+                        </div>
 
                         <div class="col-md-1 text-center">
                             <a href="http://truemoveh.truecorp.co.th/" target="_blank" class="ui small image" data-tooltip="Truemove H 4G+ แรงที่สุด เร็วที่สุด" data-inverted="" >
                                 <img src="{{ URL::asset('images/sponser/truemove_4g.png') }}" >
                             </a>
                         </div> <!--col-md-2-->
+
+
 
 
                     </div> <!--end row2-->
