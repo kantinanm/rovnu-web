@@ -591,7 +591,7 @@
                                 <td>PLKT</td>
                                 <td>แอ๋วอยู่ไหน</td>
                                 <td>9 ก.ค. 61 </td>
-                                <td><i class="red balance scale icon"></i> รอตรวจสอบจากทาง Garena <sup style="color:red">เนื่องจากมีคนคัดค้านเรื่องตัวละคร มีบัค <sup> </td>
+                                <td>PLKT ชนะ</td>
 
                             </tr>
                             <tr>
@@ -637,7 +637,7 @@
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>ทีมผู้ชนะ คู่ที่ 3 (R1)</td>
+                                <td>PLKT</td>
                                 <td>SixDion</td>
                                 <td>17 ก.ค. 61 </td>
                                 <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 16 ก.ค. 2561 </td>
