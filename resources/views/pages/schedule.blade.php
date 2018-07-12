@@ -90,7 +90,7 @@
                                 <span class="markFont">การแข่งขันรอบแรก Round 2 สาย A</span>
                             </div>
                             <ul class="list">
-                                <li>ทุกทีมในสาย A ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่เกินวันที่ 10 กรกฎาคม 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 11 ก.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
+                                <li>ทุกทีมในสาย A ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่เกินวันที่ 18 กรกฎาคม 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 19 ก.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
                                 <li>หัวหน้าทีมของทั้งสองทีมต้องติดตามและค้นหาโพสเวลานัดเวลาแข่งขันทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a></li>
                                 <li>หากต้องการติดต่ออีกทีม เรื่องการนัดเวลา <i class="plus square icon"></i> แบบฉุกเฉินหรือเร่งด่วน  ให้ใช้ข้อมูลสำหรับติดต่อของแต่ละทีมได้ ที่ดูได้จาก <a href="{{ route('overall') }}">ที่นี่ </a> และคลิกที่ชื่อทีม</li>
                                 <li>เมื่อถึงเวลา 17:00 น. ของวันแข่งขันแล้ว หากทีมที่มีชื่อเป็นทีมแรก ยังไม่ทำการขียนคอมเม้นนัดแข่ง ให้อีกฝั่งหนึ่ง ทำหน้าที่เขียนคอมเม้นนัดแข่งแทน <i class="shield alternate icon"></i> เพื่อปกป้องผลประโยชน์ของตนเอง</li>
@@ -183,7 +183,7 @@
                                 <td>Fin18</td>
                                 <td>Fight for girl</td>
                                 <td>11 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 10 ก.ค. 2561 </td>
+                                <td>Fin18 ชนะ </td>
 
                             </tr>
                             <tr>
@@ -192,14 +192,14 @@
                                 <td>ซกเล็ก</td>
                                 <td>pormung</td>
                                 <td>11 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 10 ก.ค. 2561 </td>
+                                <td>ซกเล็ก ชนะ</td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Alzheimer</td>
                                 <td>DeadJungle</td>
                                 <td>11 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 10 ก.ค. 2561 </td>
+                                <td>Alzheimer ชนะ</td>
 
                             </tr>
                             <tr>
@@ -207,24 +207,24 @@
                                 <td>Holy Light</td>
                                 <td>Réstart </td>
                                 <td>11 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 10 ก.ค. 2561 </td>
+                                <td>Réstart ชนะ <span style="color:red"><sup>** เนื่องจาก ทีม Holy Light ไม่มาแข่งขัน</sup></span></td>
                             </tr>
 
 
                             <tr>
                                 <td rowspan="2" >Round 3</td>
                                 <td>1 </td>
-                                <td>ทีมผู้ชนะ คู่ที่ 1 (R2)</td>
-                                <td>ทีมผู้ชนะ คู่ที่ 2 (R2)</td>
+                                <td>Fin18</td>
+                                <td>ซกเล็ก</td>
                                 <td>19 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 18 ก.ค. 2561</td>
+                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 18 ก.ค. 2561 </td>
 
                             </tr>
 
                             <tr>
                                 <td>2</td>
-                                <td>ทีมผู้ชนะ คู่ที่ 3 (R2)</td>
-                                <td>ทีมผู้ชนะ คู่ที่ 4 (R2)</td>
+                                <td>Alzheimer</td>
+                                <td>Réstart</td>
                                 <td>19 ก.ค. 61 </td>
                                 <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 18 ก.ค. 2561 </td>
                             </tr>
