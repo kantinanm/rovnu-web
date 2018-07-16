@@ -16,7 +16,7 @@
                                 <h5 class="client-name">น้องว่าน ภาควิขาวิศวกรรมไฟฟ้าและคอมพิวเตอร์ </h5>
                                 <p class="client-designation"><span class="markFont">เกมเมอร์สาวสาย support สุดนุ่มนิ่ม </span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="VNFJV0ny-aA" id="btnTeamVideo10"><i class="play circle icon"></i>รับชม ROV Player EP4</a>
+                                  <!--  <a href="#"  data-video-id="VNFJV0ny-aA" id="btnTeamVideo10"><i class="play circle icon"></i>รับชม ROV Player EP4</a> -->
                                 </div>
                             </div>
                             <div class="testimonial-content">
@@ -33,7 +33,7 @@
                                 <h5 class="client-name">อาร์ม หนุ่มนิติฯหน้ามน </h5>
                                 <p class="client-designation"><span class="markFont">เกมเมอร์สายลุย </span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="hH6Nze_rcnM" id="btnTeamVideo9"><i class="play circle icon"></i>รับชม ROV Player EP3</a>
+                                <!--    <a href="#"  data-video-id="hH6Nze_rcnM" id="btnTeamVideo9"><i class="play circle icon"></i>รับชม ROV Player EP3</a> -->
                                 </div>
                             </div>
                             <div class="testimonial-content">
@@ -50,7 +50,7 @@
                                 <h5 class="client-name">สิรภพ เอี่ยมบางทราย จากโรงเรียนพิษณุโลกพิทยาคม </h5>
                                 <p class="client-designation"><span class="markFont">หัวหน้าทีม MeLegends</span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="Huc6aWlHoqU" id="btnTeamVideo6"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                <!--      <a href="#"  data-video-id="Huc6aWlHoqU" id="btnTeamVideo6"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a> -->
                                 </div>
                             </div>
                             <div class="testimonial-content">
@@ -67,7 +67,7 @@
                                 <h5 class="client-name">อนุรักษ์ วงศ์วินิจศร จากโรงเรียนพิษณุโลกพิทยาคม </h5>
                                 <p class="client-designation"><span class="markFont">หัวหน้าทีม Réstart</span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="pKetJMHt194" id="btnTeamVideo7"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                <!--      <a href="#"  data-video-id="pKetJMHt194" id="btnTeamVideo7"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a> -->
                                 </div>
                             </div>
                             <div class="testimonial-content">
@@ -84,7 +84,7 @@
                                 <h5 class="client-name">น้องตัวต่อ แห่งภาควิชาวิศวกรรมไฟฟ้าและคอมพิวเตอร์</h5>
                                 <p class="client-designation"><span class="markFont">เกมเมอร์สาว สุดหนึบหนับ ระดับ Plat 1</span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="LfsPj47L_iw" id="btnTeamVideo8"><i class="play circle icon"></i>รับชม ROV Player EP2</a>
+                                <!--     <a href="#"  data-video-id="LfsPj47L_iw" id="btnTeamVideo8"><i class="play circle icon"></i>รับชม ROV Player EP2</a> -->
                                 </div>
                             </div>
                             <div class="testimonial-content">
@@ -102,7 +102,7 @@
                                 <h5 class="client-name">รัตนชาติ อินเรือน จาก คณะวิศวกรรมศาสตร์</h5>
                                 <p class="client-designation"><span class="markFont">หัวหน้าทีม Fin18</span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="i6fKYkVND9o" id="btnTeamVideo4"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                <!--    <a href="#"  data-video-id="i6fKYkVND9o" id="btnTeamVideo4"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a> -->
                                 </div>
                             </div>
                             <div class="testimonial-content">
@@ -119,7 +119,7 @@
                                 <h5 class="client-name">ธัญชนก ทองเเท้ จาก โรงเรียนพิษณุโลกพิทยาคม</h5>
                                 <p class="client-designation"><span class="markFont">หัวหน้าทีม Red dragon</span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="keCKeXdNND8" id="btnTeamVideo5"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                <!--      <a href="#"  data-video-id="keCKeXdNND8" id="btnTeamVideo5"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a> -->
                                 </div>
                             </div>
                             <div class="testimonial-content">
@@ -136,7 +136,7 @@
                                 <h5 class="client-name">จิรภัทร แห่วตระกูลปัญญา จาก โรงเรียนอุดมดารณี</h5>
                                 <p class="client-designation"><span class="markFont">หัวหน้าทีม 8-BIT</span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="c6uhNAYiKz8" id="btnTeamVideo1"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                <!--      <a href="#"  data-video-id="c6uhNAYiKz8" id="btnTeamVideo1"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a> -->
                                 </div>
                             </div>
                             <div class="testimonial-content">
@@ -152,7 +152,7 @@
                                 <h5 class="client-name">ธรรมดนย์ ชมชัย  จาก โรงเรียนอุดมดารณี</h5>
                                 <p class="client-designation"><span class="markFont">หัวหน้าทีม Holy Light </span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="wJZpLV1EY_E" id="btnTeamVideo2"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a>
+                                <!--      <a href="#"  data-video-id="wJZpLV1EY_E" id="btnTeamVideo2"><i class="play circle icon"></i>วีดิโอแนะนำทีม</a> -->
                                 </div>
                             </div>
                             <div class="testimonial-content">
@@ -168,18 +168,18 @@
                                 <h5 class="client-name">ภูมิ</h5>
                                 <p class="client-designation"><span class="markFont">ROV Player คณะวิศวกรรมศาสตร์</span></p>
                                 <div class="description">
-                                    <a href="#"  data-video-id="EuXiMB6uiew" id="btnTeamVideo3"><i class="play circle icon"></i>รับชม ROV Player EP1</a>
+                                    <!--         <a href="#"  data-video-id="EuXiMB6uiew" id="btnTeamVideo3"><i class="play circle icon"></i>รับชม ROV Player EP1</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p><i class="ion-quote"></i></p>
+                                        <p class="testimonial-speech"><span class="markFont">แรงค์ต่ำๆ มันต้องอยู่อย่างนี้ไปก่อน เพราะว่าไม่งั้นมันจะแบกทีมไม่ได้</span></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-content">
-                                <p><i class="ion-quote"></i></p>
-                                <p class="testimonial-speech"><span class="markFont">แรงค์ต่ำๆ มันต้องอยู่อย่างนี้ไปก่อน เพราะว่าไม่งั้นมันจะแบกทีมไม่ได้</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
