@@ -419,7 +419,7 @@
                             <td>8-BIT</td>
                             <td>MeLegends</td>
                             <td>15 ก.ค. 61 </td>
-                            <td></td>
+                            <td>MeLegends ชนะ</td>
 
                         </tr>
                         <tr>
@@ -427,7 +427,7 @@
                             <td>ทีมเก๋สั่งลุย</td>
                             <td>TheLast1</td>
                             <td>15 ก.ค. 61 </td>
-                            <td></td>
+                            <td>เก๋สั่งลุย ชนะ</td>
                         </tr>
                         <tr>
 
@@ -435,21 +435,21 @@
                             <td>Eric</td>
                             <td>BLueDragon</td>
                             <td>15 ก.ค. 61 </td>
-                            <td></td>
+                            <td>Eric ชนะ</td>
                         </tr>
 
                         <tr>
                             <td rowspan="2" >Round 3</td>
                             <td>1 </td>
-                            <td>ทีมผู้ชนะ คู่ที่ 1 (R2)</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 2 (R2)</td>
+                            <td>MeLegends</td>
+                            <td>เก๋สั่งลุย</td>
                             <td>23 ก.ค. 61 </td>
                             <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 22 ก.ค. 2561</td>
 
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 3 (R2)</td>
+                            <td>Eric</td>
                             <td>EX-Chapter</td>
                             <td>23 ก.ค. 61 </td>
                             <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 22 ก.ค. 2561</td>
