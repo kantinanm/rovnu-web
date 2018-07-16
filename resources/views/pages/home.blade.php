@@ -77,13 +77,13 @@
                 <div class="row">
 
                     <div class="col-md-4 text-center">
-                        <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">240</span>
+                        <span class="counter" style="display: inline-block; width: 25%;font-size: 30px;">240</span>
                     </div> <!--col-md-12-->
                     <div class="col-md-4 text-center">
                         <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$playerConfirmTeam}}</span>
                     </div> <!--col-md-12-->
                     <div class="col-md-4 text-center">
-                        <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">64</span>
+                        <span class="counter" style="display: inline-block; width: 25%;font-size: 40px;">{{$participant}}</span>
                     </div> <!--col-md-12-->
                 </div> <!--end row2-->
                 <div class="row">

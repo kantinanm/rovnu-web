@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Config;
 use App\User;
 use App\Player;
+use App\Participant;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Log;
 
@@ -38,6 +39,7 @@ class HomeRovController extends Controller
             ->whereNotIn('users.id', [1,2,3,4,7,17,18,19])
             ->get()->count();
 
+        $participant=Participant::where('p_id', '>', 0)->get()->count();
 
         return view('pages.home')->with(compact('allowTeamRegister',$allowTeamRegister))
             ->with(compact('allowPaticipantRegister',$allowPaticipantRegister))
@@ -45,6 +47,7 @@ class HomeRovController extends Controller
             ->with(compact('playerConfirmTeam',$playerConfirmTeam))
             ->with(compact('teamConfirm',$teamConfirm))
             ->with(compact('playerPaticipant',$playerPaticipant))
+            ->with(compact('participant',$participant))
             ->with(compact('allowSponsorRegister',$allowSponsorRegister));
     }
 
