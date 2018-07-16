@@ -12,6 +12,23 @@
                     <div>
                         <div class="testimonial-container">
                             <div class="client-details text-center">
+                                <img src="{{ URL::asset('images/Wan.png') }}" alt="">
+                                <h5 class="client-name">น้องว่าน ภาควิขาวิศวกรรมไฟฟ้าและคอมพิวเตอร์ </h5>
+                                <p class="client-designation"><span class="markFont">เกมเมอร์สาวสาย support สุดนุ่มนิ่ม </span></p>
+                                <div class="description">
+                                    <a href="#"  data-video-id="VNFJV0ny-aA" id="btnTeamVideo10"><i class="play circle icon"></i>รับชม ROV Player EP4</a>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p><i class="ion-quote"></i></p>
+                                <p class="testimonial-speech"><span class="markFont">E-Sport ไม่ใช่แค่การเล่นเกมอย่างเดียว แต่เป็นการแข่งขัน ได้ฝึกสมอง ฝึกการวางแผน และใช้เวลาว่างให้เป็นประโยชน์</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="testimonial-container">
+                            <div class="client-details text-center">
                                 <img src="{{ URL::asset('images/arm.png') }}" alt="">
                                 <h5 class="client-name">อาร์ม หนุ่มนิติฯหน้ามน </h5>
                                 <p class="client-designation"><span class="markFont">เกมเมอร์สายลุย </span></p>
