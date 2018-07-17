@@ -95,7 +95,7 @@
                         <i class="ion-android-contacts" style="font-size: 30px;"></i>  ผู้ที่สนใจ
                     </div>
                     <div class="col-md-4 text-center">
-                        <i class="ion-person-stalker" style="font-size: 30px;"></i> ลงทะเบียนเลุ้นรางวัล
+                        <i class="ion-person-stalker" style="font-size: 30px;"></i> ลงทะเบียนลุ้นรางวัล
                     </div>
 
                 </div>
