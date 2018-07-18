@@ -476,19 +476,19 @@
                         <div class="ui brown info message">
                             <i class="close icon"></i>
                             <div class="header">
-                                <span class="markFont">การแข่งขันรอบแรก Round 2 สาย D</span>
+                                <span class="markFont">การแข่งขันรอบแรก Round 3 สาย D</span>
                             </div>
                             <ul class="list">
-                                <li>ทุกทีมในสาย D ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่ควรเกินวันที่ 8 กรกฎาคม 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 9 ก.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
+                                <li>ทุกทีมในสาย D ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่ควรเกินวันที่ 24 กรกฎาคม 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 25 ก.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
                                 <li>หัวหน้าทีมของทั้งสองทีมต้องติดตามและค้นหาโพสเวลานัดเวลาแข่งขันทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ซึ่งทีมงานจะโพสก่อนวันแข่งขันล่วงหน้าอย่างน้อย 1 วัน</li>
-                                <li>หากต้องการติดต่ออีกทีม เรื่องการนัดเวลา <i class="plus square icon"></i> แบบฉุกเฉินหรือเร่งด่วน  ให้ใช้ข้อมูลสำหรับติดต่อของแต่ละทีมได้ ที่ดูได้จาก <a href="{{ route('overall') }}">ที่นี่ </a> และคลิกที่ชื่อทีม</li>
+                                <li>หากต้องการติดต่ออีกทีม เรื่องการนัดเวลา <i class="plus square icon"></i> แบบฉุกเฉินหรือเร่งด่วน  ให้ใช้ข้อมูลสำหรับติดต่อของแต่ละทีมได้ ที่ดูได้จาก <a href="#">ที่นี่ </a> และคลิกที่ชื่อทีม</li>
                                 <li>เมื่อถึงเวลา 17:00 น. ของวันแข่งขันแล้ว หากทีมที่มีชื่อเป็นทีมแรก ยังไม่ทำการขียนคอมเม้นนัดแข่ง ให้อีกฝั่งหนึ่ง ทำหน้าที่เขียนคอมเม้นนัดแข่งแทน <i class="shield alternate icon"></i> เพื่อปกป้องผลประโยชน์ของตนเอง</li>
                                 <li>หากทั้งสองทีมไม่สามารถตกลงเวลากันได้ ให้แข่งขันในเวลากลาง คือ เวลา 20:00 น. ของวันที่มีการแข่งขัน</li>
 
                             </ul>
                         </div>
-
                     </div>
+
                     <table class="ui celled structured violet table">
                         <thead>
                         <tr>
@@ -566,7 +566,7 @@
                             <td>Wrigleys</td>
                             <td>MEEPOOH</td>
                             <td>17 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 16 ก.ค. 2561</td>
+                            <td>MEEPOOH ชนะ</td>
 
                         </tr>
                         <tr>
@@ -574,7 +574,7 @@
                             <td>PLKT</td>
                             <td>SixDion</td>
                             <td>17 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 16 ก.ค. 2561 </td>
+                            <td>SixDion ชนะ</td>
                         </tr>
                         <tr>
 
@@ -582,24 +582,24 @@
                             <td>ROV_AFK</td>
                             <td>ปังเย็นคุง</td>
                             <td>17 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 16 ก.ค. 2561 </td>
+                            <td>ปังเย็นคุง ชนะ</td>
                         </tr>
 
                         <tr>
                             <td rowspan="2" >Round 3</td>
                             <td>1 </td>
-                            <td>ทีมผู้ชนะ คู่ที่ 1 (R2)</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 2 (R2)</td>
+                            <td>MEEPOOH</td>
+                            <td>SixDion (R2)</td>
                             <td>25 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 24 ก.ค. 2561</td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 24 ก.ค. 2561 </td>
 
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 3 (R2)</td>
+                            <td>ปังเย็นคุง</td>
                             <td>DoubleA</td>
                             <td>25 ก.ค. 61 </td>
-                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 24 ก.ค. 2561</td>
+                            <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 24 ก.ค. 2561 </td>
                         </tr>
 
                         <tr>
