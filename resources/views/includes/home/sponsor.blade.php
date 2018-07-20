@@ -97,6 +97,13 @@
                                         </a>
                         </div>
 
+
+                        <div class="col-md-1 text-center">
+                            <a href="#" target="_blank" class="ui small image" data-tooltip="Sellman Thailand" data-inverted="" >
+                                <img src="{{ URL::asset('images/sponser/sellman_thailand.jpg') }}" >
+                            </a>
+                        </div>
+
                         <div class="col-md-1 text-center">
                             <a href="http://truemoveh.truecorp.co.th/" target="_blank" class="ui small image" data-tooltip="Truemove H 4G+ แรงที่สุด เร็วที่สุด" data-inverted="" >
                                 <img src="{{ URL::asset('images/sponser/truemove_4g.png') }}" >
