@@ -445,7 +445,7 @@
                             <td>MeLegends</td>
                             <td>เก๋สั่งลุย</td>
                             <td>23 ก.ค. 61 </td>
-                            <td>รอผลการแข่งขัน</td>
+                            <td>MeLegends ชนะ</td>
 
                         </tr>
                         <tr>
@@ -453,14 +453,14 @@
                             <td>Eric</td>
                             <td>EX-Chapter</td>
                             <td>23 ก.ค. 61 </td>
-                            <td>รอผลการแข่งขัน</td>
+                            <td>Eric ชนะ</td>
                         </tr>
 
                         <tr>
                             <td rowspan="1" >Round 4</td>
                             <td>1 </td>
-                            <td>ทีมผู้ชนะ คู่ที่ 1 (R3)</td>
-                            <td>ทีมผู้ชนะ คู่ที่ 2 (R3)</td>
+                            <td>MeLegends</td>
+                            <td>Eric</td>
                             <td>31 ก.ค. 61 </td>
                             <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 30 ก.ค. 2561 </td>
 
@@ -470,7 +470,6 @@
 
                     </table>
                 </div>
-
                 <div class="ui bottom attached tab segment" data-tab="groupD">
                     <div class="card">
                         <img class="card-img-top img-responsive" src="{{ URL::asset('images/result/Round1_groupD.png') }}" alt="Card image cap">
@@ -478,10 +477,10 @@
                         <div class="ui brown info message">
                             <i class="close icon"></i>
                             <div class="header">
-                                <span class="markFont">การแข่งขันรอบแรก Round 3 สาย D</span>
+                                <span class="markFont">การแข่งขันรอบแรก Round 4 สาย D</span>
                             </div>
                             <ul class="list">
-                                <li>ทุกทีมในสาย D ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่ควรเกินวันที่ 24 กรกฎาคม 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 25 ก.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
+                                <li>ทุกทีมในสาย D ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่ควรเกินวันที่ 1 ส.ค. 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 2 ส.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
                                 <li>หัวหน้าทีมของทั้งสองทีมต้องติดตามและค้นหาโพสเวลานัดเวลาแข่งขันทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ซึ่งทีมงานจะโพสก่อนวันแข่งขันล่วงหน้าอย่างน้อย 1 วัน</li>
                                 <li>หากต้องการติดต่ออีกทีม เรื่องการนัดเวลา <i class="plus square icon"></i> แบบฉุกเฉินหรือเร่งด่วน  ให้ใช้ข้อมูลสำหรับติดต่อของแต่ละทีมได้ ที่ดูได้จาก <a href="#">ที่นี่ </a> และคลิกที่ชื่อทีม</li>
                                 <li>เมื่อถึงเวลา 17:00 น. ของวันแข่งขันแล้ว หากทีมที่มีชื่อเป็นทีมแรก ยังไม่ทำการขียนคอมเม้นนัดแข่ง ให้อีกฝั่งหนึ่ง ทำหน้าที่เขียนคอมเม้นนัดแข่งแทน <i class="shield alternate icon"></i> เพื่อปกป้องผลประโยชน์ของตนเอง</li>
@@ -618,7 +617,6 @@
 
                     </table>
                 </div>
-
             </div>
         </div>
 
