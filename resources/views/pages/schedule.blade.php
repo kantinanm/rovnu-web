@@ -654,9 +654,9 @@
                                 <td rowspan="2" >Round 3</td>
                                 <td>1 </td>
                                 <td>MEEPOOH</td>
-                                <td>SixDion (R2)</td>
+                                <td>SixDion </td>
                                 <td>25 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 24 ก.ค. 2561 </td>
+                                <td>MEEPOOH ชนะ </td>
 
                             </tr>
                             <tr>
@@ -664,14 +664,14 @@
                                 <td>ปังเย็นคุง</td>
                                 <td>DoubleA</td>
                                 <td>25 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 24 ก.ค. 2561 </td>
+                                <td>ปังเย็นคุง ชนะ</td>
                             </tr>
 
                             <tr>
                                 <td rowspan="1" >Round 4</td>
                                 <td>1 </td>
-                                <td>ทีมผู้ชนะ คู่ที่ 1 (R3)</td>
-                                <td>ทีมผู้ชนะ คู่ที่ 2 (R3)</td>
+                                <td>MEEPOOH</td>
+                                <td>ปังเย็นคุง</td>
                                 <td>2 ส.ค. 61 </td>
                                 <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 1 ส.ค. 2561 </td>
 
