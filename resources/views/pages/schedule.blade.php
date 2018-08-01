@@ -89,12 +89,7 @@
                                 <span class="markFont">การแข่งขันรอบแรก Round 4 สาย A</span>
                             </div>
                             <ul class="list">
-                                <li>ทุกทีมในสาย A ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่ควรเกินวันที่ 26 กรกฎาคม 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 27 ก.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
-                                <li>หัวหน้าทีมของทั้งสองทีมต้องติดตามและค้นหาโพสเวลานัดเวลาแข่งขันทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a></li>
-                                <li>หากต้องการติดต่ออีกทีม เรื่องการนัดเวลา <i class="plus square icon"></i> แบบฉุกเฉินหรือเร่งด่วน  ให้ใช้ข้อมูลสำหรับติดต่อของแต่ละทีมได้ ที่ดูได้จาก <a href="{{ route('overall') }}">ที่นี่ </a> และคลิกที่ชื่อทีม</li>
-                                <li>เมื่อถึงเวลา 17:00 น. ของวันแข่งขันแล้ว หากทีมที่มีชื่อเป็นทีมแรก ยังไม่ทำการขียนคอมเม้นนัดแข่ง ให้อีกฝั่งหนึ่ง ทำหน้าที่เขียนคอมเม้นนัดแข่งแทน <i class="shield alternate icon"></i> เพื่อปกป้องผลประโยชน์ของตนเอง</li>
-                                <li>หากทั้งสองทีมไม่สามารถตกลงเวลากันได้ ให้แข่งขันในเวลากลาง คือ เวลา 20:00 น. ของวันที่มีการแข่งขัน</li>
-
+                                <li><strong>ยินดีกับแชมป์กลุ่ม A ทีม Alzheimer  </strong> แล้วเจอกันวันที่ 17 สิงหาคม 2561 <i class="yellow trophy icon"></i>   </li>
                             </ul>
                         </div>
 
@@ -234,7 +229,7 @@
                                 <td>Fin18</td>
                                 <td>Alzheimer</td>
                                 <td>27 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 26 ก.ค. 2561 </td>
+                                <td>Alzheimer ชนะ</td>
 
                             </tr>
 
@@ -244,7 +239,6 @@
 
 
                     </div>
-
                     <div class="ui bottom attached tab segment" data-tab="groupB">
                         <div class="card">
                             <img class="card-img-top img-responsive" src="{{ URL::asset('images/result/Round1_groupB.png') }}" alt="Card image cap">
@@ -254,12 +248,7 @@
                                     <span class="markFont">การแข่งขันรอบแรก Round 4 สาย B</span>
                                 </div>
                                 <ul class="list">
-                                    <li>ทุกทีมในสาย B ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่ควรเกินวันที่ 28 กรกฎาคม 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 29 ก.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
-                                    <li>หัวหน้าทีมของทั้งสองทีมต้องติดตามและค้นหาโพสเวลานัดเวลาแข่งขันทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ซึ่งทีมงานจะโพสก่อนวันแข่งขันล่วงหน้าอย่างน้อย 1 วัน </li>
-                                    <li>หากต้องการติดต่ออีกทีม เรื่องการนัดเวลา <i class="plus square icon"></i> แบบฉุกเฉินหรือเร่งด่วน  ให้ใช้ข้อมูลสำหรับติดต่อของแต่ละทีมได้ ที่ดูได้จาก <a href="#">ที่นี่ </a> และคลิกที่ชื่อทีม</li>
-                                    <li>เมื่อถึงเวลา 17:00 น. ของวันแข่งขันแล้ว หากทีมที่มีชื่อเป็นทีมแรก ยังไม่ทำการขียนคอมเม้นนัดแข่ง ให้อีกฝั่งหนึ่ง ทำหน้าที่เขียนคอมเม้นนัดแข่งแทน <i class="shield alternate icon"></i> เพื่อปกป้องผลประโยชน์ของตนเอง</li>
-                                    <li>หากทั้งสองทีมไม่สามารถตกลงเวลากันได้ ให้แข่งขันในเวลากลาง คือ เวลา 20:00 น. ของวันที่มีการแข่งขัน</li>
-
+                                    <li><strong>ยินดีกับแชมป์กลุ่ม B ทีม DoEnYent  </strong> แล้วเจอกันวันที่ 17 สิงหาคม 2561 <i class="yellow trophy icon"></i>   </li>
                                 </ul>
                             </div>
                         </div>
@@ -381,7 +370,7 @@
                                 <td>DevilZone</td>
                                 <td>DoEnYent</td>
                                 <td>29 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 28 ก.ค. 2561 </td>
+                                <td>DoEnYent ชนะ</td>
 
                             </tr>
                             </tbody>
@@ -398,11 +387,7 @@
                                     <span class="markFont">การแข่งขันรอบแรก Round 4 สาย C</span>
                                 </div>
                                 <ul class="list">
-                                    <li>ทุกทีมในสาย C ต้องทำการ<strong>ตกลงเวลาในการแข่งไม่ควรเกินวันที่ 30 กรกฎาคม 2561 </strong>ผ่านทางโพส <i class="comments outline icon"></i> ที่ทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport</a> ได้  <i class="map marker alternate icon"></i>ปักหมุดไว้ และทำการแข่งขันใน<strong>วันที่ 31 ก.ค. 2561 </strong> พร้อมทั้งรายงานผลมายังที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ไม่เกิน 23.59 น.</li>
-                                    <li>หัวหน้าทีมของทั้งสองทีมต้องติดตามและค้นหาโพสเวลานัดเวลาแข่งขันทางเพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> ซึ่งทีมงานจะโพสก่อนวันแข่งขันล่วงหน้าอย่างน้อย 1 วัน</li>
-                                    <li>หากต้องการติดต่ออีกทีม เรื่องการนัดเวลา <i class="plus square icon"></i> แบบฉุกเฉินหรือเร่งด่วน  ให้ใช้ข้อมูลสำหรับติดต่อของแต่ละทีมได้ ที่ดูได้จาก <a href="{{ route('overall') }}">ที่นี่ </a> และคลิกที่ชื่อทีม</li>
-                                    <li>เมื่อถึงเวลา 17:00 น. ของวันแข่งขันแล้ว หากทีมที่มีชื่อเป็นทีมแรก ยังไม่ทำการขียนคอมเม้นนัดแข่ง ให้อีกฝั่งหนึ่ง ทำหน้าที่เขียนคอมเม้นนัดแข่งแทน <i class="shield alternate icon"></i> เพื่อปกป้องผลประโยชน์ของตนเอง</li>
-                                    <li>หากทั้งสองทีมไม่สามารถตกลงเวลากันได้ ให้แข่งขันในเวลากลาง คือ เวลา 20:00 น. ของวันที่มีการแข่งขัน</li>
+                                    <li><strong>ยินดีกับแชมป์กลุ่ม C ทีม MeLegends   </strong> แล้วเจอกันวันที่ 17 สิงหาคม 2561 <i class="yellow trophy icon"></i>   </li>
 
                                 </ul>
                             </div>
@@ -526,7 +511,7 @@
                                 <td>MeLegends</td>
                                 <td>Eric</td>
                                 <td>31 ก.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 30 ก.ค. 2561 </td>
+                                <td>MeLegends ชนะ</td>
 
                             </tr>
 
