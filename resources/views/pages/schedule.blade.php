@@ -658,7 +658,7 @@
                                 <td>MEEPOOH</td>
                                 <td>ปังเย็นคุง</td>
                                 <td>2 ส.ค. 61 </td>
-                                <td><i class="comment alternate outline icon"></i> นัดเวลาที่เพจ <a href="https://www.facebook.com/nu.esport/" target="_blank"><i class="facebook square icon"></i>NU ESport </a> วันที่ 1 ส.ค. 2561 </td>
+                                <td>ปังเย็นคุง ชนะ</td>
 
                             </tr>
 
