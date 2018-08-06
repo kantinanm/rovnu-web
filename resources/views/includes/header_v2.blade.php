@@ -23,7 +23,7 @@
 
                     <li><a href="{{ route('place') }}"><span class="menu">สถานที่จัดงาน</span></a></li>
                     <!--<li><a href="{{ route('question') }}"><span class="menu">คำถามที่พบบ่อย</span></a></li>-->
-                    <li><a href="{{ route('activity') }}"><span class="menu">กำหนดการ</span></a></li>
+                    <li><a href="{{ route('activity') }}"><span class="menu">กิจกรรมภายในงาน</span></a></li>
                     <li><a href="{{ route('schedule') }}"><span class="menu">ตารางการแข่งขัน</span></a></li>
                     @if( Auth::guest() )
                     <li><a href="{{route("register-paticipant")}}"  class="btn btn-orange border-none btn-rounded-corner btn-navbar">ลงทะเบียนเข้าร่วมงาน<span class="icon-on-button"><i class="ion-person-add"></i></span></a></li>
