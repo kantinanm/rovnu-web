@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/modal-video.min.css') }}">
     <link rel="stylesheet" type="text/css"  href="{{ URL::asset('js/infinite-grid-pro/content/global.css') }}"/>
 @endsection
-@include('includes.header')
+@include('includes.header_v2')
 @section('content')
 
 
