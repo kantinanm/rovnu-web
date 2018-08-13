@@ -78,6 +78,9 @@ Route::get('home/question','HomeRovController@question')->name('question');
 Route::get('home/overall','HomeRovController@overallTeam')->name('overall');
 Route::post('home/overall/detail', 'HomeRovController@getTeamDetail')->name('get-team-detail');
 
+Route::get('home/participant','HomeRovController@participantList')->name('participant');
+Route::get('participant/{token}','HomeRovController@getParticipant')->name('participant-get');
+
 /*Route::get('register/privacy', function () {
 
     return view('pages.register.privacy');

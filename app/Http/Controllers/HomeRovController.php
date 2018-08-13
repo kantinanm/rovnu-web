@@ -196,4 +196,37 @@ class HomeRovController extends Controller
 
         return response()->json($result);
     }
+
+    public function participantList(){
+        $listParticipant=Participant::get();
+        return view('pages.participant')->with(compact('listParticipant',$listParticipant));
+    }
+
+    public function getParticipant($token){
+
+        $objParticipant=Participant::where('unique_id', '=', $token)->first();
+
+        if($objParticipant==null){
+            $result["status"]=0;
+
+        }else {
+            $result["status"]=1;
+            $result["pid"] = $objParticipant->p_id;
+            $result["fullname"] = $objParticipant->fullname;
+            $result["email"] = $objParticipant->email;
+            $result["unique_id"] = $objParticipant->unique_id;
+            $result["garena_id"] = $objParticipant->garena_id;
+            if ($objParticipant->member_type == 0) {
+                $result["member_type"] = "นิสิต / นักศึกษา";
+            } elseif ($objParticipant->member_type == 1) {
+                $result["member_type"] = "ครู / อาจารย์";
+            } elseif ($objParticipant->member_type == 2) {
+                $result["member_type"] = "นักเรียน";
+            } elseif ($objParticipant->member_type == 3) {
+                $result["member_type"] = "บุคคลทั่วไป";
+            }
+        }
+
+        return response()->json($result);
+    }
 }
