@@ -52,15 +52,15 @@ class DatabaseSeeder extends Seeder
         $role_subscriber->attachPermission($can_list_negotiation);
         $role_subscriber->attachPermission($can_reply_negotiation);
 
-        $user = ['name' => 'Admin User', 'email' => 'adminuser@test.com', 'password' => Hash::make('1234'),'teamname' =>"",'usr_lvl'=>"admin"];
+        $user = ['name' => 'Admin User', 'email' => 'ecpe-software@nu.ac.th', 'password' => '','teamname' =>"",'usr_lvl'=>"admin",'username' => 'ecpe-software','active'=>1];
         $user = User::create($user);
         //4) Set User Role
         $user->attachRole($role_admin);
 
 
-        $user_subscriber = ['name' => 'Subscribe User', 'email' => 'user@test.com', 'password' => Hash::make('1234'),'teamname' =>"nooneelse"];
+        /*$user_subscriber = ['name' => 'Subscribe User', 'email' => 'user@test.com', 'password' => Hash::make('1234'),'teamname' =>"nooneelse"];
         $user_subscriber = User::create($user_subscriber);
-        $user_subscriber->attachRole($role_subscriber);
+        $user_subscriber->attachRole($role_subscriber);*/
 
     }
 }

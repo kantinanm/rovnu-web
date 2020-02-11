@@ -146,7 +146,7 @@ class PlayerController extends Controller
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
-        $faculty =Config::get('institution.'.Auth::user()->team_type."_level");
+        $faculty =Config::get('institution.'.Auth::user()->team_type."_level");// bug  <select id="faculty" name="faculty">
 
         //dd($faculty);
         //return view('pages.register.member-add',compact('faculty',$faculty));

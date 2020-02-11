@@ -127,25 +127,28 @@
                             </div>
                             <div class="two fields">
                                 <div class="field">
-                                    <label>E-Mail</label>
-                                    <input type="text" name="email" id="email"  value="{{ old('email') }}" />
+                                    <label>สี</label>
+                                    <select name="team_type" id="team_type">
+                                        <option value="pink">สีชมพู (กลุ่มวิทยาศาสตร์สุขภาพ)</option>
+                                        <option value="violet">สีม่วง (กลุ่มวิทยาศาสตร์และเทคโนโลยี)</option>
+                                        <option value="cyan">สีฟ้า (กลุ่มมนุษยศาสตร์และสังคมศาสตร์)</option>
+                                        <option value="green">สีเขียว (กลุ่มสำนักงานอธิการบดี)</option>
+                                    </select>
                                 </div>
                                 <div class="field">
-                                    <label>ประเภททีม</label>
-                                    <select name="team_type" id="team_type">
-                                        <option value="undergraduate">อุดมศึกษา / มหาวิทยาลัย</option>
-                                        <option value="high_school">โรงเรียน / อนุปริญญา</option>
+                                    <label>ต้นสังกัดของตัวแทนที่สามารถติดต่อได้ (หัวหน้าทีม)</label>
+                                    <select name="institution" id="institution">
+                                        @foreach($institutionList as $institution)
+                                            <option value="{{$institution}}">{{$institution}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
 
                             <div class="field">
-                                <label>สถาบันการศึกษา</label>
-                                <select name="institution" id="institution">
-                                    @foreach($institutionList as $institution)
-                                        <option value="{{$institution}}">{{$institution}}</option>
-                                    @endforeach
-                                </select>
+                                <label>E-Mail</label>
+                                <input type="text" name="email" id="email"  value="{{ old('email') }}" />
+
                             </div>
 
                             <div class="two fields">

@@ -6,6 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Config;
+use Adldap\Laravel\Facades\Adldap;
+use App\User;
+use App\Role;
+use App\Events\Registered;
+use Illuminate\Support\Str;
+use Mail;
+use Illuminate\Support\Facades\Log;
 
 
 class LoginController extends Controller
@@ -40,6 +47,11 @@ class LoginController extends Controller
         $this->middleware('guest', ['except' => 'logout']);
     }
 
+    public function username() {
+        //return config('adldap_auth.usernames.eloquent');
+        return 'username';
+    }
+
     protected function validateLogin(Request $request)
     {
         $this->validate($request, [
@@ -53,7 +65,7 @@ class LoginController extends Controller
     {
         $credentials = $request->only($this->username(), 'password');
         // Customization: validate if client status is active (1)
-        $credentials['active'] = 1;  // like sql where
+        //$credentials['active'] = 1;  // like sql where
         return $credentials;
     }
 
@@ -64,6 +76,11 @@ class LoginController extends Controller
 
         if($user->usr_lvl === 'admin') {
             return redirect()->intended('/admin/dashboard');
+        }
+
+        if(($user->usr_lvl === 'subscriber')&($user->active==0)) {
+
+            return redirect()->intended('/'); // to implement
         }
 
         // redirect to submit video form
@@ -103,7 +120,8 @@ class LoginController extends Controller
         $user = \App\User::where($this->username(), $request->{$this->username()})->first();
         // Check if user was successfully loaded, that the password matches
         // and active is not 1. If so, override the default error message.
-        if ($user && \Hash::check($request->password, $user->password) && $user->active != 1) {
+
+        if ($user && Adldap::auth()->attempt($this->username(),$request->password, $bindAsUser = true) && $user->active != 1) {
             $errors = [$this->username() => 'Your account is not active.'];
         }
         if ($request->expectsJson()) {
@@ -112,5 +130,134 @@ class LoginController extends Controller
         return redirect()->back()
             ->withInput($request->only($this->username(), 'remember'))
             ->withErrors($errors);
+    }
+
+    protected function attemptLogin(Request $request)
+    {
+        //dd("test");
+        $credentials = $request->only($this->username(), 'password');
+        $username = $credentials[$this->username()];
+        $password = $credentials['password'];
+        //dd(env('ADLDAP_USER_FORMAT'));
+
+
+        if (Adldap::auth()->attempt($username, $password, $bindAsUser = true)) {
+            //dd("true");
+
+            $user = \App\User::where($this->username(), $username)->first();
+
+            if (!$user) {
+
+                /*$user = new \App\User();
+                $user->username = $username;
+                $user->password = '';
+                $user->verify_token = Str::random(40);*/
+                //$user->email = $username.'@nu.ac.th';
+
+                $user= [
+                    'username' => $username,
+                    'name' => '',
+                    'email' => '',
+                    'password'=> '',
+                    'verify_token' => Str::random(40)
+                ];
+
+                $user = User::create($user);
+
+                $sync_attrs = $this->retrieveSyncAttributes($username);
+                foreach ($sync_attrs as $field => $value) {
+                    $user->$field = $value !== null ? $value : '';
+                }
+
+
+                $role_subscriber = Role::where("name", "subscriber")->first();
+                $user->attachRole($role_subscriber);
+                //$user->roles()->attach($role_subscriber);
+                $user->save();
+                $this->sendEmail($user,$password);
+
+            }
+
+            $this->guard()->login($user, true);
+            return true;
+        }
+        // the user doesn't exist in the LDAP server or the password is wrong
+        // log error
+        //dd("false");
+        return false;
+    }
+
+    protected function retrieveSyncAttributes($username)
+    {
+        $ldapuser = Adldap::search()->where(env('ADLDAP_USER_ATTRIBUTE'), '=', $username)->first();
+        if (!$ldapuser) {
+            // log error
+            return false;
+        }
+
+        $ldapuser_attrs = null;
+
+        $attrs = [];
+
+        foreach (config('adldap_auth.sync_attributes') as $local_attr => $ldap_attr) {
+            if ($local_attr == 'username') {
+                continue;
+            }
+
+            $method = 'get' . $ldap_attr;
+            if (method_exists($ldapuser, $method)) {
+                $attrs[$local_attr] = $ldapuser->$method();
+                continue;
+            }
+
+            if ($ldapuser_attrs === null) {
+                $ldapuser_attrs = self::accessProtected($ldapuser, 'attributes');
+            }
+
+            if (!isset($ldapuser_attrs[$ldap_attr])) {
+                // an exception could be thrown
+                $attrs[$local_attr] = null;
+                continue;
+            }
+
+            if (!is_array($ldapuser_attrs[$ldap_attr])) {
+                $attrs[$local_attr] = $ldapuser_attrs[$ldap_attr];
+            }
+
+            if (count($ldapuser_attrs[$ldap_attr]) == 0) {
+                // an exception could be thrown
+                $attrs[$local_attr] = null;
+                continue;
+            }
+
+            $attrs[$local_attr] = $ldapuser_attrs[$ldap_attr][0];
+            //$attrs[$local_attr] = implode(',', $ldapuser_attrs[$ldap_attr]);
+        }
+
+        return $attrs;
+    }
+
+    protected static function accessProtected($obj, $prop)
+    {
+        $reflection = new \ReflectionClass($obj);
+        $property = $reflection->getProperty($prop);
+        $property->setAccessible(true);
+        return $property->getValue($obj);
+    }
+
+    public function sendEmail($thisUser,$password)
+    {
+        /*
+        Mail::to($thisUser->email)
+            ->send(new verifyEmail($thisUser));
+        */
+        //dd($password);
+        $message ="User register :".$thisUser->username.",office:".$thisUser->office;
+        $message .=", name:".$thisUser->name.",email:".$thisUser->email;
+
+
+        Log::info($message);
+        event(new Registered($thisUser,$password));
+        //dispatch((new SendEmailJob($thisUser,$password))->delay(Carbon::now()->addSeconds(3)));
     }
 }

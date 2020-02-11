@@ -84,7 +84,7 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        $institutionList =Config::get('institution.undergraduate');
+        $institutionList =Config::get('institution.pink');
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');

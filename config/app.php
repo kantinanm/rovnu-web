@@ -154,6 +154,9 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         Dirape\Token\TokenServiceProvider::class,
+
+        Adldap\Laravel\AdldapServiceProvider::class,
+        Adldap\Laravel\AdldapAuthServiceProvider::class,
     ],
     /*
     |--------------------------------------------------------------------------
@@ -202,6 +205,7 @@ return [
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         'Token'=>\Dirape\Token\Facades\Facade::class,
+        'Adldap' => Adldap\Laravel\Facades\Adldap::class,
     ],
     // use for rule of team , each team has 7 player in tournament
     'player_limit' => env('PLAYER_LIMIT', '7'),
