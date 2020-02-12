@@ -116,14 +116,26 @@ class LoginController extends Controller
     protected function sendFailedLoginResponse(Request $request)
     {
         $errors = [$this->username() => trans('auth.failed')];
-        // Load user from database
+        // Check user 's exits from database
         $user = \App\User::where($this->username(), $request->{$this->username()})->first();
-        // Check if user was successfully loaded, that the password matches
-        // and active is not 1. If so, override the default error message.
 
-        if ($user && Adldap::auth()->attempt($this->username(),$request->password, $bindAsUser = true) && $user->active != 1) {
-            $errors = [$this->username() => 'Your account is not active.'];
+        // Check LDAP server or the password is wrong
+        if ( !Adldap::auth()->attempt($user->username,$request->password, $bindAsUser = true )){
+            $errors = [$this->username() => trans('auth.failed')];
+            return redirect()->back()
+                ->withInput($request->only($this->username()))
+                ->withErrors($errors);
+            //dd($errors);
         }
+        // Check active is not 1. If so, override the default error message.
+        if (  $user->active != 1 ) {
+            $errors = [$this->username() => 'บัญชี NU-NET ของท่าน  ยังไม่ได้ Activate โปรดตรวจสอบ email ตอบรับ หลังจากลงทะเบียน.'];
+            return redirect()->back()
+                ->withInput($request->only($this->username()))
+                ->withErrors($errors);
+            //dd($errors);
+        }
+
         if ($request->expectsJson()) {
             return response()->json($errors, 422);
         }
@@ -146,7 +158,7 @@ class LoginController extends Controller
 
             $user = \App\User::where($this->username(), $username)->first();
 
-            if (!$user) {
+            if (!$user) { // to move to registerController
 
                 /*$user = new \App\User();
                 $user->username = $username;
@@ -176,10 +188,19 @@ class LoginController extends Controller
                 $user->save();
                 $this->sendEmail($user,$password);
 
+            }else {
+                //have users
+                //check active = 0
+                if($user->active == 0){
+                    //have users
+                    //check active = 0
+                    return false;
+                }else{
+                    $this->guard()->login($user, true);
+                    return true;
+                }
             }
 
-            $this->guard()->login($user, true);
-            return true;
         }
         // the user doesn't exist in the LDAP server or the password is wrong
         // log error
