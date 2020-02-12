@@ -27,35 +27,37 @@
                     <div class="row">
                         <div class="col-md-8">
                             <p></p>
-                            <div class="ui floating message">ภาควิชาวิศวกรรมไฟฟ้าและคอมพิวเตอร์  คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร</div>
+                            <div class="ui floating message">มหาวิทยาลัยนเรศวร</div>
 
                             <div class="ui raised segment">
                                 <a class="ui yellow ribbon label">ร่วมเฉลิมฉลองโดย</a>
 
                                 <div class="row">
                                     <div class="col-md-3 text-center">
-                                        <a href="https://www.facebook.com/TAWANDANG.PHS/" target="_blank" class="ui small image" data-tooltip="ตะวันแดง มหาซน ณ พิษณุโลก" data-inverted="">
-                                            <img src="{{ URL::asset('images/sponser/thawandang.jpg') }}">
+                                        <a href="https://www.facebook.com/TAWANDANG.PHS/" target="_blank" class="ui small image" data-tooltip="กลุ่มวิทยาศาสตร์สุขภาพ" data-inverted="">
+                                            <img src="{{ URL::asset('images/sponser/pink.png') }}">
+                                        </a>
+                                    </div> <!--col-md-2-->
+
+
+                                    <div class="col-md-3 text-center">
+                                        <a href="https://www.facebook.com/itcorner2012/" target="_blank" class="ui small image" data-tooltip="กลุ่มวิทยาศาสตร์และเทคโนโลยี" data-inverted="">
+                                            <img src="{{ URL::asset('images/sponser/violet.png') }}" >
+                                        </a>
+                                    </div><!--col-md-2-->
+
+                                    <div class="col-md-3 text-center">
+                                        <a href="#" target="_blank" class="ui small image" data-tooltip="กลุ่มมนุษยศาสตร์และสังคมศาสตร์" data-inverted="" >
+                                            <img src="{{ URL::asset('images/sponser/cyan.png') }}" >
                                         </a>
                                     </div> <!--col-md-2-->
 
                                     <div class="col-md-3 text-center">
-                                        <a href="https://www.facebook.com/itcorner2012/" target="_blank" class="ui small image" data-tooltip="ไอทีคอร์เนอร์ พิษณุโลก" data-inverted="">
-                                            <img src="{{ URL::asset('images/sponser/itconner.jpg') }}" >
+                                        <a href="#" class="ui small image" data-tooltip="กลุ่มสำนักงานอธิการบดี" data-inverted="">
+                                            <img src="{{ URL::asset('images/sponser/green.png') }}" >
                                         </a>
-                                    </div>
+                                    </div> <!--col-md-2-->
 
-                                    <div class="col-md-3 text-center">
-                                        <a href="#" target="_blank" class="ui small image" data-tooltip="ห้างหุ้นส่วนจำกัด วิษณุบุตร เอ็นจิเนียริ่ง" data-inverted="" >
-                                            <img src="{{ URL::asset('images/sponser/vitsanub.jpg') }}" >
-                                        </a>
-                                    </div>
-
-                                    <div class="col-md-3 text-center">
-                                        <a href="#" class="ui small image" data-tooltip="บุญชัย แอร์ & เซอร์วิช  จำหน่ายและติดตั้งแอร์โดยช่างมืออาชีพ" data-inverted="">
-                                            <img src="{{ URL::asset('images/sponser/boonchai_logo.png') }}" >
-                                        </a>
-                                    </div>
 
                                 </div> <!--end row2-->
                             </div>
@@ -69,7 +71,7 @@
                         <div class="col-md-4">
                             <a href="http://www.nu.ac.th" class="ui medium image">
 
-                                <img src="{{ URL::asset('images/logo25.png') }}">
+                                <img src="{{ URL::asset('images/30th_NU_footer.png') }}">
                             </a>
                         </div> <!--col-md-4-->
                     </div> <!--end row2-->
@@ -86,29 +88,18 @@
                     <!--col-md-2-->
 
                         <div class="col-md-1 text-center">
-                            <a href="https://www.facebook.com/HAVEASEAT2009/?rf=141505385898766" target="_blank" class="ui small image" data-tooltip="Have a seat (แฮฟอะซีท)" data-inverted="" >
-                                <img src="{{ URL::asset('images/sponser/have_a_seed.jpg') }}">
+                            <a href="https://www.facebook.com/FirecomGroup/" target="_blank" class="ui small image" data-tooltip="Firecom and Network Co.,Ltd." data-inverted="" >
+                                <img src="{{ URL::asset('images/sponser/firecom.jpg') }}">
                             </a>
                         </div> <!--col-md-2-->
 
                         <div class="col-md-1 text-center">
-                                        <a href="https://www.facebook.com/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B5%E0%B8%94%E0%B8%B5-SALAD-D-378881588863740/" target="_blank" class="ui small image" data-tooltip="ร้านสาระดีดี SALAD D สลัด สด ใหม่ ทุกวัน" data-inverted="" >
-                                            <img src="{{ URL::asset('images/sponser/saladd.jpg') }}" >
+                                        <a href="https://www.facebook.com/MonkeymouseOfficial/" target="_blank" class="ui small image" data-tooltip="Monkey Mouse " data-inverted="" >
+                                            <img src="{{ URL::asset('images/sponser/monkey_mouse.jpg') }}" >
                                         </a>
                         </div>
 
 
-                        <div class="col-md-1 text-center">
-                            <a href="#" target="_blank" class="ui small image" data-tooltip="Sellman Thailand" data-inverted="" >
-                                <img src="{{ URL::asset('images/sponser/sellman_thailand.jpg') }}" >
-                            </a>
-                        </div>
-
-                        <!--<div class="col-md-1 text-center">
-                            <a href="http://truemoveh.truecorp.co.th/" target="_blank" class="ui small image" data-tooltip="Truemove H 4G+ แรงที่สุด เร็วที่สุด" data-inverted="" >
-                                <img src="{{ URL::asset('images/sponser/truemove_4g.png') }}" >
-                            </a>
-                        </div>--> <!--col-md-2-->
 
 
 

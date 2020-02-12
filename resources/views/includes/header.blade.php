@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#"><span class="logo-wraper logo-white">
-                <img src="{{ URL::asset('images/logo25.png') }}" alt=""/>NU eSports ROV Tournament
+                <img src="{{ URL::asset('images/logo-tr.png') }}" alt=""/>อีสปอร์ต กีฬาบุคลากร มหาวิทยาลัยนเรศวร
               </span></a>
             </div>
 

@@ -84,7 +84,7 @@
 
                         </div>
 
-                        <img class="ui huge bordered image" src="{{ URL::asset('images/place/state.png') }}">
+                        <img class="ui huge bordered image" src="{{ URL::asset('images/place/P1010307-edit.JPG') }}">
                         <div class="ui segment">
 
                             <p><i class="trophy large icon"></i>เวทีการแข่งขันในรอบสุดท้าย และห้องจัดเสวนาโครงการฝึกอบรมเพื่อเสริมสร้างความเข้าใจในอุตสาหกรรมเกมและการแข่งขันกีฬา E-sport </p>
