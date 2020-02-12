@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 @section('content')
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
         <div id="home-slider" class="empty-carousel"></div>
@@ -49,16 +49,17 @@
 				<div class="header">
 				 <span class="markFont"> สิ่งที่คุณจะได้รับจากการเข้าร่วมกิจกรรมและการลงทะเบียน </span>
 				</div>
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผู้ลงทะเบียนเข้าร่วมงาน มีโอกาศได้รับของรางวัลจากทาง Garena Thailand โดยการสุ่มผู้โชคดีจากรายชื่อที่ลงทะเบียนเข้าร่วม ของรางวัลคือ เสื้อ RoV 5 รางวัล และสกินฮีโร่ 10 รางวัล พร้อมความรู้ที่ได้จาก
-<strong>โครงการฝึกอบรมเพื่อเสริมสร้างความเข้าใจในอุตสาหกรรมเกมและการแข่งขันกีฬา E-sport </strong> โดยจะมีการเสวนา 3 หัวข้อ ได้แก่ </p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผู้ลงทะเบียนเข้าร่วมงาน มีโอกาศได้รับของรางวัลจากทาง Sponsor <strong>โดยการสุ่มผู้โชคดีจากรายชื่อที่ลงทะเบียนเข้าร่วม </strong> และมีกิจกรรมนาทีทอง แจกของ Premium / ของรางวัลมากมาย
+อธิ </p>
 				<p>
 					  <ol  type="1">
-						<li>อุตสาหกรรมเกมและการแข่งขัน E-sports ในปัจจุบัน</li>
-						<li>มหาวิทยาลัยกับอุตสาหกรรม/ธุรกิจเกมและการแข่งขัน E-sports  </li>
-						<li>สมดุลการใช้ชีวิตควบคู่กับกิจกรรมเกมและกีฬา E-sport</li>
+						<li>หูฟังแบบครอบ ยี่ห้อ Sony </li>
+						<li>กระเป๋าเป้ Targus  </li>
+						<li>นาฬิกาข้อมือ Smart Watch </li>
+					    <li>หมวก Nubwo รุ่น X-Series </li>
 					  </ol>
 				</p>
-				<p>โดยสามารถดูกำหนดการได้ <a href="{{ route('activity') }}" target="_blank" >ที่นี่</a></p>
+
 			  </div>
 			</div>
 
@@ -132,9 +133,10 @@
 											<label >ประเภทผู้ลงทะเบียน</label>
 											<select name="membertype" id="membertype" >
 												<option value="0" {{ old('membertype')==0 ? 'selected' : '' }} >นิสิต / นักศึกษา</option>
-												<option value="1" {{ old('membertype')==1 ? 'selected' : '' }}>ครู / อาจารย์</option>
-												<option value="2" {{ old('membertype')==2 ? 'selected' : '' }}>นักเรียน</option>
-												<option value="3" {{ old('membertype')==3 ? 'selected' : '' }}>บุคคลทั่วไป</option>
+												<option value="1" {{ old('membertype')==1 ? 'selected' : '' }}>บุคลากรสายวิชาการ</option>
+												<option value="2" {{ old('membertype')==2 ? 'selected' : '' }}>บุคลากรสายสนับสนุน</option>
+												<option value="3" {{ old('membertype')==3 ? 'selected' : '' }}>นักเรียน</option>
+												<option value="4" {{ old('membertype')==4 ? 'selected' : '' }}>บุคคลทั่วไป</option>
 											</select>
 										</div>
 									</div>
@@ -146,31 +148,31 @@
 												<div class="item">
 													<div class="ui checkbox">
 														<input type="checkbox" name="choice1" value="1" {{ old('choice1') ? 'checked' : '' }} onChange="chkReasonChange(this)">
-														<label>มาร่วมงาน 25 ปี คณะวิศวกรรมศาสตร์ <i class="cog icon red" style="font-size: 32px"></i></label>
+														<label>มาร่วมงานกีฬาบุคลากร มหาวิทยาลัยนเรศวร <i class="cog icon red" style="font-size: 32px"></i></label>
 													</div>
 												</div>
 						  <div class="item">
 													<div class="ui checkbox">
 														<input type="checkbox" name="choice2" value="2" {{ old('choice2') ? 'checked' : '' }}  onChange="chkReasonChange(this)">
-														<label>มาเที่ยวงานสัปดาห์วิทยาศาสตร์ <i class="connectdevelop icon yellow" style="font-size: 32px"></i></label>
+														<label>มาสังเกตุการณ์ กระแสตอบรับในสังคมมหาวิทยาลัย กับกีฬาอีสปอร์ต <i class="connectdevelop icon yellow" style="font-size: 32px"></i></label>
 													</div>
 												</div>
 												<div class="item">
 													<div class="ui checkbox">
 														<input type="checkbox" name="choice3" value="3" {{ old('choice3') ? 'checked' : '' }}  onChange="chkReasonChange(this)">
-														<label>มาลุ้นรับของรางวัลภายในงานจาก Garena <i class="gift icon orange" style="font-size: 32px"></i></label>
+														<label>มาลุ้นรับของรางวัลภายในงาน <i class="gift icon orange" style="font-size: 32px"></i></label>
 													</div>
 												</div>
 												<div class="item">
 													<div class="ui checkbox">
 														<input type="checkbox" name="choice4" value="4" {{ old('choice4') ? 'checked' : '' }}  onChange="chkReasonChange(this)">
-														<label>มาเชียร์เพื่อน/น้อง แข่งรอบ 4 ทีมสุดท้าย <i class="trophy icon yellow" style="font-size: 32px"></i></label>
+														<label>มาเชียร์เพื่อน/น้อง แข่งขัน <i class="trophy icon yellow" style="font-size: 32px"></i></label>
 													</div>
 												</div>
 												<div class="item">
 													<div class="ui checkbox">
 														<input type="checkbox" name="choice5" value="5" {{ old('choice5') ? 'checked' : '' }}  onChange="chkReasonChange(this)">
-														<label>อยากถ่ายรูปกับคอสเพลย์สาวสวย <i class="hand peace outline icon pink" style="font-size: 32px"></i></label>
+														<label>อยากถ่ายรูปกับ Caster สาวสวย <i class="hand peace outline icon pink" style="font-size: 32px"></i></label>
 													</div>
 												</div>
 												<div class="item">
@@ -187,7 +189,7 @@
 									</div>
 
 					   				<div class="ui form">
-                    <label>รู้จักงาน NU eSport RoV Tournament 2018 ได้จากที่ใด (เลือกตอบได้หลายข้อ)</label>
+                    <label>รู้จักงาน อีสปอร์ต กีฬาบุคลากร มหาวิทยาลัยนเรศวร (เลือกตอบได้หลายข้อ)</label>
 										<div class="field">
 										<div class="list">
 											<div class="item">
@@ -217,7 +219,7 @@
 											<div class="item">
 												<div class="ui checkbox">
 													<input type="checkbox" name="nuchoice5" {{ old('nuchoice5') ? 'checked' : '' }} onChange="chkRecognitionChange(this)">
-													<label>ประชาสัมพันธ์จากโรงเรียน / ครู <i class="microphone icon olive" style="font-size: 32px"> </i></label>
+													<label>การพูดคุยในหมู่เพื่อนร่วมงาน ที่มีใจรัก กีฬาอีสปอร์ต <i class="microphone icon olive" style="font-size: 32px"> </i></label>
 												</div>
 											</div>
 											<div class="item">
@@ -258,38 +260,46 @@
 	          <div class="col-md-4">
 				  <div class="ui card">
 				  <div class="ui move reveal image">
-					<img src="{{ URL::asset('images/T-Shirt_front.png') }}" class="visible content">
-					<img src="{{ URL::asset('images/T-Shirt_back.png') }}" class="hidden content">
+					<img src="{{ URL::asset('images/t01_reszie.jpg') }}" class="visible content">
+					<img src="{{ URL::asset('images/reward/g213_headset.png') }}" class="hidden content">
 				  </div>
 				  <div class="content">
 					  <a class="header"><span class="markFont">ของรางวัลภายในงาน</span></a>
 					<div class="meta">
-					  <span class="date">สนับสนุนโดย Garena Thailand</span>
+					  <span class="date">สนับสนุนโดย Firecom และ Monkey Mouse</span>
 					</div>
 				  </div>
 				  <div class="extra content">
 					  <p>
 					  <i class="gift icon orange"></i>
-					  เสื้อ 5 รางวัล *
+						หูฟังแบบครอบ ยี่ห้อ Sony 5 รางวัล
 					  </p>
 					  <p>
-					  <i class="chess queen icon purple"></i>
-					  สกินฮีโร่ 10 รางวัล *
+						<i class="gift icon orange"></i>
+						  กระเป๋าเป้ Targus 2 รางวัล
+					  </p>
+					  <p>
+						  <i class="gift icon orange"></i>
+						  นาฬิกาข้อมือ Smart Watch 2 รางวัล
+					  </p>
+					  <p>
+						  <i class="gift icon orange"></i>
+						  หมวก Nubwo รุ่น X-Series 5 รางวัล
 					  </p>
 				  </div>
 				  <div class="extra content">
-					  <span style="color: green">*สำหรับผู้เข้าร่วมงานที่ลงทะเบียนและมาร่วมงานในวันที่ 17 สิงหาคม 2561</span>
+					  <span style="color: green">*สำหรับผู้เข้าร่วมงานที่ลงทะเบียนและมาร่วมงานในวันที่ 18-21 กุมภาพันธ์ 2563</span>
 				  </div>
 				</div>
 
 				  <div class="ui card">
-					  <a class="image" href="{{ url('/download/infographic.pdf')  }}" target="_blank">
-						  <img src="{{ URL::asset('images/card_cover_register.png') }}">
+					  <a class="image" href="{{ url('/download/poster.pdf')  }}" target="_blank">
+						  <img src="{{ URL::asset('images/poster.jpg') }}">
 					  </a>
 					  <div class="content">
-						  <a class="header" href="{{ url('/download/infographic.pdf')  }}" target="_blank"><span class="markFont">ขั้นตอนลงทะเบียนเข้าร่วมงาน</span></a>
+						  <a class="header" href="{{ url('/download/poster.pdf')  }}" target="_blank"><span class="markFont">โปสเตอร์ประชาสัมพันธ์</span></a>
 						  <div class="meta">
-							  <a>*โปรดอ่านก่อนที่จะพลาดของรางวัล</a>
+							  <a></a>
 						  </div>
 					  </div>
 				  </div>

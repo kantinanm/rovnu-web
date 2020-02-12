@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 @section('content')
 
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
@@ -102,19 +102,24 @@
                             {{ csrf_field() }}
                             <div class="field">
                                 <label>ชื่อทีม</label>
-                                <input type="text" name="teamname" id="teamname"  value="{{ old('teamname') }}" placeholder="ชื่อทีมที่ใช้ในการแข่งขันไม่เกิน 3 พยางค์" />
+                                <input type="text" name="teamname" id="teamname"  value="{{ old('teamname') }}" placeholder="ระบุชื่อทีมที่ใช้ในการแข่งขัน 3 พยางค์ โดยให้มีสังกัดสีของทีมอยู่ด้วย" />
                             </div>
 
                             <div class="field">
-                                <label>คำโปรยทีม</label>
-                                <input type="text" name="teamslug" id="teamslug"  value="{{ old('teamslug') }}" placeholder="พูดอะไรสักเล็กน้อย หรือคำแนะนำทีม เช่น เก่งไม่กลัว กลัวแพ้บาย..." />
+                                <label></label>
+                                <input type="hidden" name="teamslug" id="teamslug"  value="{{ old('teamslug') }}" placeholder="พูดอะไรสักเล็กน้อย หรือคำแนะนำทีม เช่น เก่งไม่กลัว กลัวแพ้บาย..." />
                             </div>
 
 
                             <div class="two fields">
                                 <div class="field">
-                                    <label>ชื่อ - นามสกุล ตัวแทนทีม</label>
-                                    <input type="text" name="name" id="name"  value="{{ old('name') }}" />
+                                    <label>สี</label>
+                                    <select name="team_type" id="team_type">
+                                        <option value="pink_level" >สีชมพู (กลุ่มวิทยาศาสตร์สุขภาพ)</option>
+                                        <option value="violet_level">สีม่วง (กลุ่มวิทยาศาสตร์และเทคโนโลยี)</option>
+                                        <option value="cyan_level">สีฟ้า (กลุ่มมนุษยศาสตร์และสังคมศาสตร์)</option>
+                                        <option value="green_level">สีเขียว (กลุ่มสำนักงานอธิการบดี)</option>
+                                    </select>
                                 </div>
                                 <div class="field">
                                     <label>เบอร์โทรศัพท์มือถือ ที่ติดต่อได้</label>
@@ -122,43 +127,35 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <label>Facebook ID หรือ Facebook URL</label>
-                                <input type="text" name="facebook_id" id="facebook_id"  value="{{ old('facebook_id') }}" placeholder="** ใช้สำหรับการดึงเข้ากลุ่มในการนัดเวลาการแข่งขัน" />
+                                <label></label>
+                                <input type="hidden" name="facebook_id" id="facebook_id"  value="{{ old('facebook_id') }}" placeholder="** ใช้สำหรับการดึงเข้ากลุ่มในการนัดเวลาการแข่งขัน" />
                             </div>
                             <div class="two fields">
                                 <div class="field">
-                                    <label>สี</label>
-                                    <select name="team_type" id="team_type">
-                                        <option value="pink">สีชมพู (กลุ่มวิทยาศาสตร์สุขภาพ)</option>
-                                        <option value="violet">สีม่วง (กลุ่มวิทยาศาสตร์และเทคโนโลยี)</option>
-                                        <option value="cyan">สีฟ้า (กลุ่มมนุษยศาสตร์และสังคมศาสตร์)</option>
-                                        <option value="green">สีเขียว (กลุ่มสำนักงานอธิการบดี)</option>
-                                    </select>
+                                    <label></label>
+                                    <input type="hidden" name="name" id="name"  value="{{ old('name') }}" />
                                 </div>
                                 <div class="field">
-                                    <label>ต้นสังกัดของตัวแทนที่สามารถติดต่อได้ (หัวหน้าทีม)</label>
-                                    <select name="institution" id="institution">
-                                        @foreach($institutionList as $institution)
-                                            <option value="{{$institution}}">{{$institution}}</option>
-                                        @endforeach
-                                    </select>
+                                    <label></label>
+                                    <input type="hidden" name="institution" id="institution"  value="{{ old('institution') }}" />
+                                    <input type="hidden" name="color" id="color"  value="{{ old('color') }}" />
                                 </div>
                             </div>
 
                             <div class="field">
-                                <label>E-Mail</label>
-                                <input type="text" name="email" id="email"  value="{{ old('email') }}" />
+                                <label></label>
+                                <input type="hidden" name="email" id="email"  value="{{ old('email') }}" />
 
                             </div>
 
                             <div class="two fields">
                                 <div class="field">
-                                    <label>รหัสผ่าน</label>
-                                    <input type="password" name="password" id="password"  value="" />
+                                    <label>NU-NET Account</label>
+                                    <input type="text" name="username" id="username"  value="{{ old('username') }}" />
                                 </div>
                                 <div class="field">
-                                    <label>ยืนยันรหัสผ่านอีกครั้ง</label>
-                                    <input type="password" name="password_confirmation" id="password-confirm"  value="" />
+                                    <label>Password</label>
+                                    <input type="password" name="password" id="password"  value="" />
                                 </div>
                             </div>
 
@@ -204,6 +201,8 @@
 
     <script>
         jQuery(document).ready(function( $ ) {
+
+
             var minPasswordLength = 6;
             $(".ui.form")
                 .form({
@@ -211,23 +210,10 @@
                         teamname: {
                             identifier: "teamname",
                             rules: [
-                                {type: 'empty', prompt: 'ระบุชื่อทีมที่ใช้ในการแข่งขัน 3 พยางค์ หากตั้งเกิน ทีมงานขอสงวนสิทธิในการเปลี่ยนแปลงชื่อโดยไม่แจ้งให้ทราบล่วงหน้า'}
+                                {type: 'empty', prompt: 'ระบุชื่อทีมที่ใช้ในการแข่งขัน 3 พยางค์ โดยให้มีสังกัดสีของทีมอยู่ด้วย  และทีมงานขอสงวนสิทธิในการเปลี่ยนแปลงชื่อโดยไม่แจ้งให้ทราบล่วงหน้า'}
                             ]
                         }
                         ,
-                        teamslug: {
-                            identifier: "teamslug",
-                            rules: [
-                                {type: 'empty', prompt: 'พูดอะไรสักเล็กน้อย'}
-                            ]
-                        }
-                        ,
-                        name: {
-                            identifier: "name",
-                            rules: [
-                                {type: 'empty', prompt: 'ระบุชื่อ-นามสกุลจริง กรณีได้รับรางวัล หากชื่อไม่ตรงกับบัตรประชาชน ทีมงานขอสงวนสิทธิให้ทีมอื่น'}
-                            ]
-                        },
                         mobilephone: {
                             identifier: 'mobilephone',
                             rules: [
@@ -236,38 +222,16 @@
                                     prompt: 'หมายเลขโทรศัพท์ 10 หลัก ตัวอย่าง 085xxyyyyy'
                                 }
                             ]},
-                        facebook_id: {
-                            identifier: "facebook_id",
+                        username: {
+                            identifier: "username",
                             rules: [
-                                {type: 'empty', prompt: '**โปรดระบุ facebook id หรือ facebook url ใช้สำหรับการดึงเข้ากลุ่มในการนัดเวลาการแข่งขัน'}
-                            ]
-                        },
-
-                        email: {
-                            identifier: 'email',
-                            rules: [
-                                {
-                                    type: 'email',
-                                    prompt: 'โปรดระบุ e-mail ที่สามารถติดต่อได้'
-                                }
+                                {type: 'empty', prompt: 'บัญชีผู้ใช้งานในเครือข่าย NU-NET ไม่ต้องมี nu\\'}
                             ]
                         },
                         password: {
-                            identifier: 'password',
+                            identifier: "password",
                             rules: [
-                                {
-                                    type: 'length[' + minPasswordLength + ']',
-                                    prompt: 'รหัสผ่านต้องมีความยาวอย่างน้อย '+minPasswordLength+' ตัวอักษร'
-                                }
-                            ]
-                        },
-                        passwordConfirm: {
-                            identifier: 'password-confirm',
-                            rules: [
-                                {
-                                    type: 'match[password]',
-                                    prompt: 'โปรดระบุรหัสผ่านให้เหมือนกัน'
-                                }
+                                {type: 'empty', prompt: 'รหัสผ่านภายในเครือข่าย NU-NET ในการยืนยันตัวตน  คุณไม่ต้องกังวลว่าว่าเราจะแอบดักจับรหัสผ่าน  '}
                             ]
                         },
 
@@ -278,27 +242,27 @@
 
             $("select#team_type").change(function(){
 
-                $.ajax
-                ({
-                    type: "POST",
-                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')},
-                    url: "{{ route('register-team-option') }}",
-                    dataType: 'json',
-                    contentType : 'application/json; charset=utf-8',
-                    data: JSON.stringify({ "institution_type" :$("#team_type option:selected").val(), "_token" :"{{ csrf_token() }}" }),
-                    success: function (data) {
+                console.log($(this).val());
 
-                        console.log(data);
-                        $("#institution").empty();
+                if($(this).val()=="pink_level"){
+                    $('#institution').val('pink');
+                    $('#color').val('สีชมพู (กลุ่มวิทยาศาสตร์สุขภาพ)');
 
+                }else if($(this).val()=="violet_level"){
+                    $('#institution').val('violet');
+                    $('#color').val('สีม่วง (กลุ่มวิทยาศาสตร์และเทคโนโลยี)');
 
-                        var options = '';
-                        for (var i = 0; i < data.length; i++) {
-                            options += '<option value="' + data[i].optionValue + '">' + data[i].optionDisplay + '</option>';
-                        }
-                        $("#institution").html(options);
-                    }
-                })
+                }else if($(this).val()=="cyan_level"){
+                    $('#institution').val('cyan');
+                    $('#color').val('สีฟ้า (กลุ่มมนุษยศาสตร์และสังคมศาสตร์)');
+
+                }else if($(this).val()=="green_level"){
+                    $('#institution').val('green');
+                    $('#color').val('สีเขียว (กลุ่มสำนักงานอธิการบดี)');
+                }
+
+                console.log($('#color').val());
+                console.log($('#institution').val());
 
             })
         });

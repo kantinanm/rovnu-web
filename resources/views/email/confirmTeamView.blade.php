@@ -1,29 +1,21 @@
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คุณได้ยืนยันการส่งทีมเข้าร่วมแข่งขัน NU e-Sport ROV Tournament โดยมีรายละเอียดดังนี้
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คุณได้ยืนยันการส่งทีมเข้าร่วมแข่งขัน อีสปอร์ต กีฬาบุคลากร มหาวิทยาลัยนเรศวร
 <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <table width="650" border="0" cellspacing="1" cellpadding="0">
     <tr>
-        <td width="160px" align="right"><span style="color:#000;font-size:16px">ทีมของคุณใช้ชื่อว่า :</span></td>
-        <td><span style="color:#00F;font-size:16px"><div id="divEmail" style="width:250px;">{{$user->teamname}}</div></span></td>
+        <td width="160px" align="right"><span style="color:#000;font-size:16px">ทีมกลุ่ม :</span></td>
+        <td><span style="color:#00F;font-size:16px"><div id="divEmail" style="width:250px;">{{$user->color}}</div></span></td>
     </tr>
 </table>
 
     <table width="650" border="0" cellspacing="1" cellpadding="0">
         <tr>
-            <td width="160px" align="right"><span style="color:#000;font-size:16px">คำบรรยายทีม :</span></td>
-            <td><span style="color:#00F;font-size:16px"><div id="divEmail" style="width:250px;">{{$user->slug}}</div></span></td>
-        </tr>
-    </table>
-
-
-    <table width="650" border="0" cellspacing="1" cellpadding="0">
-        <tr>
-            <td width="160px" align="right"><span style="color:#000;font-size:16px">ทีมจากสถาบัน :</span></td>
-            <td><span style="color:#00F;font-size:16px"><div id="divEmail" style="width:250px;">{{$user->institution}}</div></span></td>
+            <td width="160px" align="right"><span style="color:#000;font-size:16px">ใช้ชื่อทีมว่า :</span></td>
+            <td><span style="color:#00F;font-size:16px"><div id="divEmail" style="width:250px;">{{$user->teamname}}</div></span></td>
         </tr>
     </table>
 
@@ -56,8 +48,8 @@
     <tr>
         <td width="20" align="right"><strong>ลำดับ</strong></td>
         <td align="center"><strong>ชื่อ-นามสกุล</strong></td>
-        <td align="center"><strong>รหัสนิสิต/นักศึกษา</strong></td>
-        <td align="center"><strong>คณะ/ระดับชั้น</strong></td>
+        <td align="center"><strong>เบอร์โทรศัพท์</strong></td>
+        <td align="center"><strong>คณะ / กอง /สนง.</strong></td>
         <td align="center"><strong>Garena ID</strong></td>
         <td align="center"><strong>Player</strong></td>
     </tr>
@@ -65,7 +57,7 @@
     <tr>
         <td align="center">{{$loop->index+1}}</td>
         <td>{{$player->firstname}} {{$player->lastname}}</td>
-        <td>{{$player->studentid}}</td>
+        <td>{{$player->mobilephone}}</td>
         <td>@if($player->faculty==="อื่นๆ")
                 {{$player->note}}
             @else
@@ -80,12 +72,12 @@
 
 <br />
 
-&nbsp;&nbsp;&nbsp;&nbsp; ภายหลังนี้ 7 วัน คุณสามารถตรวจสอบผลการสมัครได้ด้วยตนเอง โดยเข้าไปที่ <a href="{{route('login')}}">login</a> หรือ ข้อมูลเพิ่มเติม -> จัดการข้อมูลทีม
+&nbsp;&nbsp;&nbsp;&nbsp; ภายหลังนี้ 3 วัน คุณสามารถตรวจสอบผลการสมัครได้ด้วยตนเอง โดยเข้าไปที่ <a href="{{route('login')}}">login</a> หรือ ข้อมูลเพิ่มเติม -> จัดการข้อมูลทีม
 
 <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หรือรอประกาศรายชื่อทีมทั้งหมดที่ผ่านการตัดเลือก ผ่านทางเว็บไซต์ ภายในวันที่  <span style="color:#F00;"><strong> 1 กรกฏาคม 2561  </strong></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; หรือรอประกาศรายชื่อทีมทั้งหมดที่ผ่านการตัดเลือก ผ่านทางเว็บไซต์ ภายในวันที่  <span style="color:#F00;"><strong> 17 กุมภาพันธ์ 2563  </strong></span>
 <br />
-<br />โดยสามารถกดติดตามรายละเอียดเพิ่มเติมได้ที่ <a href="https://www.facebook.com/ecpenu-124356001077081/" target="_blank"> เพจ ecpe.nu </a><br />
+<br />โดยสามารถกดติดตามรายละเอียดเพิ่มเติมได้ที่ <a href="https://www.facebook.com/%E0%B8%AD%E0%B8%B5%E0%B8%AA%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%95-%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3-%E0%B8%A1%E0%B8%99%E0%B9%80%E0%B8%A3%E0%B8%A8%E0%B8%A7%E0%B8%A3-104781621097309/" target="_blank"> เพจ อีสปอร์ต กีฬาบุคลากร ม.นเรศวร </a><br />
 
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ขอบคุณที่ส่งทีมเข้ามาร่วมสนุกกัน&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />

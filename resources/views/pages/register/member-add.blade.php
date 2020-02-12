@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 @section('content')
 
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
@@ -105,10 +105,11 @@
                     <div class="content">
                         <div class="header">
                             <span class="markFont"> ทีม :{{Auth::user()->teamname}}</span>
+                            <br/><span class="markFont"></span>
                         </div>
-                        <p>"{{Auth::user()->slug}}"</p>
-                        <p><strong> สถาบันการศึกษา :</strong> {{Auth::user()->institution}}</p>
-                        <p><strong>ข้อมูลผู้ติดต่อของทีม </strong>{{Auth::user()->name}} , {{Auth::user()->mobilephone}}</p>
+                        <p>ข้อมูลที่ติดต่อได้ : {{Auth::user()->name}}, {{Auth::user()->mobilephone}}</p>
+                        <p><strong> กลุ่ม :</strong> {{Auth::user()->color}}</p>
+                        <p><strong>ข้อมูลผู้ติดต่อของทีม </strong>{{Auth::user()->name}} , {{Auth::user()->office}}(* อ้างอิงจาก Organization Unit ใน Active Directory)</p>
                     </div>
                 </div>
             </div>
@@ -143,8 +144,7 @@
                                     <input type="text" name="lastname" id="lastname"  value="{{ old('lastname') }}" />
                                 </div>
                                 <div class="field">
-                                    <label>รหัสนักเรียน/รหัสนักศึกษา</label>
-                                    <input type="text" name="studentid" id="studentid"  value="{{ old('studentid') }}" />
+                                    <input type="hidden" name="studentid" id="studentid"  value="-" />
                                 </div>
                             </div>
 
@@ -172,7 +172,7 @@
                             <div class="two fields">
 
                                 <div class="field">
-                                    <label>คณะ / ระดับชั้น</label>
+                                    <label>คณะ / กอง /สนง.</label>
                                     <select id="faculty" name="faculty">
                                         @foreach($faculty as $value)
                                             <option value="{{$value}}">{{$value}}</option>
@@ -186,7 +186,7 @@
                             </div>
 
                             <div class="fields" id="otherFaculty" style="display: none">
-                                    <input type="text" name="note" id="note" placeholder="อื่นๆ โปรดระบุ : ใส่ชื่อ คณะ / ระดับชั้น ที่สังกัด" value="{{ old('note') }}" />
+                                    <input type="text" name="note" id="note" placeholder="อื่นๆ โปรดระบุ : ใส่ชื่อ คณะ / กอง /สนง. ที่สังกัด" value="{{ old('note') }}" />
 
                             </div>
 
@@ -260,12 +260,6 @@
                             ]
                         },
 
-                        studentid: {
-                            identifier: "studentid",
-                            rules: [
-                                {type: 'empty', prompt: 'ระบุรหัสนักเรียน/นักศึกษา'}
-                            ]
-                        },
 
                         player_name: {
                             identifier: "player_name",

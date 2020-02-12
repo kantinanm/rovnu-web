@@ -18,12 +18,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav  navbar-right">
                     <li class="active"><a href="{{ route('home') }}"><span class="menu">หน้าแรก</span> <span class="sr-only">(current)</span></a></li>
-                    <li><a href="{{ route('home') }}#rules"><span class="menu">กติกาการแข่งขัน</span></a></li>
-                    <li><a href="{{ route('home') }}#rewards"><span class="menu">ของรางวัล</span></a></li>
-
+                    <li><a href="{{ route('rules') }}"><span class="menu">กติกาการแข่งขัน</span></a></li>
                     <li><a href="{{ route('place') }}"><span class="menu">สถานที่จัดงาน</span></a></li>
                     <li><a href="{{ route('question') }}"><span class="menu">คำถามที่พบบ่อย</span></a></li>
-                    <li><a href="{{ route('home') }}#schedule"><span class="menu">ตารางการแข่งขัน</span></a></li>
+                    @if( false )<li><a href="{{ route('home') }}#schedule"><span class="menu">ตารางการแข่งขัน</span></a></li>@endif
                     @if( Auth::guest() )
                     <li><a href="{{route("register-paticipant")}}"  class="btn btn-orange border-none btn-rounded-corner btn-navbar">ลงทะเบียนเข้าร่วมงาน<span class="icon-on-button"><i class="ion-person-add"></i></span></a></li>
                     @endif

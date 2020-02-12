@@ -41,7 +41,7 @@ class SendConfirmationMailable extends Mailable
 
         $players=Player::where('team_id',$this->user->id)->get();
 
-        return $this->subject("ยืนยันการส่งทีมเข้าร่วมแข่งขัน NU e-Sport ROV Tournament ")
+        return $this->subject("ยืนยันการส่งทีมเข้าร่วมแข่งขัน อีสปอร์ต กีฬาบุคลากร มหาวิทยาลัยนเรศวร ")
             ->from('ecpe-software@nu.ac.th')
             ->bcc($emails)
             ->view('email.confirmTeamView')->with(compact('user',$this->user)) ->with(compact('players',$players));

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 @section('content')
 
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
@@ -53,7 +53,7 @@
                             <i class="certificate icon" style="font-size: 32px;"></i>&nbsp;&nbsp;
                             <div class="content">
                                 <div class="title"><span class="markFont">ประกาศผลการสมัคร</span></div>
-                                <div class="description">ภายใน 7 วัน @if($by_pass_submit_video==true) ที่กดยืนยันการส่งข้อมูลทีม @else ที่ส่งหลักฐาน @endif </div>
+                                <div class="description">ภายใน 3 วัน @if($by_pass_submit_video==true) ที่กดยืนยันการส่งข้อมูลทีม @else ที่ส่งหลักฐาน @endif </div>
                             </div>
                         </div>
                     </div>
@@ -97,9 +97,9 @@
                             <span class="markFont"> ทีม :{{Auth::user()->teamname}}</span>
                             <br/><span class="markFont"></span>
                         </div>
-                        <p>"{{Auth::user()->slug}}"</p>
-                        <p><strong> สถาบันการศึกษา :</strong> {{Auth::user()->institution}}</p>
-                        <p><strong>ข้อมูลผู้ติดต่อของทีม </strong>{{Auth::user()->name}} , {{Auth::user()->mobilephone}}</p>
+                        <p>เบอร์ที่ติดต่อได้ : {{Auth::user()->mobilephone}}</p>
+                        <p><strong> กลุ่ม :</strong> {{Auth::user()->color}}</p>
+                        <p><strong>ข้อมูลผู้ติดต่อของทีม </strong>{{Auth::user()->name}} , {{Auth::user()->office}}</p>
                     </div>
                 </div>
             </div>

@@ -39,8 +39,18 @@ class PlayerController extends Controller
     protected function showEditForm($player_id)
     {
 
+        if(Auth::user()->team_type=="pink_level"){
+            $color="pink";
+        }else if(Auth::user()->team_type=="violet_level"){
+            $color="violet";
+        }else if(Auth::user()->team_type=="cyan_level"){
+            $color="cyan";
+        }else if(Auth::user()->team_type=="green_level"){
+            $color="green";
+        }
+
         //return view('pages.register.member-edit');
-        $faculty =Config::get('institution.'.Auth::user()->team_type."_level");
+        $faculty =Config::get('institution.'.$color);
         $player=Player::where('player_id',$player_id)->get();
 
 
@@ -76,7 +86,7 @@ class PlayerController extends Controller
         $player= [
             'firstname' => $request->input('firstname'),
             'lastname'=> $request->input('lastname'),
-            'studentid'=> $request->input('studentid'),
+            'studentid'=> $request->input('lastname'),
             'rov_id' => $request->input('hidGameId'),
             'player_name' => $request->input('player_name'),
             'faculty' => $request->input('faculty'),
@@ -141,12 +151,21 @@ class PlayerController extends Controller
 
     protected function showPlayerRegisForm()
     {
+        if(Auth::user()->team_type=="pink_level"){
+            $color="pink";
+        }else if(Auth::user()->team_type=="violet_level"){
+            $color="violet";
+        }else if(Auth::user()->team_type=="cyan_level"){
+            $color="cyan";
+        }else if(Auth::user()->team_type=="green_level"){
+            $color="green";
+        }
 
         //return view('pages.register.member-add');
         $allowTeamRegister =Config::get('app.allow_team_register');
         $allowPaticipantRegister =Config::get('app.allow_paticipant_register');
         $allowSponsorRegister =Config::get('app.allow_sponsor_register');
-        $faculty =Config::get('institution.'.Auth::user()->team_type."_level");// bug  <select id="faculty" name="faculty">
+        $faculty =Config::get('institution.'.$color);// bug  <select id="faculty" name="faculty">
 
         //dd($faculty);
         //return view('pages.register.member-add',compact('faculty',$faculty));

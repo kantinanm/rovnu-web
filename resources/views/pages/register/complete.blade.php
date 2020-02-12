@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 @section('content')
 
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
@@ -112,8 +112,8 @@
                         </div>
                         <p>
                         <ul class="list">
-                            <li>ภายหลังจากนี้จะมีการนำข้อมูลไปตรวจสอบกับทาง Garana Thailand ระยะเวลาประมาณ 5-7 วัน</li>
-                            <li>ภายหลังนี้ 7 วัน คุณสามารถตรวจสอบผลการสมัครได้ด้วยตนเอง โดยเข้าไปที่ ข้อมูลเพิ่มเติม -> จัดการข้อมูลทีม  </li>
+                            <li>ภายหลังจากนี้จะมีการนำข้อมูลไปตรวจสอบกับทาง Garana Thailand ระยะเวลาประมาณ 1-3 วัน</li>
+                            <li>ภายหลังนี้ 3 วัน คุณสามารถตรวจสอบผลการสมัครได้ด้วยตนเอง โดยเข้าไปที่ ข้อมูลเพิ่มเติม -> จัดการข้อมูลทีม  </li>
                             <li> เราจะประกาศผลการสมัครอย่างเป็นทางการในวันที่ <strong>{{$notification_date}}</strong>  </li>
                         </ul>
                         </p>

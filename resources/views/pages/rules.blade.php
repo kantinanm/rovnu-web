@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('title')
-    NU eSports ROV Tournament : งานเฉลิมฉลองครบรอบ 25 ปี คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร
+    อีสปอร์ต กีฬาบุคลากร มหาวิทยาลัยนเรศวร
 @stop
 @section('css_script')
     <!-- Bootstrap CSS -->
@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/modal-video.min.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 @section('content')
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
         <div id="home-slider" class="empty-carousel">

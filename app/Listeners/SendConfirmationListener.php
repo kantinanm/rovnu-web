@@ -32,7 +32,7 @@ class SendConfirmationListener
     public function handle(TeamConfirmed $event)
     {
         //
-        $message = 'ทีม'.$event->user->teamname . ' ได้ยืนยันการส่งทีมเข้าร่วมแข่งขัน '.Carbon::now();
+        $message = 'ทีม'.$event->user->color . ' ได้ยืนยันการส่งทีมเข้าร่วมแข่งขัน '.Carbon::now();
         //Storage::put('registeractivity.txt', $message);
         Storage::append('confirm_activity.txt', $message);
         dispatch((new SendComfirmEmailJob($event->user))->delay(Carbon::now()->addSeconds(5)));

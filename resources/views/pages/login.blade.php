@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 @section('content')
 
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
@@ -123,11 +123,7 @@
 
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-4">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                            </label>
-                                        </div>
+
                                     </div>
                                 </div>
 
@@ -137,9 +133,6 @@
                                             Login
                                         </button>
 
-                                        <a  href="{{ route('password.request') }}">
-                                            Forgot Your Password?
-                                        </a>
                                     </div>
                                 </div>
                             </form>

@@ -19,7 +19,7 @@
                         <div class="footer-list-wiget">
                             <h4>ข้อมูลเพิ่มเติม</h4>
                             <div class="list-group">
-                            <!-- <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="list-group-item"><i class="ion-ios-game-controller-b-outline" style="font-size: 30px;"></i>&nbsp;<span class="markFont">การรับสมัคร</span></a> -->
+                             <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="list-group-item"><i class="ion-ios-game-controller-b-outline" style="font-size: 30px;"></i>&nbsp;<span class="markFont">การรับสมัคร แข่งขันเกม ROV </span></a>
                                 <!--  <a href="#" data-toggle="modal" data-target="#exampleModalPaticipicant" class="list-group-item"><i class="ion-person-add" style="font-size: 30px;"></i>&nbsp;<span class="markFont">ลงทะเบียนเข้าร่วมงาน</span></a> -->
                                <!--    <a href="#" data-toggle="modal" data-target="#exampleModalSponser" class="list-group-item"><i class="ion-pin" style="font-size: 30px;"></i>&nbsp;<span class="markFont">ลงทะเบียนการเป็นผู้สนับสนุน</span></a> -->
                                 <a href="{{ route('rules') }}"  class="list-group-item"><i class="icon gavel" style="font-size: 30px;"></i>&nbsp;<span class="markFont">กฏและกติกาการแข่งขัน</span></a>

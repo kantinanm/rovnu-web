@@ -25,7 +25,7 @@
         <div class="col-md-5">
             <div class="customer-support-content padding-top-bottom-120 sm-padding-top-bottom-50-75">
                 <h4>ประกาศรายชื่อทีม </h4>
-                <p class="margin-top-bottom-30">&nbsp;&nbsp;&nbsp;&nbsp;ทางผู้จัดงานจะประกาศรายชื่อทีมที่ผ่านการพิจารณาให้สามารถเข้าร่วมการแข่งขันในครั้งนี้ ในวันที่ 16 กุมภาพันธ์ 2563              </p>
+                <p class="margin-top-bottom-30">&nbsp;&nbsp;&nbsp;&nbsp;ทางผู้จัดงานจะประกาศรายชื่อทีมที่ผ่านการพิจารณาให้สามารถเข้าร่วมการแข่งขันในครั้งนี้ ในวันที่ 17 กุมภาพันธ์ 2563              </p>
 
                 <div class="ui info message">
                     <i class="close icon"></i>

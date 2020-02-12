@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('title')
-    NU eSports ROV Tournament : งานเฉลิมฉลองครบรอบ 25 ปี คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร
+    อีสปอร์ต กีฬาบุคลากร มหาวิทยาลัยนเรศวร
 @stop
 @section('css_script')
     <!-- Bootstrap CSS -->
@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/modal-video.min.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 @section('content')
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
         <div id="home-slider" class="empty-carousel">
@@ -55,20 +55,8 @@
                     <i class="map outline icon"></i>
                     <div class="content">
                         <div class="header">
-                            <span class="markFont"> คณะวิศวกรรมศาสตร์ มหาวิทยาลัยนเรศวร </span>
+                            <span class="markFont">  กองบริการเทคโนโลยีสารสนเทศและการสื่อสาร (CITCOMS) มหาวิทยาลัยนเรศวร </span>
                         </div>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>หากเดินทางจากกรุงเทพมหานคร</strong> ตามทางหลวงแผ่นดินหมายเลข 117 (นครสวรรค์ - พิษณุโลก) มหาวิทยาลัยนเรศวรจะตั้งอยู่ทางขวามือช่วงกิโลเมตรที่ 117 - 118 <i class="map marker alternate icon"></i> GPS : 16.743780, 100.196493
-                        </p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับ<strong>การเดินทางจากภายในตัวเมืองพิษณุโลกมาที่มหาวิทยาลัยนเรศวร</strong> นั้น สามารถทำได้โดย รถโดยสารประจำทาง ปอ.12 ซึ่งจะมีจุดจอดอยู่ที่ สถานีรถไฟและสถานีขนส่งพิษณุโลก นอกจากนั้นสามารถเดินทางมาได้โดย
-                        </p>
-                        <p>
-                        <ul>
-                            <li>รถแท็กซี่รับจ้าง (อัตราเหมาจ่าย 150 บาทจากตัวเมือง) ,คิงด้อมแท็กซี่ <i class="phone icon"></i> 055-222-222  และ สหกรณ์แท็กซี่ <i class="phone  icon"></i> 055-388-888 </li>
-                            <li>รถสามล้อรับจ้าง  </li>
-                        </ul>
-                        </p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับ<strong><a href="{{ URL::asset('images/map/nu-map.jpg') }}">การเดินทางภายในมหาวิทยาลัย</a></strong> จะมี "โครงการขนส่งมวลชนมหาวิทยาลัยนเรศวร (ขสมน.)" ซึ่งเป็นรถประหยัดพลังงานที่ขับเคลื่อนด้วยพลังงานไฟฟ้าบริการรอบมหาวิทยาลัยโดยไม่คิดค่าใช้จ่ายตั้งแต่เวลา 6.30 น. ถึง 21.00 น.
-                        </p>
                         <p></p>
                     </div>
                 </div>
@@ -76,106 +64,76 @@
                 <div class="row">
                     <div class="col-md-8">
 
-                        <img class="ui huge bordered image" src="{{ URL::asset('images/map/map-internal_number.png') }}">
+                        <img class="ui huge bordered image" src="{{ URL::asset('images/CITCOMS.jpg') }}">
                         <div class="ui segment">
 
-                            <p><i class="car large icon"></i>พื้นที่จอดรถยนต์  </p>
-                            <p>สามารถจอดรถได้ <strong>จุดที่ 1</strong> บริเวณข้างอาคาร 20-30 คัน และ<strong>จุดที่ 2</strong> ทางเข้ากลุ่มอาคารปฏิบัติการ 40-50 คัน</p>
+                            <p>กองบริการเทคโนโลยีสารสนเทศและการสื่อสาร (CITCOMS) มหาวิทยาลัยนเรศวร</p>
 
                         </div>
 
                         <img class="ui huge bordered image" src="{{ URL::asset('images/place/P1010307-edit.JPG') }}">
                         <div class="ui segment">
 
-                            <p><i class="trophy large icon"></i>เวทีการแข่งขันในรอบสุดท้าย และห้องจัดเสวนาโครงการฝึกอบรมเพื่อเสริมสร้างความเข้าใจในอุตสาหกรรมเกมและการแข่งขันกีฬา E-sport </p>
-                            <p><strong>จุดที่ 3</strong> อาคารเรียนวิศวกรรมโยธา  ชั้น 7  ห้อง Slope 4 (Main State รองรับ ผู้เข้าร่วมงาน 120 คน) และ ห้อง Slope 3 (ถ่ายทอดสัญญาณ <i class="ion-videocamera large icon"></i> รองรับ ผู้เข้าร่วมงาน 120 คน)</p>
+                            <p><i class="trophy large icon"></i>ห้อง Main Conference เวทีการแข่งขันในรอบคัดเลือกและรอบชิงชนะเลิศ </p>
+                            <p>สามารถจุคนได้ 40-50 ท่าน</p>
 
                         </div>
 
-                        <img class="ui huge bordered image" src="{{ URL::asset('images/place/backdrop.png') }}">
+                        <img class="ui huge bordered image" src="{{ URL::asset('images/register_onsite.jpg') }}">
+                        <div class="ui segment">
 
+                            <p>จุดลงทะเบียนเข้าร่วมงาน</p>
+
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="ui card">
                             <div class="ui move reveal image">
-                                <img src="{{ URL::asset('images/T-Shirt_front.png') }}" class="visible content">
-                                <img src="{{ URL::asset('images/T-Shirt_back.png') }}" class="hidden content">
+                                <img src="{{ URL::asset('images/t01_reszie.jpg') }}" class="visible content">
+                                <img src="{{ URL::asset('images/reward/g213_headset.png') }}" class="hidden content">
                             </div>
                             <div class="content">
                                 <a class="header"><span class="markFont">ของรางวัลภายในงาน</span></a>
                                 <div class="meta">
-                                    <span class="date">สนับสนุนโดย Garena Thailand</span>
+                                    <span class="date">สนับสนุนโดย Firecom และ Monkey Mouse</span>
                                 </div>
                             </div>
                             <div class="extra content">
                                 <p>
                                     <i class="gift icon orange"></i>
-                                    เสื้อ 5 รางวัล *
+                                    หูฟังแบบครอบ ยี่ห้อ Sony 5 รางวัล
                                 </p>
                                 <p>
-                                    <i class="chess queen icon purple"></i>
-                                    สกินฮีโร่ 10 รางวัล *
+                                    <i class="gift icon orange"></i>
+                                    กระเป๋าเป้ Targus 2 รางวัล
+                                </p>
+                                <p>
+                                    <i class="gift icon orange"></i>
+                                    นาฬิกาข้อมือ Smart Watch 2 รางวัล
+                                </p>
+                                <p>
+                                    <i class="gift icon orange"></i>
+                                    หมวก Nubwo รุ่น X-Series 5 รางวัล
                                 </p>
                             </div>
                             <div class="extra content">
-                                <span style="color: green">*สำหรับผู้เข้าร่วมงานที่ลงทะเบียนและมาร่วมงานในวันที่ 17 สิงหาคม 2561</span>
+                                <span style="color: green">*สำหรับผู้เข้าร่วมงานที่ลงทะเบียนและมาร่วมงานในวันที่ 18-21 กุมภาพันธ์ 2563</span>
                             </div>
                         </div>
 
                         <div class="ui card">
-                            <div class="blurring dimmable image">
-                                <div class="ui inverted dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <div class="ui primary button" data-toggle="modal" data-target="#exampleModalCenter">ส่งทีมเข้าร่วมแข่งขัน</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <img src="{{ URL::asset('images/reward/money_reward.png') }}">
-                            </div>
+                            <a class="image" href="{{ url('/download/poster.pdf')  }}" target="_blank">
+                                <img src="{{ URL::asset('images/poster.jpg') }}">
+                            </a>
                             <div class="content">
-                                <a class="header"><span class="markFont"></span></a>
+                                <a class="header" href="{{ url('/download/poster.pdf')  }}" target="_blank"><span class="markFont">โปสเตอร์ประชาสัมพันธ์</span></a>
                                 <div class="meta">
-                                    <span class="date">เงินรางวัล <i class="cog icon red"></i>จาก คณะวิศวกรรมศาสตร์</span>
-                                </div>
-                            </div>
-                            <div class="extra content">
-
-
-                                <p><i class="trophy icon yellow"></i>อันดับ 1 ได้รับเงินรางวัล 5,000 บาท</p>
-                                <p><i class="trophy icon grey"></i>อันดับ 2 ได้รับเงินรางวัล 3,000 บาท</p>
-                                <p><i class="trophy icon brown"></i>ชมเชย 2 รางวัล รางวัล 1,000 บาท</p>
-
-                            </div>
-                        </div>
-
-                        <div class="ui special cards">
-                            <div class="card">
-                                <div class="blurring dimmable image">
-                                    <div class="ui inverted dimmer">
-                                        <div class="content">
-                                            <div class="center">
-                                                <div class="ui primary button" data-toggle="modal" data-target="#exampleModalCenter">ส่งทีมเข้าร่วมแข่งขัน</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="{{ URL::asset('images/coupon.png') }}">
-                                </div>
-                                <div class="content">
-                                    <a class="header"><span class="markFont">รางวัลในการแข่งขันรอบสุดท้าย</span></a>
-                                    <div class="meta">
-                                        <span class="date">สนับสนุนโดย Garena Thailand</span>
-                                    </div>
-                                </div>
-                                <div class="extra content">
-
-
-                                    <p><i class="trophy icon yellow"></i>อันดับ 1 ได้รับ 500 คูปอง/คน +สกิน</p>
-                                    <p><i class="trophy icon grey"></i>อันดับ 2 ได้รับ 300 คูปอง/คน +สกิน</p>
-                                    <p><i class="trophy icon brown"></i>ชมเชย 2 รางวัล ได้รับ 100 คูปอง/คน</p>
+                                    <a></a>
                                 </div>
                             </div>
                         </div>
+
+
 
 
                     </div>

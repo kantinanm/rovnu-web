@@ -28,7 +28,7 @@
 
 
 
-    @include('includes.home.notification')
+    @include('includes.home.rov')
     <section id="cta" class="gradient-violat cta padding-top-bottom-90">
         <div class="container">
 
@@ -38,8 +38,8 @@
                     <p class="text-white">ฝ่าสมรภูมิรบไปด้วยกัน เปิดรับลงทะเบียนทีมแล้ววันนี้</p>
                     <div class="cta-btn-group">
 
-                        <a class="btn btn-orange border-none btn-rounded-corner" href="#" data-toggle="modal" data-target="#exampleModalCenter">พร้อม Battle ,ส่งทีม ROV <span class="icon-on-button"><i class="ion-log-in"></i></span></a>
-                        <a class="btn btn-white gradient-white border-none btn-rounded-corner" href="#" data-toggle="modal" data-target="#exampleModalPaticipicant">ไม่ ฉันจะส่งทีมลงสมัคร FIFA Online 4<span class="icon-on-button"><i class="ion-person-add"></i></span></a>
+                        <a class="btn btn-orange border-none btn-rounded-corner" href="#" data-toggle="modal" data-target="#exampleModalCenter">พร้อม Battle ,ส่งทีมแข่งขันเกม ROV <span class="icon-on-button"><i class="ion-log-in"></i></span></a>
+                        <a class="btn btn-white gradient-white border-none btn-rounded-corner" href="{{route("register-paticipant")}}" >ไม่ แต่ฉันจะไปเข้าร่วมงาน<span class="icon-on-button"><i class="ion-person-add"></i></span></a>
                     </div>
                     <p class="text-white">* กิจกรรมภายในงานมีของรางวัลให้ร่วมลุ้นและร่วมใกล้ชิด Caster และ Gamer สาวสวยภายในงาน</p>
 
@@ -89,7 +89,8 @@
 
         </div><!--container-->
     </section>
-
+    @include('includes.home.fifa')
+    @include('includes.home.notification')
 
 
     @include('includes.home.sponsor')

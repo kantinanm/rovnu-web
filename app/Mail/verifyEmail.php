@@ -47,10 +47,10 @@ class verifyEmail extends Mailable
         $emails = [$admin_email,$manager_email];
 
         return $this->subject("Verify Your Email โปรดทำการยืนยัน email ที่สมัคร จากกิจกรรม อีสปอร์ต กีฬาบุคลากร มหาวิทยาลัยนเรศวร ")
-            ->from('ecpe-software@nu.ac.th')
+            ->from('esport@nu.ac.th')
             ->bcc($emails)
             ->attach(public_path('/download').'/poster.pdf', [
-                'as' => 'poster_preview.pdf',
+                'as' => 'poster.pdf',
                 'mime' => 'application/pdf',
             ])
             ->view('email.sendView')->with(compact('user',$this->user)) ->with(compact('password',$this->pass));

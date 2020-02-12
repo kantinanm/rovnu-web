@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 @section('content')
 
     <section id="introduction" class="gradient-violat padding-top-90 home-slider">
@@ -108,9 +108,9 @@
                             <span class="markFont"> ทีม :{{Auth::user()->teamname}}</span>
                             <br/><span class="markFont"></span>
                         </div>
-                        <p>"{{Auth::user()->slug}}"</p>
-                        <p><strong> สถาบันการศึกษา :</strong> {{Auth::user()->institution}}</p>
-                        <p><strong>ข้อมูลผู้ติดต่อของทีม </strong>{{Auth::user()->name}} , {{Auth::user()->mobilephone}}</p>
+                        <p>เบอร์ที่ติดต่อได้ : {{Auth::user()->mobilephone}}</p>
+                        <p><strong> กลุ่ม :</strong> {{Auth::user()->color}}</p>
+                        <p><strong>ข้อมูลผู้ติดต่อของทีม </strong>{{Auth::user()->name}} , {{Auth::user()->office}} (* อ้างอิงจาก Organization Unit ใน Active Directory)</p>
                     </div>
                 </div>
             </div>
@@ -128,8 +128,8 @@
                     <tr>
                         <th>ลำดับ</th>
                         <th>ชื่อ - นามสกุล</th>
-                        <th>รหัสนักเรียน/นักศึกษา</th>
-                        <th>คณะ / ระดับชั้น</th>
+                        <th>เบอร์ที่ติดต่อได้</th>
+                        <th>คณะ / กอง /สนง.</th>
                         <th>Garena ID </th>
                         <th>Player Name</th>
                         <th>แก้ไข</th>
@@ -142,7 +142,7 @@
                         <td>
                             {{$player->firstname}} {{$player->lastname}}
                         </td>
-                        <td>{{$player->studentid}}</td>
+                        <td>{{$player->mobilephone}}</td>
                         <td>@if($player->faculty==="อื่นๆ")
                                 {{$player->note}}
                             @else

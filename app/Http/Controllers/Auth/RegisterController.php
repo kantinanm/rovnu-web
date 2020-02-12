@@ -20,6 +20,7 @@ use Carbon\Carbon;
 use Config;
 use App\Events\Registered;
 use Illuminate\Support\Facades\Log;
+use Adldap\Laravel\Facades\Adldap;
 
 class RegisterController extends Controller
 {
@@ -62,10 +63,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'team_type' => 'required|max:255',
+            'username' => 'required|max:255|unique:users',
             'teamname' => 'required|max:255',
+            'mobilephone' => 'required|max:255',
         ]);
     }
 
@@ -76,7 +77,59 @@ class RegisterController extends Controller
 
         $this->validator($request->all())->validate();
 
-        $this->create($request->all());
+        if(Adldap::auth()->attempt($request->username, $request->password)){
+            Session::flash('status' ,'Registered ! but verify you email to activate you account.');
+            //$getCommonName = Adldap::search()->users()->find('xxxx@nu.ac.th');
+            //dd($getCommonName);
+            if($request->team_type=="pink_level"){
+                $colorAbbr="pink";
+                $color="สีชมพู (กลุ่มวิทยาศาสตร์สุขภาพ)";
+            }else if($request->team_type=="violet_level"){
+                $colorAbbr="violet";
+                $color="สีม่วง (กลุ่มวิทยาศาสตร์และเทคโนโลยี)";
+            }else if($request->team_type=="cyan_level"){
+                $colorAbbr="cyan";
+                $color="สีฟ้า (กลุ่มมนุษยศาสตร์และสังคมศาสตร์)";
+            }else if($request->team_type=="green_level"){
+                $colorAbbr="green";
+                $color="สีเขียว (กลุ่มสำนักงานอธิการบดี)";
+            }
+
+            $user= [
+                'username' => $request->username,
+                'teamname' => $request->teamname,
+                'name' => '',
+                'email' => '',
+                'password'=> '',
+                'verify_token' => Str::random(40),
+                'team_type' => $request->team_type,
+                'institution' => $colorAbbr,
+                'color' => $color,
+                'mobilephone' => $request->mobilephone,
+            ];
+
+            $user = User::create($user);
+
+            $sync_attrs = $this->retrieveSyncAttributes($request->username);
+            foreach ($sync_attrs as $field => $value) {
+                $user->$field = $value !== null ? $value : '';
+            }
+
+
+            $role_subscriber = Role::where("name", "subscriber")->first();
+            $user->attachRole($role_subscriber);
+            $user->save();
+
+            $thisUser=User::findOrFail($user->id);
+            $this->sendEmail($thisUser,$request->password);
+
+        }else{
+            return redirect()->back()
+                ->withInput($request->all())
+                ->withErrors([$request->username => 'โปรดตรวจสอบ บัญชีผู้ใช้งานในเครือข่าย NU-NET และ รหัสผ่านที่ถูกต้อง.']);
+        }
+
+        //$this->create($request->all());
         //dd($request);
 
         return redirect(route("verifyEmail"));
@@ -156,9 +209,9 @@ class RegisterController extends Controller
             ->send(new verifyEmail($thisUser));
         */
         //dd($password);
-        $message ="User register :".$thisUser->teamname.",slug:".$thisUser->slug;
+        $message ="User register :".$thisUser->teamname.",username:".$thisUser->username;
         $message .=", name:".$thisUser->name.",email:".$thisUser->email;
-        $message .=", facebook_id:".$thisUser->facebook_id.",mobilephone:".$thisUser->mobilephone;
+        $message .=", office:".$thisUser->office.",mobilephone:".$thisUser->mobilephone;
 
         Log::info($message);
         event(new Registered($thisUser,$password));
@@ -222,5 +275,63 @@ class RegisterController extends Controller
         }
 
         return response()->json($result);
+    }
+
+    protected function retrieveSyncAttributes($username)
+    {
+        $ldapuser = Adldap::search()->where(env('ADLDAP_USER_ATTRIBUTE'), '=', $username)->first();
+        if (!$ldapuser) {
+            // log error
+            return false;
+        }
+
+        $ldapuser_attrs = null;
+
+        $attrs = [];
+
+        foreach (config('adldap_auth.sync_attributes') as $local_attr => $ldap_attr) {
+            if ($local_attr == 'username') {
+                continue;
+            }
+
+            $method = 'get' . $ldap_attr;
+            if (method_exists($ldapuser, $method)) {
+                $attrs[$local_attr] = $ldapuser->$method();
+                continue;
+            }
+
+            if ($ldapuser_attrs === null) {
+                $ldapuser_attrs = self::accessProtected($ldapuser, 'attributes');
+            }
+
+            if (!isset($ldapuser_attrs[$ldap_attr])) {
+                // an exception could be thrown
+                $attrs[$local_attr] = null;
+                continue;
+            }
+
+            if (!is_array($ldapuser_attrs[$ldap_attr])) {
+                $attrs[$local_attr] = $ldapuser_attrs[$ldap_attr];
+            }
+
+            if (count($ldapuser_attrs[$ldap_attr]) == 0) {
+                // an exception could be thrown
+                $attrs[$local_attr] = null;
+                continue;
+            }
+
+            $attrs[$local_attr] = $ldapuser_attrs[$ldap_attr][0];
+            //$attrs[$local_attr] = implode(',', $ldapuser_attrs[$ldap_attr]);
+        }
+
+        return $attrs;
+    }
+
+    protected static function accessProtected($obj, $prop)
+    {
+        $reflection = new \ReflectionClass($obj);
+        $property = $reflection->getProperty($prop);
+        $property->setAccessible(true);
+        return $property->getValue($obj);
     }
 }
