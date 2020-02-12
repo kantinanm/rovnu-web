@@ -123,6 +123,8 @@ class RegisterController extends Controller
             $thisUser=User::findOrFail($user->id);
             $this->sendEmail($thisUser,$request->password);
 
+            //return redirect(route("verifyEmail"));
+
         }else{
             return redirect()->back()
                 ->withInput($request->all())
@@ -132,7 +134,7 @@ class RegisterController extends Controller
         //$this->create($request->all());
         //dd($request);
 
-        return redirect(route("verifyEmail"));
+        //return redirect(route("verifyEmail"));
     }
 
     public function showRegistrationForm()
