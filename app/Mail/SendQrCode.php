@@ -58,7 +58,7 @@ class SendQrCode extends Mailable
         */
 
         return $this->subject("ขอบคุณที่สนใจลงทะเบียนเพื่อเข้าร่วมงาน อีสปอร์ต กีฬาบุคลากร มหาวิทยาลัยนเรศวร ")
-            ->from('ecpe-software@nu.ac.th')
+            ->from('esport@nu.ac.th')
             ->bcc($emails)
             ->attach(public_path('/images/qrcode').'/'.$this->file_name, [
                 'as' => $this->file_name,
