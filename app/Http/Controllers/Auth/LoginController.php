@@ -166,15 +166,15 @@ class LoginController extends Controller
                 $user->verify_token = Str::random(40);*/
                 //$user->email = $username.'@nu.ac.th';
 
-                $user= [
+                /*$user= [
                     'username' => $username,
                     'name' => '',
                     'email' => '',
                     'password'=> '',
                     'verify_token' => Str::random(40)
-                ];
+                ];*/
 
-                $user = User::create($user);
+                /*$user = User::create($user);
 
                 $sync_attrs = $this->retrieveSyncAttributes($username);
                 foreach ($sync_attrs as $field => $value) {
@@ -186,7 +186,7 @@ class LoginController extends Controller
                 $user->attachRole($role_subscriber);
                 //$user->roles()->attach($role_subscriber);
                 $user->save();
-                $this->sendEmail($user,$password);
+                $this->sendEmail($user,$password);*/
 
             }else {
                 //have users
