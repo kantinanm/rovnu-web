@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/stellar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/Semantic-UI-CSS/semantic.css') }}">
 @endsection
-@include('includes.header_v2')
+@include('includes.header')
 
 
 @section('content')
@@ -61,7 +61,7 @@
     </div>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <!--<script src="js/jquery.min.js"></script> -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <script src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
