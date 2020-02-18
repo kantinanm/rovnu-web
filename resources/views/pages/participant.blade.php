@@ -36,12 +36,15 @@
                 @if($item->member_type==0)
                     นิสิต / นักศึกษา
                 @elseif($item->member_type==1)
-                    ครู / อาจารย์
+                    บุคลากรสายวิชาการ
                 @elseif($item->member_type==2)
-                    นักเรียน
+                    บุคลากรสายสนับสนุน
                 @elseif($item->member_type==3)
+                    นักเรียน
+                @elseif($item->member_type==4)
                     บุคคลทั่วไป
                 @endif
+
             </td>
 
         </tr>

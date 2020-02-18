@@ -80,7 +80,7 @@ Route::post('home/overall/detail', 'HomeRovController@getTeamDetail')->name('get
 
 Route::get('home/participant','HomeRovController@participantList')->name('participant');
 Route::get('participant/{token}','HomeRovController@getParticipant')->name('participant-get');
-
+Route::post('participant/action','HomeRovController@approveParticipant')->name('participant-action');
 /*Route::get('register/privacy', function () {
 
     return view('pages.register.privacy');

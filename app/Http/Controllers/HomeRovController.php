@@ -219,10 +219,53 @@ class HomeRovController extends Controller
             if ($objParticipant->member_type == 0) {
                 $result["member_type"] = "นิสิต / นักศึกษา";
             } elseif ($objParticipant->member_type == 1) {
-                $result["member_type"] = "ครู / อาจารย์";
+                $result["member_type"] = "บุคลากรสายวิชาการ";
             } elseif ($objParticipant->member_type == 2) {
-                $result["member_type"] = "นักเรียน";
+                $result["member_type"] = "บุคลากรสายสนับสนุน";
             } elseif ($objParticipant->member_type == 3) {
+                $result["member_type"] = "นักเรียน";
+            } elseif ($objParticipant->member_type == 4) {
+                $result["member_type"] = "บุคคลทั่วไป";
+            }
+        }
+
+        return response()->json($result);
+    }
+
+    public function approveParticipant(Request $request){
+
+        $data = $request->json()->all();
+
+        $objParticipant=Participant::where('unique_id', '=', $data->token)->first();
+
+        if($objParticipant==null){
+            $result["status"]=0;
+
+        }else {
+
+            if($data->action=="join"){
+                $objParticipant->is_join=1;
+            }else{
+                $objParticipant->is_join=0;
+            }
+
+            $objParticipant->save();
+
+            $result["status"]=1;
+            $result["pid"] = $objParticipant->p_id;
+            $result["fullname"] = $objParticipant->fullname;
+            $result["email"] = $objParticipant->email;
+            $result["unique_id"] = $objParticipant->unique_id;
+            $result["garena_id"] = $objParticipant->garena_id;
+            if ($objParticipant->member_type == 0) {
+                $result["member_type"] = "นิสิต / นักศึกษา";
+            } elseif ($objParticipant->member_type == 1) {
+                $result["member_type"] = "บุคลากรสายวิชาการ";
+            } elseif ($objParticipant->member_type == 2) {
+                $result["member_type"] = "บุคลากรสายสนับสนุน";
+            } elseif ($objParticipant->member_type == 3) {
+                $result["member_type"] = "นักเรียน";
+            } elseif ($objParticipant->member_type == 4) {
                 $result["member_type"] = "บุคคลทั่วไป";
             }
         }
