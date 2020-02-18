@@ -232,23 +232,18 @@ class HomeRovController extends Controller
         return response()->json($result);
     }
 
-    public function approveParticipant(Request $request){
+    public function approveParticipant($token){
 
-        $data = $request->json()->all();
+        $objParticipant=Participant::where('unique_id', '=', $token)->first();
 
-        $objParticipant=Participant::where('unique_id', '=', $data->token)->first();
 
         if($objParticipant==null){
             $result["status"]=0;
 
         }else {
 
-            if($data->action=="join"){
-                $objParticipant->is_join=1;
-            }else{
-                $objParticipant->is_join=0;
-            }
 
+            $objParticipant->is_join=1;
             $objParticipant->save();
 
             $result["status"]=1;
