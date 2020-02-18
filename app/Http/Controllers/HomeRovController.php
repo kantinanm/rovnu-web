@@ -202,6 +202,13 @@ class HomeRovController extends Controller
         return view('pages.participant')->with(compact('listParticipant',$listParticipant));
     }
 
+    public function participantJoinList(){
+        //$listParticipant=Participant::get();
+        $listParticipant=Participant::where('is_join', '=', 1)->get();
+
+        return view('pages.participant-join')->with(compact('listParticipant',$listParticipant));
+    }
+
     public function getParticipant($token){
 
         $objParticipant=Participant::where('unique_id', '=', $token)->first();

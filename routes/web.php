@@ -79,6 +79,7 @@ Route::get('home/overall','HomeRovController@overallTeam')->name('overall');
 Route::post('home/overall/detail', 'HomeRovController@getTeamDetail')->name('get-team-detail');
 
 Route::get('home/participant','HomeRovController@participantList')->name('participant');
+Route::get('participant-join','HomeRovController@participantJoinList')->name('participant-join-list');
 Route::get('participant/{token}','HomeRovController@getParticipant')->name('participant-get');
 Route::get('participant/action/{token}','HomeRovController@approveParticipant')->name('participant-action');
 /*Route::get('register/privacy', function () {
